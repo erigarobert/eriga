@@ -15,7 +15,8 @@ const CONFIG = {
   facebook: "https://www.facebook.com/share/1FRfmfW5WH/",
   instagram: "https://www.instagram.com/erifusion_/",
   x: "https://x.com/EngErigaRobert",
-  publicationUrl: "", // paste your IEEE paper link (DOI) here
+  publicationUrl: "https://ieeexplore.ieee.org/document/10201780", // IEEE paper 1 (EV fast charging)
+  publicationUrl2: "https://ieeexplore.ieee.org/document/10452171", // IEEE paper 2
 };
 
 /* ---------------- PROJECTS: edit / add here ----------------
@@ -40,7 +41,29 @@ const PROJECTS = [
     ],
     impact: "Reliable renewable generation reaching the national transmission network.",
     tags: ["1,500 V DC", "33 kV", "161 kV", "SCADA", "Python", "Performance analytics"],
-    photos: [],
+    photos: [
+      "images/projects/sl50-1.jpg",
+      "images/projects/sl50-2.jpg",
+      "images/projects/sl50-3.jpg",
+      "images/projects/sl50-4.jpg",
+      "images/projects/sl50-5.jpg",
+      "images/projects/sl50-6.jpg",
+      "images/projects/sl50-7.jpg",
+      "images/projects/sl50-8.jpg",
+      "images/projects/sl50-9.jpg",
+      "images/projects/sl50-10.jpg",
+      "images/projects/sl50-11.jpg",
+      "images/projects/sl50-12.jpg",
+      "images/projects/sl50-13.jpg",
+      "images/projects/sl50-14.jpg",
+      "images/projects/sl50-15.jpg",
+      "images/projects/sl50-16.jpg",
+      "images/projects/sl50-17.jpg",
+      "images/projects/sl50-18.jpg",
+      "images/projects/sl50-19.jpg",
+      "images/projects/sl50-20.jpg",
+      "images/projects/sl50-21.jpg",
+    ],
   },
   {
     id: "juba",
@@ -57,7 +80,13 @@ const PROJECTS = [
     ],
     impact: "Added grid-connected solar capacity to South Sudan's power supply — reducing diesel dependence.",
     tags: ["Grid-connected PV", "Commissioning", "Mini-grid", "Expansion"],
-    photos: [],
+    photos: [
+      "images/projects/juba-1.jpg",
+      "images/projects/juba-2.jpg",
+      "images/projects/juba-3.jpg",
+      "images/projects/juba-4.jpg",
+      "images/projects/juba-5.jpg",
+    ],
   },
   {
     id: "hosp",
@@ -74,7 +103,17 @@ const PROJECTS = [
     ],
     impact: "Dependable electricity for theatres, maternity wards, vaccine fridges and labs.",
     tags: ["Hybrid PV", "100 kWh BESS", "BMS", "HOMER", "PVsyst"],
-    photos: [],
+    photos: [
+      "images/projects/hosp-1.jpg",
+      "images/projects/hosp-2.jpg",
+      "images/projects/hosp-3.jpg",
+      "images/projects/hosp-4.jpg",
+      "images/projects/hosp-5.jpg",
+      "images/projects/hosp-6.jpg",
+      "images/projects/hosp-7.jpg",
+      "images/projects/hosp-8.jpg",
+      "images/projects/hosp-9.jpg",
+    ],
   },
   {
     id: "bids",
@@ -91,7 +130,10 @@ const PROJECTS = [
     ],
     impact: "Won funding that brought solar power to communities and public institutions.",
     tags: ["Tendering", "Proposals", "BoQ", "Client presentations", "UNDP"],
-    photos: [],
+    photos: [
+      "images/projects/bids-1.jpg",
+      "images/projects/bids-2.jpg",
+    ],
   },
   {
     id: "offgrid",
@@ -107,7 +149,11 @@ const PROJECTS = [
     ],
     impact: "Clean water closer to home, safer streets at night and power for schools and institutions.",
     tags: ["Off-grid", "Solar pumping", "Street lighting", "Communities"],
-    photos: [],
+    photos: [
+      "images/projects/offgrid-1.jpg",
+      "images/projects/offgrid-2.jpg",
+      "images/projects/offgrid-3.jpg",
+    ],
   },
   {
     id: "tororo",
@@ -124,7 +170,16 @@ const PROJECTS = [
     ],
     impact: "Stronger plant power distribution and dependable operation of a key production drive.",
     tags: ["GIS", "20 MVA", "Switchgear", "Protection", "Large drives"],
-    photos: [],
+    photos: [
+      "images/projects/tororo-1.jpg",
+      "images/projects/tororo-2.jpg",
+      "images/projects/tororo-3.jpg",
+      "images/projects/tororo-4.jpg",
+      "images/projects/tororo-5.jpg",
+      "images/projects/tororo-6.jpg",
+      "images/projects/tororo-7.jpg",
+      "images/projects/tororo-8.jpg",
+    ],
   },
   {
     id: "ml",
@@ -141,7 +196,10 @@ const PROJECTS = [
     ],
     impact: "A data-driven approach to system performance and control, documented in technical research reports.",
     tags: ["Python", "MATLAB", "Simulink", "Machine learning", "LLM"],
-    photos: [],
+    photos: [
+      "images/projects/ml-1.jpg",
+      "images/projects/ml-2.jpg",
+    ],
   },
   {
     id: "ev",
@@ -157,7 +215,10 @@ const PROJECTS = [
     ],
     impact: "A pathway to charging electric vehicles directly from the sun.",
     tags: ["Power electronics", "EV charging", "MATLAB/Simulink", "IEEE"],
-    photos: [],
+    photos: [
+      "images/projects/ev-1.jpg",
+      "images/projects/ev-2.jpg",
+    ],
   },
   {
     id: "nexus",
@@ -281,6 +342,8 @@ const store = {
     catch { alert("Browser storage is full. For many photos, put them in images/projects/ and list them in js/main.js."); return false; }
   },
 };
+// Upload buttons only show when previewing locally (not to website visitors)
+const canUpload = location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
 const allPhotos = (p) => [...p.photos, ...store.get(p.id)];
 
 // Shrink uploaded photos so they fit in browser storage
@@ -323,7 +386,7 @@ function renderProjects() {
       <div class="p-media" data-open="${p.id}">
         ${ph.length ? `<img src="${ph[0]}" alt="${p.title}" loading="lazy" />` : placeholder(p)}
         ${ph.length > 1 ? `<span class="p-count"><i class="fa-solid fa-images"></i> ${ph.length}</span>` : ""}
-        <button class="p-upload" data-upload="${p.id}" title="Attach photos"><i class="fa-solid fa-camera"></i></button>
+        ${canUpload ? `<button class="p-upload" data-upload="${p.id}" title="Attach photos"><i class="fa-solid fa-camera"></i></button>` : ""}
       </div>
       <div class="p-body">
         <span class="p-cat">${p.label}</span>
@@ -354,8 +417,8 @@ function openModal(id) {
   const p = PROJECTS.find((x) => x.id === id);
   const local = store.get(p.id);
   const gallery = [
-    ...p.photos.map((src) => `<div class="g-item"><img src="${src}" alt="" /></div>`),
-    ...local.map((src, i) => `<div class="g-item"><img src="${src}" alt="" /><button class="g-del" data-del="${i}" title="Remove"><i class="fa-solid fa-trash"></i></button></div>`),
+    ...p.photos.map((src) => `<div class="g-item"><img src="${src}" alt="${p.title} photo" loading="lazy" /></div>`),
+    ...local.map((src, i) => `<div class="g-item"><img src="${src}" alt="${p.title} photo" /><button class="g-del" data-del="${i}" title="Remove"><i class="fa-solid fa-trash"></i></button></div>`),
   ];
   $("#modalGallery").innerHTML = gallery.length ? gallery.join("") : placeholder(p, true);
   $("#modalBody").innerHTML = `
@@ -365,13 +428,40 @@ function openModal(id) {
     <ul style="margin:0 0 16px 18px;list-style:disc;color:var(--text-2)">${p.details.map((d) => `<li style="margin:6px 0">${d}</li>`).join("")}</ul>
     <div class="p-impact" style="margin-bottom:16px"><i class="fa-solid fa-star"></i> <strong>Impact:</strong> ${p.impact}</div>
     <div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div>
-    <button class="btn btn-primary btn-sm" id="modalAdd"><i class="fa-solid fa-camera"></i> Add photos</button>`;
-  $("#modalAdd").onclick = () => pickPhotos(p);
+    ${canUpload ? `<button class="btn btn-primary btn-sm" id="modalAdd"><i class="fa-solid fa-camera"></i> Add photos</button>` : ""}`;
+  if (canUpload) $("#modalAdd").onclick = () => pickPhotos(p);
   $$("[data-del]", modal).forEach((b) => (b.onclick = () => {
     const arr = store.get(p.id); arr.splice(+b.dataset.del, 1); store.set(p.id, arr); renderProjects(); openModal(p.id);
   }));
   modal.classList.add("open"); modal.setAttribute("aria-hidden", "false");
 }
+/* Lightbox: click a gallery photo to see it full size; arrows / swipe to move */
+const lb = document.createElement("div");
+lb.className = "lightbox";
+lb.innerHTML = '<button class="lb-btn lb-close" aria-label="Close">&times;</button><button class="lb-btn lb-prev" aria-label="Previous">&#8249;</button><img alt="" /><button class="lb-btn lb-next" aria-label="Next">&#8250;</button><span class="lb-count"></span>';
+document.body.appendChild(lb);
+let lbList = [], lbIdx = 0;
+const lbShow = (i) => { lbIdx = (i + lbList.length) % lbList.length; $("img", lb).src = lbList[lbIdx]; $(".lb-count", lb).textContent = `${lbIdx + 1} / ${lbList.length}`; };
+const lbClose = () => lb.classList.remove("open");
+$("#modalGallery").addEventListener("click", (e) => {
+  const img = e.target.closest(".g-item img");
+  if (!img || e.target.closest("[data-del]")) return;
+  lbList = $$("#modalGallery .g-item img").map((x) => x.src);
+  lbShow(lbList.indexOf(img.src)); lb.classList.add("open");
+});
+$(".lb-prev", lb).onclick = (e) => { e.stopPropagation(); lbShow(lbIdx - 1); };
+$(".lb-next", lb).onclick = (e) => { e.stopPropagation(); lbShow(lbIdx + 1); };
+$(".lb-close", lb).onclick = lbClose;
+lb.addEventListener("click", (e) => { if (e.target === lb) lbClose(); });
+let lbX = null;
+lb.addEventListener("touchstart", (e) => (lbX = e.touches[0].clientX), { passive: true });
+lb.addEventListener("touchend", (e) => { if (lbX === null) return; const dx = e.changedTouches[0].clientX - lbX; if (Math.abs(dx) > 40) lbShow(lbIdx + (dx < 0 ? 1 : -1)); lbX = null; });
+document.addEventListener("keydown", (e) => {
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "ArrowRight") lbShow(lbIdx + 1);
+  if (e.key === "ArrowLeft") lbShow(lbIdx - 1);
+  if (e.key === "Escape") { e.stopImmediatePropagation(); lbClose(); }
+}, true);
 const closeModal = () => { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); };
 $("#modalClose").onclick = closeModal;
 modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });

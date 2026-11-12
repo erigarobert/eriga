@@ -492,3 +492,16 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
   /* narrow screens: justified text leaves gaps, so align left */
   p, li, .impact-life, .ai-link { text-align: left; }
 }
+
+/* Photo lightbox */
+.modal-gallery img { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 3000; display: none; align-items: center; justify-content: center; background: rgba(5, 8, 12, .94); padding: 56px 16px; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+.lb-btn { position: absolute; border: 0; background: rgba(255,255,255,.12); color: #fff; width: 46px; height: 46px; border-radius: 50%; font-size: 1.8rem; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+.lb-btn:hover { background: rgba(255,255,255,.25); }
+.lb-close { top: 12px; right: 12px; }
+.lb-prev { left: 12px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 12px; top: 50%; transform: translateY(-50%); }
+.lb-count { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.8); font-size: .9rem; }
+@media (max-width: 640px) { .lb-prev, .lb-next { top: auto; bottom: 8px; transform: none; } }
