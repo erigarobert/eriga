@@ -553,14 +553,6 @@ $("#chatForm").addEventListener("submit", (e) => { e.preventDefault(); const i =
 body.addEventListener("click", (e) => { if (e.target.matches("a[href^='#']")) toggleChat(false); });
 
 /* ---------------- CV request (approval by email) ---------------- */
-const cvModal = $("#cvModal");
-const openCv = () => { cvModal.classList.add("open"); cvModal.setAttribute("aria-hidden", "false"); };
-const closeCv = () => { cvModal.classList.remove("open"); cvModal.setAttribute("aria-hidden", "true"); };
-$("#cvRequestBtn").addEventListener("click", openCv);
-$("#cvClose").onclick = closeCv;
-cvModal.addEventListener("click", (e) => { if (e.target === cvModal) closeCv(); });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeCv(); });
-document.addEventListener("click", (e) => { const a = e.target.closest("a[href='#cv-request']"); if (a) { e.preventDefault(); openCv(); } });
 const cvText = (d) =>
   `Hello Eriga, I'd like to request your CV.\n\nName: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nReason: ${d.reason}` + (d.message ? `\nDetails: ${d.message}` : "");
 $("#cvForm").addEventListener("submit", async (e) => {

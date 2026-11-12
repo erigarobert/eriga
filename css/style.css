@@ -523,7 +523,6 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
 
 /* CV request modal */
 .cv-box { width: min(560px, 100%); }
-.cv-form { border: 0; background: transparent; }
 .cv-form h3 { display: flex; gap: 10px; align-items: center; margin: 0; padding-right: 48px; }
 .cv-form h3 i { color: var(--sun); }
 .cv-note { margin: 0; color: var(--text-2); font-size: .92rem; }
@@ -536,3 +535,7 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
 .cv-wa { border-color: #25d366; }
 .cv-wa i { color: #25d366; }
 .cv-wa[hidden] { display: none; }
+
+/* CV request section */
+.cv-section { border-top: 1px solid var(--border); }
+.cv-section .contact-info .c-item { cursor: default; }

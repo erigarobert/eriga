@@ -67,7 +67,7 @@
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Hire Me</a>
           <a href="#projects" class="btn btn-ghost"><i class="fa-solid fa-solar-panel"></i> See My Work</a>
-          <button type="button" class="btn btn-ghost" id="cvRequestBtn"><i class="fa-solid fa-file-shield"></i> Request CV</button>
+          <a href="#cv-request" class="btn btn-ghost" id="cvRequestBtn"><i class="fa-solid fa-file-shield"></i> Request CV</a>
         </div>
         <div class="socials">
           <a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -483,43 +483,6 @@
     </div>
   </div>
 
-  <!-- CV request (CV is sent by email only after Eriga approves) -->
-  <div class="modal" id="cvModal" aria-hidden="true">
-    <div class="modal-box cv-box">
-      <button class="modal-close" id="cvClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-      <form class="contact-form cv-form" id="cvForm">
-        <h3><i class="fa-solid fa-file-shield"></i> Request my CV</h3>
-        <p class="cv-note">My CV is shared on request. Tell me who you are and I'll email it to you once I've reviewed your request.</p>
-        <input type="hidden" name="_subject" value="CV request from your portfolio website" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-        <div class="row">
-          <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
-          <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
-        </div>
-        <label>Company / Organisation<input type="text" name="company" required placeholder="Where you work" /></label>
-        <label>Why do you need my CV?
-          <select name="reason" required>
-            <option value="" disabled selected>Choose a reason…</option>
-            <option>Full-time job opportunity</option>
-            <option>Working student / internship role</option>
-            <option>Contract or freelance project</option>
-            <option>Consulting / technical advisory</option>
-            <option>Research collaboration</option>
-            <option>Recruiter / talent sourcing</option>
-            <option>Scholarship, grant or fellowship</option>
-            <option>Conference or speaking invitation</option>
-            <option>Other</option>
-          </select>
-        </label>
-        <label>Details (optional)<textarea name="message" rows="3" placeholder="e.g. Role title, location, start date"></textarea></label>
-        <button type="submit" class="btn btn-primary btn-block" id="cvSend"><i class="fa-solid fa-paper-plane"></i> Send request by email</button>
-        <p class="form-status" id="cvStatus" role="status"></p>
-        <a href="#" class="btn btn-ghost btn-block cv-wa" id="cvWhatsApp" target="_blank" rel="noopener" hidden><i class="fa-brands fa-whatsapp"></i> Also notify me on WhatsApp</a>
-      </form>
-    </div>
-  </div>
-
   <!-- ================= RESEARCH ================= -->
   <section class="section" id="research">
     <div class="container">
@@ -657,6 +620,52 @@ df[<span class="s">"anomaly"</span>] = model.predict(df[[<span class="s">"PR"</s
           <div class="interest-card"><i class="fa-solid fa-tower-broadcast"></i><div><h4>Grid Stability, Reliability &amp; Availability</h4><p>Protection, power quality and integration studies that keep high-renewable grids stable and plants available.</p></div></div>
           <div class="interest-card"><i class="fa-solid fa-earth-africa"></i><div><h4>Energy Access &amp; Electrification in Africa</h4><p>Mini-grids, off-grid and productive-use solutions that bring reliable power to health, water, agriculture and communities.</p></div></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CV REQUEST ================= -->
+  <section class="section cv-section" id="cv-request">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Curriculum vitae</span>
+        <h2>Request my <span class="grad">CV</span></h2>
+        <p class="lead">My CV is shared on request. Fill in the form and I'll email it to you once I've reviewed your request.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="c-item"><i class="fa-solid fa-pen-to-square"></i><div><strong>1. Fill in the form</strong><span>Your name, email, organisation and reason</span></div></div>
+          <div class="c-item"><i class="fa-solid fa-envelope-circle-check"></i><div><strong>2. I review your request</strong><span>I'm notified by email straight away</span></div></div>
+          <div class="c-item"><i class="fa-solid fa-file-pdf"></i><div><strong>3. Receive my CV</strong><span>Sent to your email, usually within 24 hours</span></div></div>
+        </div>
+          <form class="contact-form cv-form reveal" id="cvForm">
+            <input type="hidden" name="_subject" value="CV request from your portfolio website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="row">
+              <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
+              <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
+            </div>
+            <label>Company / Organisation<input type="text" name="company" required placeholder="Where you work" /></label>
+            <label>Why do you need my CV?
+              <select name="reason" required>
+                <option value="" disabled selected>Choose a reason…</option>
+                <option>Full-time job opportunity</option>
+                <option>Working student / internship role</option>
+                <option>Contract or freelance project</option>
+                <option>Consulting / technical advisory</option>
+                <option>Research collaboration</option>
+                <option>Recruiter / talent sourcing</option>
+                <option>Scholarship, grant or fellowship</option>
+                <option>Conference or speaking invitation</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Details (optional)<textarea name="message" rows="3" placeholder="e.g. Role title, location, start date"></textarea></label>
+            <button type="submit" class="btn btn-primary btn-block" id="cvSend"><i class="fa-solid fa-paper-plane"></i> Send request by email</button>
+            <p class="form-status" id="cvStatus" role="status"></p>
+            <a href="#" class="btn btn-ghost btn-block cv-wa" id="cvWhatsApp" target="_blank" rel="noopener" hidden><i class="fa-brands fa-whatsapp"></i> Also notify me on WhatsApp</a>
+          </form>
       </div>
     </div>
   </section>
