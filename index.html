@@ -493,15 +493,29 @@
         <input type="hidden" name="_subject" value="CV request from your portfolio website" />
         <input type="hidden" name="_template" value="table" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-        <input type="hidden" name="reason" value="CV request" />
         <div class="row">
           <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
           <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
         </div>
         <label>Company / Organisation<input type="text" name="company" required placeholder="Where you work" /></label>
-        <label>Why do you need my CV?<textarea name="message" rows="4" required placeholder="e.g. Hiring for a PV engineer role in Hamburg"></textarea></label>
-        <button type="submit" class="btn btn-primary btn-block" id="cvSend"><i class="fa-solid fa-paper-plane"></i> Send request</button>
+        <label>Why do you need my CV?
+          <select name="reason" required>
+            <option value="" disabled selected>Choose a reason…</option>
+            <option>Full-time job opportunity</option>
+            <option>Working student / internship role</option>
+            <option>Contract or freelance project</option>
+            <option>Consulting / technical advisory</option>
+            <option>Research collaboration</option>
+            <option>Recruiter / talent sourcing</option>
+            <option>Scholarship, grant or fellowship</option>
+            <option>Conference or speaking invitation</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Details (optional)<textarea name="message" rows="3" placeholder="e.g. Role title, location, start date"></textarea></label>
+        <button type="submit" class="btn btn-primary btn-block" id="cvSend"><i class="fa-solid fa-paper-plane"></i> Send request by email</button>
         <p class="form-status" id="cvStatus" role="status"></p>
+        <a href="#" class="btn btn-ghost btn-block cv-wa" id="cvWhatsApp" target="_blank" rel="noopener" hidden><i class="fa-brands fa-whatsapp"></i> Also notify me on WhatsApp</a>
       </form>
     </div>
   </div>

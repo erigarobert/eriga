@@ -550,26 +550,29 @@ $("#cvClose").onclick = closeCv;
 cvModal.addEventListener("click", (e) => { if (e.target === cvModal) closeCv(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeCv(); });
 document.addEventListener("click", (e) => { const a = e.target.closest("a[href='#cv-request']"); if (a) { e.preventDefault(); openCv(); } });
+const cvText = (d) =>
+  `Hello Eriga, I'd like to request your CV.\n\nName: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nReason: ${d.reason}` + (d.message ? `\nDetails: ${d.message}` : "");
 $("#cvForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const form = e.target, btn = $("#cvSend"), status = $("#cvStatus");
+  const form = e.target, btn = $("#cvSend"), status = $("#cvStatus"), wa = $("#cvWhatsApp");
   const data = Object.fromEntries(new FormData(form));
   if (data._honey) return;
   data._replyto = data.email;
+  wa.href = `${CONFIG.whatsapp}?text=${encodeURIComponent(cvText(data))}`;
   btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
   status.className = "form-status"; status.textContent = "";
   try {
     const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
     const j = await r.json().catch(() => ({}));
     if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || "Failed");
-    status.className = "form-status ok"; status.textContent = "✅ Request sent! I'll review it and email you my CV.";
+    status.className = "form-status ok"; status.textContent = "✅ Request sent by email! I'll review it and send you my CV. For a faster reply, also notify me on WhatsApp below.";
     form.reset();
   } catch (err) {
     status.className = "form-status err";
-    const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\n\n${data.message}`);
-    status.innerHTML = `Couldn't send automatically. <a href="mailto:${CONFIG.email}?subject=${encodeURIComponent("CV request")}&body=${body}" style="color:var(--sun);text-decoration:underline">Click here to send the request by email</a>.`;
+    status.innerHTML = `Couldn't send by email automatically. <a href="mailto:${CONFIG.email}?subject=${encodeURIComponent("CV request")}&body=${encodeURIComponent(cvText(data))}" style="color:var(--sun);text-decoration:underline">Send it from your email app</a> or use WhatsApp below.`;
   } finally {
-    btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send request';
+    wa.hidden = false;
+    btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send request by email';
   }
 });
 

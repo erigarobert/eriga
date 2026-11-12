@@ -533,3 +533,6 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
 .p-media img, .modal-gallery img, .lightbox img { -webkit-user-drag: none; user-select: none; -webkit-touch-callout: none; }
 .lightbox::after { content: "© Eriga Robert"; position: absolute; right: 24px; bottom: 18px; color: rgba(255,255,255,.55); font-size: .85rem; letter-spacing: .05em; pointer-events: none; }
 .modal-gallery .g-item::after { content: "© Eriga Robert"; position: absolute; right: 8px; bottom: 6px; color: rgba(255,255,255,.75); font-size: .7rem; text-shadow: 0 1px 3px rgba(0,0,0,.7); pointer-events: none; }
+.cv-wa { border-color: #25d366; }
+.cv-wa i { color: #25d366; }
+.cv-wa[hidden] { display: none; }
