@@ -68,7 +68,7 @@ const PROJECTS = [
   {
     id: "juba",
     cat: "grid pv",
-    label: "Utility-scale PV · EPC",
+    label: "Grid-connected Solar PV · EPC & Commissioning",
     title: "12 MW Solar Plant, Juba, South Sudan",
     icon: "fa-bolt",
     ph: "linear-gradient(135deg,#0ea5a0,#0369a1 60%,#1e1b4b)",
@@ -81,10 +81,10 @@ const PROJECTS = [
     impact: "Added grid-connected solar capacity to South Sudan's power supply, reducing diesel dependence.",
     tags: ["Grid-connected PV", "12 MW", "Commissioning", "Mini-grid"],
     photos: [
+      "images/projects/juba-4.jpg",
       "images/projects/juba-1.jpg",
       "images/projects/juba-2.jpg",
       "images/projects/juba-3.jpg",
-      "images/projects/juba-4.jpg",
       "images/projects/juba-5.jpg",
     ],
   },
