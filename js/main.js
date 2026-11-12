@@ -261,10 +261,7 @@ toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
 /* ---------------- Typing effect ---------------- */
 const roles = [
   "Electrical & Energy Engineer",
-  "Energy Analyst & Modeller",
-  "AI / ML for Energy Systems",
-  "Community Development",
-  "Python · MATLAB · PowerFactory",
+  "ML for Energy Systems",
 ];
 (function type(i = 0, j = 0, del = false) {
   const el = $("#typed"), word = roles[i];
