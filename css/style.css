@@ -581,3 +581,4 @@ section.section.cv-section { background: linear-gradient(120deg, rgba(251,191,36
 @media (max-width: 960px) { .about-points { grid-template-columns: 1fr; } .about-lead { font-size: 1.05rem; } }
 .about-point p, .about-point li, .about-lead { text-align: left !important; hyphens: none; }
 .hero-quote i.quote-close { margin: 0 0 0 6px; }
+.hero-quote .quote-tagline { display: block; margin-top: 8px; }
