@@ -43,7 +43,7 @@
   if (typeof KB !== "undefined") {
     KB.push({
       k: ["leave", "left", "leaving", "reason", "quit", "why did", "resign", "contract"],
-      a: "📌 <b>Frontier Energy (Nov 2025 – Sep 2026):</b> left to begin a full-time M.Eng. in Sustainable Energy and Development at Europa-Universität Flensburg.<br>📌 <b>Aptech Africa (Aug 2023 – Oct 2025):</b> contract concluded after the successful delivery of all assigned projects; with no immediate follow-on project, Eriga moved to a utility-scale PV role at Frontier Energy.",
+      a: "📌 <b>Frontier Energy (Nov 2025 to Sep 2026):</b> left to begin a full-time M.Eng. in Sustainable Energy and Development at Europa-Universität Flensburg.<br>📌 <b>Aptech Africa (Aug 2023 to Oct 2025):</b> contract concluded after the successful delivery of all assigned projects; with no immediate follow-on project, Eriga moved to a utility-scale PV role at Frontier Energy.",
     });
     const interests = KB.find((item) => item.k.includes("interest"));
     if (interests) {

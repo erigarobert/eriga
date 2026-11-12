@@ -1,12 +1,12 @@
 /* ==========================================================
-   Eriga Robert – Portfolio scripts
+   Eriga Robert: Portfolio scripts
    ========================================================== */
 
 /* ---------------- SETTINGS: edit these ---------------- */
 const CONFIG = {
   email: "erigarobert2@gmail.com",
   // Contact form delivery (free, no backend): https://formsubmit.co
-  // The FIRST message triggers an activation email to your Gmail – click "Activate" once.
+  // The FIRST message triggers an activation email to your Gmail, click "Activate" once.
   formEndpoint: "https://formsubmit.co/ajax/erigarobert2@gmail.com",
   phoneDE: "+49 159 079 14616",
   phoneUG: "+256 765 499 689",
@@ -34,7 +34,7 @@ const PROJECTS = [
     ph: "linear-gradient(135deg,#f59e0b,#ea580c 55%,#0f766e)",
     summary: "O&M support, performance analysis and commissioning of added capacity across the 1,500 V DC, 33 kV and 161 kV chain.",
     details: [
-      "35 MW in operation and 15 MW under implementation, feeding Sierra Leone's national grid via the 161 kV Bumbuna–Freetown corridor.",
+      "35 MW in operation and 15 MW under implementation, feeding Sierra Leone's national grid via the 161 kV Bumbuna to Freetown corridor.",
       "Daily generation vs. expected yield analysis; inverter, transformer and feeder trend tracking to isolate losses and downtime.",
       "Troubleshooting of breakers, CTs, CVTs/VTs, surge arresters, protection relays and transformers using SCADA/PLC alarms.",
       "Pre-energisation checks, functional testing and commissioning records for new capacity.",
@@ -78,7 +78,7 @@ const PROJECTS = [
       "Testing and commissioning support during the expansion phase.",
       "Mini-grid engineering under the SLP project.",
     ],
-    impact: "Added grid-connected solar capacity to South Sudan's power supply — reducing diesel dependence.",
+    impact: "Added grid-connected solar capacity to South Sudan's power supply, reducing diesel dependence.",
     tags: ["Grid-connected PV", "Commissioning", "Mini-grid", "Expansion"],
     photos: [
       "images/projects/juba-1.jpg",
@@ -95,10 +95,10 @@ const PROJECTS = [
     title: "2.4 MW Hybrid PV for Seven Hospitals",
     icon: "fa-hospital",
     ph: "linear-gradient(135deg,#10b981,#0d9488 50%,#1e3a8a)",
-    summary: "Sized and designed PV–battery–diesel systems with 100 kWh storage to match hospital loads, plus BMS upgrades for five government hospital laboratories.",
+    summary: "Sized and designed PV/battery/diesel systems with 100 kWh storage to match hospital loads, plus BMS upgrades for five government hospital laboratories.",
     details: [
       "Load assessment and PV/battery/inverter sizing for critical healthcare loads.",
-      "Hybrid PV–battery–diesel architecture with Battery Management System (BMS).",
+      "Hybrid PV/battery/diesel architecture with Battery Management System (BMS).",
       "Battery bank + BMS upgrades in five government hospital laboratories.",
     ],
     impact: "Dependable electricity for theatres, maternity wards, vaccine fridges and labs.",
@@ -122,7 +122,7 @@ const PROJECTS = [
     title: "Solar Project Bids, incl. UNDP Sierra Leone",
     icon: "fa-file-signature",
     ph: "linear-gradient(135deg,#8b5cf6,#6d28d9 50%,#0f172a)",
-    summary: "Technical proposals, designs, BoQs and tender documents — presented to clients and stakeholders.",
+    summary: "Technical proposals, designs, BoQs and tender documents, presented to clients and stakeholders.",
     details: [
       "Wrote technical proposals and supporting documents for community and government-laboratory solar projects.",
       "Presented system designs to clients, translating energy needs into PV, battery and hybrid configurations.",
@@ -188,7 +188,7 @@ const PROJECTS = [
     title: "Machine-Learning Research for Energy Systems",
     icon: "fa-brain",
     ph: "linear-gradient(135deg,#a855f7,#6366f1 50%,#0ea5a0)",
-    summary: "ML models for energy and power-electronics applications combining Simulink system models with Python data analysis — now applying LLMs to O&M.",
+    summary: "ML models for energy and power-electronics applications combining Simulink system models with Python data analysis, now applying LLMs to O&M.",
     details: [
       "Developed and simulated ML models for energy and power-electronics use cases.",
       "Combined MATLAB/Simulink system models with Python data pipelines.",
@@ -264,7 +264,7 @@ const roles = [
   "AI / ML for Energy Systems",
   "Grid Integration · 1,500 V DC → 161 kV",
   "Python · MATLAB · PowerFactory",
-  "Open to work — anywhere in the world 🌍",
+  "Open to work, anywhere in the world 🌍",
 ];
 (function type(i = 0, j = 0, del = false) {
   const el = $("#typed"), word = roles[i];
@@ -374,7 +374,7 @@ function pickPhotos(project) {
 }
 
 const placeholder = (p, big) =>
-  `<div class="p-placeholder" style="--ph:${p.ph}"><div><i class="fa-solid ${p.icon}"></i><small>${big ? "No photos yet — click “Add photos” to attach" : "Project photos coming soon"}</small></div></div>`;
+  `<div class="p-placeholder" style="--ph:${p.ph}"><div><i class="fa-solid ${p.icon}"></i><small>${big ? "No photos yet. Click “Add photos” to attach" : "Project photos coming soon"}</small></div></div>`;
 
 function renderProjects() {
   $("#projectsGrid").innerHTML = PROJECTS.map((p) => {
@@ -479,7 +479,7 @@ $("#contactForm").addEventListener("submit", async (e) => {
     const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
     const j = await r.json().catch(() => ({}));
     if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || "Failed");
-    status.className = "form-status ok"; status.textContent = "✅ Thank you! Your message was sent — I'll get back to you within 24 hours.";
+    status.className = "form-status ok"; status.textContent = "✅ Thank you! Your message was sent. I'll get back to you within 24 hours.";
     form.reset();
   } catch (err) {
     status.className = "form-status err";
@@ -493,22 +493,22 @@ $("#contactForm").addEventListener("submit", async (e) => {
 /* ---------------- Chatbot (rule-based, no API key needed) ---------------- */
 const KB = [
   { k: ["hi", "hello", "hey", "good morning", "good evening", "hallo", "guten"], a: "Hello! 👋 I'm Eriga's virtual assistant. Ask me about his experience, skills, projects, AI/ML work, availability or how to contact him." },
-  { k: ["who", "about", "introduce", "yourself", "summary", "eriga"], a: "Eriga Robert is an <b>Electrical & Solar PV Engineer, Energy Analyst and AI/ML enthusiast</b> with 3+ years of field experience. He has supported <b>90+ MW of solar PV</b> across Africa — from 1,500 V DC to 161 kV — and is now doing a Master's in Sustainable Energy and Development in Flensburg, Germany." },
-  { k: ["experience", "work", "job", "career", "worked", "employ", "frontier", "aptech", "planet"], a: "💼 <b>Frontier Energy – Planet Solar Energy</b> (Nov 2025 – Sep 2026, Sierra Leone): O&M & performance analytics for a 50 MW grid-connected PV portfolio at 33 kV / 161 kV.<br>💼 <b>Aptech Africa</b> (Aug 2023 – Oct 2025, Uganda/South Sudan/Sierra Leone): PV design, tenders (incl. UNDP), hybrid systems for 7 hospitals, 12 MW + 26 MW plant near Juba.<br>💼 <b>Tororo Cement (ABB project)</b>: GIS, 20 MVA transformer, 11 switchgear panels, 5,800 kW drive." },
+  { k: ["who", "about", "introduce", "yourself", "summary", "eriga"], a: "Eriga Robert is an <b>Electrical & Solar PV Engineer, Energy Analyst and AI/ML enthusiast</b> with 3+ years of field experience. He has supported <b>90+ MW of solar PV</b> across Africa, from 1,500 V DC to 161 kV, and is now doing a Master's in Sustainable Energy and Development in Flensburg, Germany." },
+  { k: ["experience", "work", "job", "career", "worked", "employ", "frontier", "aptech", "planet"], a: "💼 <b>Frontier Energy (Planet Solar Energy)</b> (Nov 2025 to Sep 2026, Sierra Leone): O&M & performance analytics for a 50 MW grid-connected PV portfolio at 33 kV / 161 kV.<br>💼 <b>Aptech Africa</b> (Aug 2023 to Oct 2025, Uganda/South Sudan/Sierra Leone): PV design, tenders (incl. UNDP), hybrid systems for 7 hospitals, 12 MW + 26 MW plant near Juba.<br>💼 <b>Tororo Cement (ABB project)</b>: GIS, 20 MVA transformer, 11 switchgear panels, 5,800 kW drive." },
   { k: ["skill", "tool", "software", "pvsyst", "homer", "powerfactory", "etap", "matlab", "simulink", "pscad", "autocad"], a: "🛠️ <b>Modelling:</b> MATLAB/Simulink, PVsyst, HOMER, DIgSILENT PowerFactory, ETAP, PSCAD<br>🐍 <b>Data/AI:</b> Python (pandas, NumPy), machine learning, LLMs, Excel<br>⚡ <b>Field:</b> PV design & commissioning, BESS/BMS, protection relays, SCADA/PLC, Siemens TIA, Bosch Rexroth, AutoCAD" },
-  { k: ["python", "ai", "ml", "machine learning", "artificial", "llm", "data", "model", "predict", "forecast"], a: "🤖 Eriga combines Simulink system models with Python data analysis to build ML models for energy & power-electronics applications. He's now applying <b>LLMs to solar O&M</b> — faster fault diagnosis, alarm triage and automated reporting — and is interested in predictive maintenance and solar/load forecasting." },
+  { k: ["python", "ai", "ml", "machine learning", "artificial", "llm", "data", "model", "predict", "forecast"], a: "🤖 Eriga combines Simulink system models with Python data analysis to build ML models for energy & power-electronics applications. He's now applying <b>LLMs to solar O&M</b>, faster fault diagnosis, alarm triage and automated reporting, and is interested in predictive maintenance and solar/load forecasting." },
   { k: ["publication", "paper", "ieee", "research", "publish", "mitacs", "guelph"], a: "📚 <b>IEEE publications:</b><br>• Solar-Powered EV DC Fast Charging Station based on MPPT-Buck Converter Design using PSO Trained NN Algorithm and MPC (APSIT 2023, first author)<br>• Solar Powered MPPT Buck-Boost Converter Using Adaptive ML Algorithm and Smart Controller For DC Fast Charging Application (ICEFEET 2023, co-author)<br>🔬 <b>Mitacs Globalink Research Intern</b>, University of Guelph, Canada (2022): micropower generation for smart devices.<br>🧠 Ongoing ML research for energy systems. See the <a href='#research'>Research section</a>." },
   { k: ["project", "portfolio", "hospital", "juba", "sierra", "50 mw", "solar plant"], a: "🔆 Highlights: 50 MW PV portfolio (Sierra Leone) · 12 MW + 26 MW plant (Juba) · 2.4 MW hybrid PV for 7 hospitals · UNDP solar bids · solar pumping & street lighting · Tororo Cement industrial power. <a href='#projects'>See all projects →</a>" },
   { k: ["impact", "lives", "change", "community", "world", "sdg", "help"], a: "🌍 His work keeps hospital theatres and vaccine fridges running, puts clean solar power on national grids in Sierra Leone and South Sudan, brings water and street lighting to communities, and cuts diesel use and CO₂ emissions. <a href='#impact'>Read more →</a>" },
-  { k: ["education", "degree", "study", "university", "master", "gold", "cgpa", "flensburg", "b.tech"], a: "🎓 <b>M.Eng. Sustainable Energy and Development</b> — Europa-Universität Flensburg (Sep 2026 – present)<br>🥇 <b>B.Tech. Electrical Engineering</b> — CV Raman Global University, India (2019–2023), <b>Gold Medal</b>, CGPA 8.31/10" },
-  { k: ["hire", "available", "availability", "open", "opportunit", "relocat", "location", "remote", "working student", "werkstudent", "full-time", "full time"], a: "✅ <b>Yes — Eriga is available for hire!</b> Full-time, working-student, contract, consulting or remote roles. He's <b>open to work in any location</b> worldwide and is currently based in Flensburg, Germany. <a href='#contact'>Send him a message →</a>" },
-  { k: ["visa", "canada", "canadian", "permit", "work permit"], a: "🍁 Eriga holds a <b>valid Canadian visa</b> and is open to relocating — to Canada, Europe, Africa or anywhere the right opportunity is." },
-  { k: ["language", "german", "deutsch", "english", "speak"], a: "🗣️ English — professional · German — A2 (improving) · Madi — fluent." },
-  { k: ["contact", "email", "mail", "phone", "call", "number", "reach", "whatsapp", "linkedin", "message", "facebook", "instagram", "twitter", "x.com", "social"], a: `📧 <a href="mailto:${CONFIG.email}">${CONFIG.email}</a><br>📞 <a href="tel:+4915907914616">${CONFIG.phoneDE}</a> (DE) · <a href="tel:+256765499689">${CONFIG.phoneUG}</a> (UG)<br>💬 <a href="${CONFIG.whatsapp}" target="_blank">WhatsApp</a> · <a href="${CONFIG.linkedin}" target="_blank">LinkedIn</a><br>🌐 <a href="${CONFIG.facebook}" target="_blank">Facebook</a> · <a href="${CONFIG.instagram}" target="_blank">Instagram</a> · <a href="${CONFIG.x}" target="_blank">X (@EngErigaRobert)</a><br>Or use the <a href="#contact">message form</a> — it goes straight to his inbox.` },
+  { k: ["education", "degree", "study", "university", "master", "gold", "cgpa", "flensburg", "b.tech"], a: "🎓 <b>M.Eng. Sustainable Energy and Development</b>, Europa-Universität Flensburg (Sep 2026, present)<br>🥇 <b>B.Tech. Electrical Engineering</b>, CV Raman Global University, India (2019 to 2023), <b>Gold Medal</b>, CGPA 8.31/10" },
+  { k: ["hire", "available", "availability", "open", "opportunit", "relocat", "location", "remote", "working student", "werkstudent", "full-time", "full time"], a: "✅ <b>Yes, Eriga is available for hire!</b> Full-time, working-student, contract, consulting or remote roles. He's <b>open to work in any location</b> worldwide and is currently based in Flensburg, Germany. <a href='#contact'>Send him a message →</a>" },
+  { k: ["visa", "canada", "canadian", "permit", "work permit"], a: "🍁 Eriga holds a <b>valid Canadian visa</b> and is open to relocating, to Canada, Europe, Africa or anywhere the right opportunity is." },
+  { k: ["language", "german", "deutsch", "english", "speak"], a: "🗣️ English: professional · German: A2 (improving) · Madi: fluent." },
+  { k: ["contact", "email", "mail", "phone", "call", "number", "reach", "whatsapp", "linkedin", "message", "facebook", "instagram", "twitter", "x.com", "social"], a: `📧 <a href="mailto:${CONFIG.email}">${CONFIG.email}</a><br>📞 <a href="tel:+4915907914616">${CONFIG.phoneDE}</a> (DE) · <a href="tel:+256765499689">${CONFIG.phoneUG}</a> (UG)<br>💬 <a href="${CONFIG.whatsapp}" target="_blank">WhatsApp</a> · <a href="${CONFIG.linkedin}" target="_blank">LinkedIn</a><br>🌐 <a href="${CONFIG.facebook}" target="_blank">Facebook</a> · <a href="${CONFIG.instagram}" target="_blank">Instagram</a> · <a href="${CONFIG.x}" target="_blank">X (@EngErigaRobert)</a><br>Or use the <a href="#contact">message form</a>. It goes straight to his inbox.` },
   { k: ["cv", "resume", "download"], a: "📄 You can download Eriga's CV using the <b>Download CV</b> button at the top of the page, or request the latest version via the <a href='#contact'>contact form</a>." },
-  { k: ["salary", "rate", "price", "cost", "fee"], a: "💶 Compensation depends on the role and location — please reach out via the <a href='#contact'>contact form</a> and Eriga will reply within 24 hours." },
+  { k: ["salary", "rate", "price", "cost", "fee"], a: "💶 Compensation depends on the role and location. Please reach out via the <a href='#contact'>contact form</a> and Eriga will reply within 24 hours." },
   { k: ["interest", "hobby", "passion", "future", "goal"], a: "🔭 Current interests: AI & LLMs for solar O&M, battery storage & grid-forming inverters, energy-system modelling, agri-PV & solar irrigation, solar e-mobility, energy access in Africa, and green hydrogen." },
-  { k: ["sustaina", "nexus", "foundation", "founder", "ngo"], a: "🌱 Eriga founded <b>Sustaina Nexus Foundation</b> (in development) — an energy-access and agriculture initiative for underserved rural communities in Uganda, built through community mobilisation and grant funding." },
+  { k: ["sustaina", "nexus", "foundation", "founder", "ngo"], a: "🌱 Eriga founded <b>Sustaina Nexus Foundation</b> (in development), an energy-access and agriculture initiative for underserved rural communities in Uganda, built through community mobilisation and grant funding." },
   { k: ["thank", "thanks", "danke", "great", "awesome", "cool"], a: "You're welcome! 😊 Anything else you'd like to know? You can also leave Eriga a message directly from the <a href='#contact'>contact form</a>." },
 ];
 const QUICK = ["Is he available for hire?", "Experience", "AI & Python work", "Publications", "Projects", "Visa / relocation", "Contact"];
@@ -531,7 +531,7 @@ function toggleChat(force) {
   const open = force ?? !chat.classList.contains("open");
   chat.classList.toggle("open", open); chat.setAttribute("aria-hidden", String(!open));
   $("#chatFab").innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-robot"></i><span class="fab-dot"></span>';
-  if (open && !greeted) { greeted = true; addMsg("Hi there! 👋 I'm Eriga's assistant. ⚡ Electrical & PV Engineer · 📊 Energy Analyst · 🤖 AI/ML — and <b>available for hire worldwide</b>. What would you like to know?"); }
+  if (open && !greeted) { greeted = true; addMsg("Hi there! 👋 I'm Eriga's assistant. ⚡ Electrical & PV Engineer · 📊 Energy Analyst · 🤖 AI/ML, and <b>available for hire worldwide</b>. What would you like to know?"); }
   if (open) setTimeout(() => $("#chatText").focus(), 300);
 }
 $("#chatQuick").innerHTML = QUICK.map((q) => `<button type="button">${q}</button>`).join("");
