@@ -546,3 +546,12 @@ section.section.cv-section { background: linear-gradient(120deg, rgba(251,191,36
 .cv-card .cv-form[hidden] { display: none; }
 #cvToggle[hidden] { display: none; }
 @media (max-width: 640px) { .cv-card { padding: 28px 18px; } }
+
+/* Address + Languages under the CV request card */
+.cv-extras { max-width: 620px; margin: 18px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.cv-extras .mini-card { background: var(--surface-solid); }
+.cv-extras a.mini-card { color: inherit; transition: border-color .2s, transform .2s; }
+.cv-extras a.mini-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+.cv-extras .mini-card i { color: var(--teal); font-size: 1.2rem; }
+.cv-extras .mini-card span { display: block; font-size: .85rem; color: var(--text-2); text-align: left; }
+@media (max-width: 640px) { .cv-extras { grid-template-columns: 1fr; } }
