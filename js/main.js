@@ -262,6 +262,7 @@ toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
 const roles = [
   "Electrical & Energy Engineer",
   "ML for Energy Systems",
+  "Community Development",
 ];
 (function type(i = 0, j = 0, del = false) {
   const el = $("#typed"), word = roles[i];
