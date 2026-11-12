@@ -520,3 +520,16 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
 .logo-sub { font-size: .62em; font-weight: 500; opacity: .85; }
 @media (max-width: 640px) { .logo-name { font-size: 1rem; } }
 @media (max-width: 380px) { .logo-sub, .logo-name .accent { display: none; } }
+
+/* CV request modal */
+.cv-box { width: min(560px, 100%); }
+.cv-form { border: 0; background: transparent; }
+.cv-form h3 { display: flex; gap: 10px; align-items: center; margin: 0; padding-right: 48px; }
+.cv-form h3 i { color: var(--sun); }
+.cv-note { margin: 0; color: var(--text-2); font-size: .92rem; }
+@media (max-width: 640px) { .cv-form .row { grid-template-columns: 1fr; } }
+
+/* Photo protection: no dragging/selection, watermark on full-size view */
+.p-media img, .modal-gallery img, .lightbox img { -webkit-user-drag: none; user-select: none; -webkit-touch-callout: none; }
+.lightbox::after { content: "© Eriga Robert"; position: absolute; right: 24px; bottom: 18px; color: rgba(255,255,255,.55); font-size: .85rem; letter-spacing: .05em; pointer-events: none; }
+.modal-gallery .g-item::after { content: "© Eriga Robert"; position: absolute; right: 8px; bottom: 6px; color: rgba(255,255,255,.75); font-size: .7rem; text-shadow: 0 1px 3px rgba(0,0,0,.7); pointer-events: none; }

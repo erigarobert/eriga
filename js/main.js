@@ -505,7 +505,7 @@ const KB = [
   { k: ["visa", "canada", "canadian", "permit", "work permit"], a: "🍁 Eriga holds a <b>valid Canadian visa</b> and is open to relocating, to Canada, Europe, Africa or anywhere the right opportunity is." },
   { k: ["language", "german", "deutsch", "english", "speak"], a: "🗣️ English: professional · German: A2 (improving) · Madi: fluent." },
   { k: ["contact", "email", "mail", "phone", "call", "number", "reach", "whatsapp", "linkedin", "message", "facebook", "instagram", "twitter", "x.com", "social"], a: `📧 <a href="mailto:${CONFIG.email}">${CONFIG.email}</a><br>📞 <a href="tel:+4915907914616">${CONFIG.phoneDE}</a> (DE) · <a href="tel:+256765499689">${CONFIG.phoneUG}</a> (UG)<br>💬 <a href="${CONFIG.whatsapp}" target="_blank">WhatsApp</a> · <a href="${CONFIG.linkedin}" target="_blank">LinkedIn</a><br>🌐 <a href="${CONFIG.facebook}" target="_blank">Facebook</a> · <a href="${CONFIG.instagram}" target="_blank">Instagram</a> · <a href="${CONFIG.x}" target="_blank">X (@EngErigaRobert)</a><br>Or use the <a href="#contact">message form</a>. It goes straight to his inbox.` },
-  { k: ["cv", "resume", "download"], a: "📄 You can download Eriga's CV using the <b>Download CV</b> button at the top of the page, or request the latest version via the <a href='#contact'>contact form</a>." },
+  { k: ["cv", "resume", "download"], a: "📄 Eriga shares his CV on request. <a href='#cv-request'>Request the CV here</a>; he reviews each request and emails the CV to you." },
   { k: ["salary", "rate", "price", "cost", "fee"], a: "💶 Compensation depends on the role and location. Please reach out via the <a href='#contact'>contact form</a> and Eriga will reply within 24 hours." },
   { k: ["interest", "hobby", "passion", "future", "goal"], a: "🔭 Current interests: AI & LLMs for solar O&M, battery storage & grid-forming inverters, energy-system modelling, agri-PV & solar irrigation, solar e-mobility, energy access in Africa, and green hydrogen." },
   { k: ["sustaina", "nexus", "foundation", "founder", "ngo"], a: "🌱 Eriga founded <b>Sustaina Nexus Foundation</b> (in development), an energy-access and agriculture initiative for underserved rural communities in Uganda, built through community mobilisation and grant funding." },
@@ -540,3 +540,39 @@ $("#chatFab").onclick = () => toggleChat();
 $("#chatClose").onclick = () => toggleChat(false);
 $("#chatForm").addEventListener("submit", (e) => { e.preventDefault(); const i = $("#chatText"); send(i.value); i.value = ""; });
 body.addEventListener("click", (e) => { if (e.target.matches("a[href^='#']")) toggleChat(false); });
+
+/* ---------------- CV request (approval by email) ---------------- */
+const cvModal = $("#cvModal");
+const openCv = () => { cvModal.classList.add("open"); cvModal.setAttribute("aria-hidden", "false"); };
+const closeCv = () => { cvModal.classList.remove("open"); cvModal.setAttribute("aria-hidden", "true"); };
+$("#cvRequestBtn").addEventListener("click", openCv);
+$("#cvClose").onclick = closeCv;
+cvModal.addEventListener("click", (e) => { if (e.target === cvModal) closeCv(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeCv(); });
+document.addEventListener("click", (e) => { const a = e.target.closest("a[href='#cv-request']"); if (a) { e.preventDefault(); openCv(); } });
+$("#cvForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target, btn = $("#cvSend"), status = $("#cvStatus");
+  const data = Object.fromEntries(new FormData(form));
+  if (data._honey) return;
+  data._replyto = data.email;
+  btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+  status.className = "form-status"; status.textContent = "";
+  try {
+    const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || "Failed");
+    status.className = "form-status ok"; status.textContent = "✅ Request sent! I'll review it and email you my CV.";
+    form.reset();
+  } catch (err) {
+    status.className = "form-status err";
+    const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\n\n${data.message}`);
+    status.innerHTML = `Couldn't send automatically. <a href="mailto:${CONFIG.email}?subject=${encodeURIComponent("CV request")}&body=${body}" style="color:var(--sun);text-decoration:underline">Click here to send the request by email</a>.`;
+  } finally {
+    btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send request';
+  }
+});
+
+/* ---------------- Photo protection (discourage saving) ---------------- */
+document.addEventListener("contextmenu", (e) => { if (e.target.tagName === "IMG") e.preventDefault(); });
+document.addEventListener("dragstart", (e) => { if (e.target.tagName === "IMG") e.preventDefault(); });

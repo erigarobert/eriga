@@ -67,7 +67,7 @@
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Hire Me</a>
           <a href="#projects" class="btn btn-ghost"><i class="fa-solid fa-solar-panel"></i> See My Work</a>
-          <a href="cv/Eriga_Robert_CV.pdf" class="btn btn-ghost" download><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+          <button type="button" class="btn btn-ghost" id="cvRequestBtn"><i class="fa-solid fa-file-shield"></i> Request CV</button>
         </div>
         <div class="socials">
           <a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -480,6 +480,29 @@
       <button class="modal-close" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-gallery" id="modalGallery"></div>
       <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- CV request (CV is sent by email only after Eriga approves) -->
+  <div class="modal" id="cvModal" aria-hidden="true">
+    <div class="modal-box cv-box">
+      <button class="modal-close" id="cvClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <form class="contact-form cv-form" id="cvForm">
+        <h3><i class="fa-solid fa-file-shield"></i> Request my CV</h3>
+        <p class="cv-note">My CV is shared on request. Tell me who you are and I'll email it to you once I've reviewed your request.</p>
+        <input type="hidden" name="_subject" value="CV request from your portfolio website" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="reason" value="CV request" />
+        <div class="row">
+          <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
+          <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
+        </div>
+        <label>Company / Organisation<input type="text" name="company" required placeholder="Where you work" /></label>
+        <label>Why do you need my CV?<textarea name="message" rows="4" required placeholder="e.g. Hiring for a PV engineer role in Hamburg"></textarea></label>
+        <button type="submit" class="btn btn-primary btn-block" id="cvSend"><i class="fa-solid fa-paper-plane"></i> Send request</button>
+        <p class="form-status" id="cvStatus" role="status"></p>
+      </form>
     </div>
   </div>
 
