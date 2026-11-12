@@ -14,9 +14,9 @@ FOLDERS
    Facebook, Instagram and X links are already set (index.html and js/main.js).
 
 2) MESSAGES TO GMAIL
-   The contact form uses FormSubmit (free). After the site is online, send yourself one test message.
-   FormSubmit emails erigarobert2@gmail.com an "Activate form" link. Click it once.
-   After that, every message reaches your Gmail. (Check the Spam folder the first time.)
+   The contact form and CV request use Web3Forms (free, https://web3forms.com).
+   The access key is set in js/main.js (CONFIG.formKey). Messages arrive at erigarobert2@gmail.com.
+   Check the Spam folder the first time.
    NOTE: the form only works when the site is hosted online (not when opened as a local file).
 
 3) PROJECT PHOTOS (permanent, seen by every visitor)

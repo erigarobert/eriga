@@ -5,9 +5,10 @@
 /* ---------------- SETTINGS: edit these ---------------- */
 const CONFIG = {
   email: "erigarobert2@gmail.com",
-  // Contact form delivery (free, no backend): https://formsubmit.co
+  // Contact form delivery (free, no backend): https://web3forms.com
   // The FIRST message triggers an activation email to your Gmail, click "Activate" once.
-  formEndpoint: "https://formsubmit.co/ajax/erigarobert2@gmail.com",
+  formEndpoint: "https://api.web3forms.com/submit",
+  formKey: "4b236019-4f0e-4a2f-a1de-1238d4dc4225", // Web3Forms access key (public by design)
   phoneDE: "+49 159 079 14616",
   phoneUG: "+256 765 499 689",
   whatsapp: "https://wa.me/4915907914616",
@@ -465,7 +466,20 @@ modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); }
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); toggleChat(false); } });
 renderProjects();
 
-/* ---------------- Contact form → Gmail (FormSubmit) ---------------- */
+/* ---------------- Contact form → Gmail (Web3Forms) ---------------- */
+// Sends form fields to Web3Forms, which emails them to Eriga. Reply-To is the visitor's email.
+async function sendForm(data) {
+  const payload = {
+    access_key: CONFIG.formKey,
+    subject: data._subject || "New message from your portfolio website",
+    from_name: "Eriga Robert Portfolio",
+    name: data.name, email: data.email, company: data.company || "-", reason: data.reason || "-",
+    message: data.message || "-",
+  };
+  const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.success) throw new Error(j.message || "Failed");
+}
 $("#contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = e.target, btn = $("#sendBtn"), status = $("#formStatus");
@@ -475,9 +489,7 @@ $("#contactForm").addEventListener("submit", async (e) => {
   btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
   status.className = "form-status"; status.textContent = "";
   try {
-    const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
-    const j = await r.json().catch(() => ({}));
-    if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || "Failed");
+    await sendForm(data);
     status.className = "form-status ok"; status.textContent = "✅ Thank you! Your message was sent. I'll get back to you within 24 hours.";
     form.reset();
   } catch (err) {
@@ -561,9 +573,7 @@ $("#cvForm").addEventListener("submit", async (e) => {
   btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
   status.className = "form-status"; status.textContent = "";
   try {
-    const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
-    const j = await r.json().catch(() => ({}));
-    if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || "Failed");
+    await sendForm(data);
     status.className = "form-status ok"; status.textContent = "✅ Request sent by email! I'll review it and send you my CV. For a faster reply, also notify me on WhatsApp below.";
     form.reset();
   } catch (err) {
