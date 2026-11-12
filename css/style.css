@@ -505,3 +505,5 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
 .lb-next { right: 12px; top: 50%; transform: translateY(-50%); }
 .lb-count { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.8); font-size: .9rem; }
 @media (max-width: 640px) { .lb-prev, .lb-next { top: auto; bottom: 8px; transform: none; } }
+
+.pub-meta { font-size: .85rem; color: var(--text-2); margin: -4px 0 10px; }
