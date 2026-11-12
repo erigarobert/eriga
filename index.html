@@ -624,48 +624,43 @@ df[<span class="s">"anomaly"</span>] = model.predict(df[[<span class="s">"PR"</s
     </div>
   </section>
 
-  <!-- ================= CV REQUEST ================= -->
+  <!-- ================= CV REQUEST (optional, folded until clicked) ================= -->
   <section class="section cv-section" id="cv-request">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="cv-card reveal">
+        <div class="cv-icon"><i class="fa-solid fa-file-shield"></i></div>
         <span class="eyebrow">Curriculum vitae</span>
-        <h2>Request my <span class="grad">CV</span></h2>
-        <p class="lead">My CV is shared on request. Fill in the form and I'll email it to you once I've reviewed your request.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div class="c-item"><i class="fa-solid fa-pen-to-square"></i><div><strong>1. Fill in the form</strong><span>Your name, email, organisation and reason</span></div></div>
-          <div class="c-item"><i class="fa-solid fa-envelope-circle-check"></i><div><strong>2. I review your request</strong><span>I'm notified by email straight away</span></div></div>
-          <div class="c-item"><i class="fa-solid fa-file-pdf"></i><div><strong>3. Receive my CV</strong><span>Sent to your email, usually within 24 hours</span></div></div>
-        </div>
-          <form class="contact-form cv-form reveal" id="cvForm">
-            <input type="hidden" name="_subject" value="CV request from your portfolio website" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-            <div class="row">
-              <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
-              <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
-            </div>
-            <label>Company / Organisation<input type="text" name="company" required placeholder="Where you work" /></label>
-            <label>Why do you need my CV?
-              <select name="reason" required>
-                <option value="" disabled selected>Choose a reason…</option>
-                <option>Full-time job opportunity</option>
-                <option>Working student / internship role</option>
-                <option>Contract or freelance project</option>
-                <option>Consulting / technical advisory</option>
-                <option>Research collaboration</option>
-                <option>Recruiter / talent sourcing</option>
-                <option>Scholarship, grant or fellowship</option>
-                <option>Conference or speaking invitation</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label>Details (optional)<textarea name="message" rows="3" placeholder="e.g. Role title, location, start date"></textarea></label>
-            <button type="submit" class="btn btn-primary btn-block" id="cvSend"><i class="fa-solid fa-paper-plane"></i> Send request by email</button>
-            <p class="form-status" id="cvStatus" role="status"></p>
-            <a href="#" class="btn btn-ghost btn-block cv-wa" id="cvWhatsApp" target="_blank" rel="noopener" hidden><i class="fa-brands fa-whatsapp"></i> Also notify me on WhatsApp</a>
-          </form>
+        <h2>Request my CV</h2>
+        <p class="cv-lead">My CV is shared on request. Tell me who you are and I'll email it to you after reviewing your request.</p>
+        <button type="button" class="btn btn-primary" id="cvToggle" aria-expanded="false" aria-controls="cvForm"><i class="fa-solid fa-file-arrow-down"></i> Request my CV</button>
+        <form class="contact-form cv-form" id="cvForm" hidden>
+          <input type="hidden" name="_subject" value="CV request from your portfolio website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="row">
+            <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
+            <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
+          </div>
+          <label>Company / Organisation<input type="text" name="company" required placeholder="Where you work" /></label>
+          <label>Why do you need my CV?
+            <select name="reason" required>
+              <option value="" disabled selected>Choose a reason…</option>
+              <option>Full-time job opportunity</option>
+              <option>Working student / internship role</option>
+              <option>Contract or freelance project</option>
+              <option>Consulting / technical advisory</option>
+              <option>Research collaboration</option>
+              <option>Recruiter / talent sourcing</option>
+              <option>Scholarship, grant or fellowship</option>
+              <option>Conference or speaking invitation</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Details (optional)<textarea name="message" rows="3" placeholder="e.g. Role title, location, start date"></textarea></label>
+          <button type="submit" class="btn btn-primary btn-block" id="cvSend"><i class="fa-solid fa-paper-plane"></i> Send request by email</button>
+          <p class="form-status" id="cvStatus" role="status"></p>
+          <a href="#" class="btn btn-ghost btn-block cv-wa" id="cvWhatsApp" target="_blank" rel="noopener" hidden><i class="fa-brands fa-whatsapp"></i> Also notify me on WhatsApp</a>
+        </form>
       </div>
     </div>
   </section>

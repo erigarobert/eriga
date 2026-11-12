@@ -553,6 +553,18 @@ $("#chatForm").addEventListener("submit", (e) => { e.preventDefault(); const i =
 body.addEventListener("click", (e) => { if (e.target.matches("a[href^='#']")) toggleChat(false); });
 
 /* ---------------- CV request (approval by email) ---------------- */
+/* CV request form is folded away until the visitor asks for it */
+const cvForm = $("#cvForm"), cvToggle = $("#cvToggle");
+function openCvForm(scroll) {
+  cvForm.hidden = false; cvToggle.hidden = true; cvToggle.setAttribute("aria-expanded", "true");
+  if (scroll) $("#cv-request").scrollIntoView({ behavior: "smooth", block: "start" });
+  setTimeout(() => cvForm.querySelector("input[name=name]").focus({ preventScroll: true }), scroll ? 600 : 0);
+}
+cvToggle.addEventListener("click", () => openCvForm(false));
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a[href='#cv-request']");
+  if (a) { e.preventDefault(); openCvForm(true); }
+});
 const cvText = (d) =>
   `Hello Eriga, I'd like to request your CV.\n\nName: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nReason: ${d.reason}` + (d.message ? `\nDetails: ${d.message}` : "");
 $("#cvForm").addEventListener("submit", async (e) => {

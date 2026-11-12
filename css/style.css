@@ -536,6 +536,13 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
 .cv-wa i { color: #25d366; }
 .cv-wa[hidden] { display: none; }
 
-/* CV request section */
-.cv-section { border-top: 1px solid var(--border); }
-.cv-section .contact-info .c-item { cursor: default; }
+/* CV request: compact centred card on a gradient band */
+section.section.cv-section { background: linear-gradient(120deg, rgba(251,191,36,.22), rgba(249,115,22,.12) 45%, rgba(45,212,191,.22)); }
+.cv-card { max-width: 620px; margin: 0 auto; padding: 40px 36px; border-radius: 26px; text-align: center; background: var(--surface-solid); border: 1px solid var(--border); box-shadow: 0 30px 70px -30px rgba(0,0,0,.45); }
+.cv-icon { width: 64px; height: 64px; margin: 0 auto 14px; border-radius: 18px; display: grid; place-items: center; font-size: 1.7rem; background: var(--grad); color: #0a0f1c; }
+.cv-card h2 { margin: 6px 0 10px; }
+.cv-lead { color: var(--text-2); margin: 0 auto 22px; max-width: 460px; }
+.cv-card .cv-form { text-align: left; padding: 0; background: transparent; border: 0; margin-top: 8px; animation: pop .35s ease; }
+.cv-card .cv-form[hidden] { display: none; }
+#cvToggle[hidden] { display: none; }
+@media (max-width: 640px) { .cv-card { padding: 28px 18px; } }
