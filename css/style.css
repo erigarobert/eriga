@@ -555,3 +555,13 @@ section.section.cv-section { background: linear-gradient(120deg, rgba(251,191,36
 .cv-extras .mini-card i { color: var(--teal); font-size: 1.2rem; }
 .cv-extras .mini-card span { display: block; font-size: .85rem; color: var(--text-2); text-align: left; }
 @media (max-width: 640px) { .cv-extras { grid-template-columns: 1fr; } }
+
+/* Hero quote (replaces intro paragraph) */
+.hero-quote { font-style: italic; border-left: 3px solid var(--sun); padding-left: 18px; line-height: 1.7; }
+.hero-quote i { color: var(--sun); opacity: .8; margin-right: 6px; font-size: .95em; }
+.hero-quote strong { font-style: normal; }
+@media (max-width: 900px) { .hero-quote { text-align: left; } }
+
+/* About: text only, full width */
+.about-grid.about-single { grid-template-columns: 1fr; }
+.about-single .about-text { max-width: 900px; }
