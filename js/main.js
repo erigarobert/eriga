@@ -259,12 +259,11 @@ toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
 
 /* ---------------- Typing effect ---------------- */
 const roles = [
-  "Electrical & Solar PV Engineer",
+  "Electrical & Energy Engineer",
   "Energy Analyst & Modeller",
   "AI / ML for Energy Systems",
-  "Sustainable Energy for Community Development",
+  "Community Development",
   "Python · MATLAB · PowerFactory",
-  "Clean Energy Access for Rural Communities 🌍",
 ];
 (function type(i = 0, j = 0, del = false) {
   const el = $("#typed"), word = roles[i];
