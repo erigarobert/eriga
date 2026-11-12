@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eriga Robert | Electrical & PV Engineer · Energy Analyst · AI/ML</title>
+  <meta name="description" content="Eriga Robert – Electrical & Solar PV Engineer, Energy Analyst and AI/ML enthusiast. 90+ MW of solar PV across Africa, 1,500 V DC to 161 kV. Open to work worldwide." />
+  <meta property="og:title" content="Eriga Robert | Powering Grids. Decoding Data. Changing Lives." />
+  <meta property="og:description" content="Electrical & PV Engineer · Energy Analyst · AI/ML for Energy. Open to work in any location." />
+  <meta property="og:image" content="images/profile.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/light.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Animated energy background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo"><img src="images/profile.jpg" alt="Eriga Robert" class="logo-avatar" />Eriga<span class="accent">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-drop" id="navDrop" data-group="about,focus,impact">
+        <button class="nav-drop-btn" id="navDropBtn" type="button" aria-haspopup="true" aria-expanded="false">About <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-drop-menu">
+          <a href="#about"><i class="fa-solid fa-user"></i> Who I Am</a>
+          <a href="#focus"><i class="fa-solid fa-bullseye"></i> Focus Areas</a>
+          <a href="#impact"><i class="fa-solid fa-earth-africa"></i> Impact</a>
+        </div>
+      </div>
+      <a href="#skills">Skills</a>
+      <div class="nav-drop" data-group="experience,projects,research">
+        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Experience <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-drop-menu">
+          <a href="#experience"><i class="fa-solid fa-briefcase"></i> Work Experience</a>
+          <a href="#projects"><i class="fa-solid fa-solar-panel"></i> Projects</a>
+          <a href="#research"><i class="fa-solid fa-flask"></i> Research &amp; Publications</a>
+        </div>
+      </div>
+      <a href="#education">Education</a>
+      <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="status-pill"><span class="pulse"></span> Available for hire · Open to any location</div>
+        <h1>Powering Grids.<br /><span class="grad">Decoding Data.</span><br />Changing Lives.</h1>
+        <p class="hero-role">
+          <span id="typed"></span><span class="caret">|</span>
+        </p>
+        <p class="hero-sub">
+          I'm <strong>Eriga Robert</strong> — an electrical engineer who has helped build and run
+          <strong>90+ MW of solar PV</strong> across Africa, from <strong>1,500 V DC</strong> strings to
+          <strong>161 kV</strong> substations — and who now uses <strong>Python, MATLAB and machine learning</strong>
+          to make clean-energy systems smarter, more reliable and more profitable.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Hire Me</a>
+          <a href="#projects" class="btn btn-ghost"><i class="fa-solid fa-solar-panel"></i> See My Work</a>
+          <a href="cv/Eriga_Robert_CV.pdf" class="btn btn-ghost" download><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/share/1FRfmfW5WH/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/erifusion_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/EngErigaRobert" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://wa.me/4915907914616" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:erigarobert2@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+4915907914616" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-ring">
+          <div class="photo-orbit"></div>
+          <img src="images/profile.jpg" alt="Eriga Robert" class="profile-photo" />
+          <div class="float-badge b1"><i class="fa-solid fa-solar-panel"></i> 90+ MW PV</div>
+          <div class="float-badge b2"><i class="fa-solid fa-bolt"></i> 161 kV Grid</div>
+          <div class="float-badge b3"><i class="fa-solid fa-brain"></i> AI / ML</div>
+          <div class="float-badge b4"><i class="fa-solid fa-medal"></i> Gold Medalist</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="container stats">
+      <div class="stat"><span class="num" data-count="90" data-suffix="+">0</span><span class="lbl">MW of solar PV supported</span></div>
+      <div class="stat"><span class="num" data-count="161" data-suffix=" kV">0</span><span class="lbl">Highest grid voltage worked</span></div>
+      <div class="stat"><span class="num" data-count="7">0</span><span class="lbl">Hospitals powered by hybrid PV</span></div>
+      <div class="stat"><span class="num" data-count="6">0</span><span class="lbl">Countries worked & studied in</span></div>
+      <div class="stat"><span class="num" data-count="3" data-suffix="+">0</span><span class="lbl">Years hands-on field experience</span></div>
+    </div>
+  </section>
+
+  <!-- ================= HIRE BANNER ================= -->
+  <div class="hire-strip">
+    <div class="marquee">
+      <span>⚡ Solar PV Design & Grid Integration</span><span>📊 Energy Analytics & Performance Audits</span>
+      <span>🤖 Machine Learning for Energy Systems</span><span>🔋 Battery Storage & Hybrid Microgrids</span>
+      <span>🐍 Python · MATLAB · PowerFactory · PVsyst · HOMER</span><span>🌍 Open to work in any location · Canadian visa holder</span>
+      <span>⚡ Solar PV Design & Grid Integration</span><span>📊 Energy Analytics & Performance Audits</span>
+      <span>🤖 Machine Learning for Energy Systems</span><span>🔋 Battery Storage & Hybrid Microgrids</span>
+      <span>🐍 Python · MATLAB · PowerFactory · PVsyst · HOMER</span><span>🌍 Open to work in any location · Canadian visa holder</span>
+    </div>
+  </div>
+
+  <!-- ================= ORGANISATIONS ================= -->
+  <div class="org-strip">
+    <div class="container">
+      <p class="org-title">Organisations I have worked and studied with</p>
+      <div class="org-logos">
+        <a href="https://frontier.dk/" target="_blank" rel="noopener" title="Frontier Energy"><img src="images/logos/frontier.svg" alt="Frontier Energy logo" /></a>
+        <a href="https://aptechafrica.com/" target="_blank" rel="noopener" title="Aptech Africa"><img src="images/logos/aptech-wide.png" alt="Aptech Africa logo" /></a>
+        <a href="https://www.tororocement.com/" target="_blank" rel="noopener" title="Tororo Cement"><img src="images/logos/tororo.png" alt="Tororo Cement logo" /></a>
+        <a href="https://www.uni-flensburg.de/en/" target="_blank" rel="noopener" title="Europa-Universität Flensburg"><img src="images/logos/flensburg.svg" alt="Europa-Universität Flensburg logo" /></a>
+        <a href="https://cgu-odisha.ac.in/" target="_blank" rel="noopener" title="C. V. Raman Global University"><img src="images/logos/cgu.png" alt="C. V. Raman Global University logo" /></a>
+        <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener" title="University of Guelph (Mitacs Globalink)"><img src="images/logos/uog.png" alt="University of Guelph logo" /></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About me</span>
+        <h2>The engineer who speaks <span class="grad">both kilovolts and code</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I am an <strong>Electrical & Solar PV Engineer and Energy Analyst</strong> with 3+ years of hands-on experience
+            designing, bidding, commissioning and operating solar PV, hybrid and grid-connected systems in
+            <strong>Uganda, South Sudan and Sierra Leone</strong>. I've worked on everything from rooftop-scale off-grid kits and
+            solar water pumps, to a <strong>50 MW grid-connected PV portfolio</strong> feeding Sierra Leone's national grid through a
+            <strong>161 kV</strong> connection on the Bumbuna–Freetown corridor.
+          </p>
+          <p>
+            What makes me different is that I sit at the meeting point of <strong>field engineering and data</strong>. I know how
+            real inverters, transformers and protection relays behave at 3 a.m. during a fault — and I use
+            <strong>Python, MATLAB/Simulink and machine-learning models</strong> to turn that behaviour into insight: spotting
+            underperformance early, quantifying losses and supporting smarter operations, including
+            <strong>LLM-assisted O&M</strong>.
+          </p>
+          <p>
+            I'm a <strong>Gold Medalist</strong> in Electrical Engineering (CGPA 8.31/10), an <strong>IEEE-indexed author</strong>,
+            a former <strong>Mitacs Globalink research intern</strong> in Canada, and I'm currently pursuing a Master's in
+            <strong>Sustainable Energy and Development (SEDev)</strong> at Europa-Universität Flensburg, Germany.
+          </p>
+          <div class="about-cards">
+            <div class="mini-card"><i class="fa-solid fa-earth-africa"></i><div><strong>Open to work anywhere</strong><span>Europe · Africa · North America · Remote</span></div></div>
+            <div class="mini-card"><i class="fa-brands fa-canadian-maple-leaf"></i><div><strong>Canadian visa holder</strong><span>Ready for opportunities in Canada</span></div></div>
+            <div class="mini-card"><i class="fa-solid fa-user-graduate"></i><div><strong>Working student / Full-time</strong><span>Based in Flensburg, Germany</span></div></div>
+            <div class="mini-card"><i class="fa-solid fa-language"></i><div><strong>Languages</strong><span>English (Professional) · German (A2) · Madi (Fluent)</span></div></div>
+          </div>
+        </div>
+        <div class="about-side reveal">
+          <div class="quote-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>"Every megawatt I help connect is a hospital that keeps its lights on, a pump that brings clean water, and a classroom that can study after dark. Engineering is my tool — impact is my goal."</p>
+            <span>— Eriga Robert</span>
+          </div>
+          <div class="info-list">
+            <div><i class="fa-solid fa-location-dot"></i> Flensburg, Germany</div>
+            <div><a href="tel:+4915907914616"><i class="fa-solid fa-phone"></i> +49 159 079 14616</a></div>
+            <div><a href="tel:+256765499689"><i class="fa-solid fa-phone"></i> +256 765 499 689</a></div>
+            <div><a href="mailto:erigarobert2@gmail.com"><i class="fa-solid fa-envelope"></i> erigarobert2@gmail.com</a></div>
+            <div><a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/eriga-robert-9522b518a</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOCUS AREAS ================= -->
+  <section class="section alt" id="focus">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What I do best</span>
+        <h2>Four focus areas. <span class="grad">One mission: clean, reliable, intelligent and inclusive energy.</span></h2>
+      </div>
+      <div class="focus-grid">
+        <article class="focus-card reveal" style="--c: var(--sun)">
+          <div class="focus-icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <h3>Electrical & Solar PV Engineering</h3>
+          <p>From site assessment to handover — I design, size, test and commission PV systems that last.</p>
+          <ul>
+            <li>Utility-scale PV up to 1,500 V DC, 33 kV collection & 161 kV grid connection</li>
+            <li>Off-grid, hybrid PV–battery–diesel & microgrid design</li>
+            <li>Battery storage sizing & Battery Management Systems (BMS)</li>
+            <li>Protection relays & coordination, GIS, transformers up to 20 MVA</li>
+            <li>Pre-energisation checks, functional testing & commissioning</li>
+            <li>Load flow & short-circuit studies (PowerFactory, ETAP)</li>
+          </ul>
+        </article>
+        <article class="focus-card reveal" style="--c: var(--teal)">
+          <div class="focus-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Energy Analytics, Modelling & Audit</h3>
+          <p>I turn plant data into decisions — finding the kilowatt-hours that are silently being lost.</p>
+          <ul>
+            <li>Daily generation vs. expected yield analysis (PR, availability, losses)</li>
+            <li>Inverter, transformer & feeder trend analysis to isolate faults</li>
+            <li>Energy-system modelling with HOMER, PVsyst & MATLAB</li>
+            <li>Energy audits & power-plant efficiency analysis</li>
+            <li>Management-ready performance reports & dashboards</li>
+            <li>Tender documents, technical proposals & BoQs</li>
+          </ul>
+        </article>
+        <article class="focus-card reveal" style="--c: var(--violet)">
+          <div class="focus-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>AI & Machine Learning for Energy</h3>
+          <p>I bring data science into the control room — so plants predict problems instead of reacting to them.</p>
+          <ul>
+            <li>ML models for energy & power-electronics applications</li>
+            <li>Python data pipelines combined with Simulink system models</li>
+            <li>Anomaly detection & predictive maintenance concepts for PV O&M</li>
+            <li>Solar / load forecasting for storage & grid planning</li>
+            <li>LLM-assisted O&M: faster fault diagnosis & reporting</li>
+            <li>Converter control & solar-fed EV fast charging research</li>
+          </ul>
+        </article>
+        <article class="focus-card reveal" style="--c: #16a34a">
+          <div class="focus-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Sustainable Energy &amp; Development</h3>
+          <p>I plan energy solutions around the development outcomes they must deliver: healthier communities, secure livelihoods and a lower-carbon economy.</p>
+          <ul>
+            <li>Energy-access planning: mini-grids, off-grid systems &amp; productive use of energy</li>
+            <li>Aligning energy projects with SDG 7 (clean energy) and SDG 13 (climate action)</li>
+            <li>Techno-economic and socio-economic assessment of energy investments</li>
+            <li>Climate-resilient, low-carbon power for health, water &amp; agriculture</li>
+            <li>Donor-funded project delivery and stakeholder engagement (incl. UNDP)</li>
+            <li>Founder, Sustaina Nexus Foundation: energy &amp; agriculture in rural Uganda</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IMPACT ================= -->
+  <section class="section" id="impact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Real-world impact</span>
+        <h2>Beyond megawatts: <span class="grad">how lives have changed</span></h2>
+        <p class="lead">Energy is never just electricity. Here is what the systems I've worked on mean for people, sectors and the planet.</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-hospital"></i></div>
+          <h3>Healthcare</h3>
+          <p>A 2.4 MW hybrid solar PV system with battery storage now serves <strong>seven hospitals</strong>, plus battery-bank and BMS upgrades for <strong>five government hospital laboratories</strong>.</p>
+          <div class="impact-life"><i class="fa-solid fa-heart-pulse"></i> Fridges keep vaccines cold, theatres keep running during outages, lab samples aren't lost — mothers deliver babies under reliable light.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-tower-broadcast"></i></div>
+          <h3>National Grids</h3>
+          <p>Supported a <strong>50 MW PV portfolio in Sierra Leone</strong> and a <strong>12 MW plant + 26 MW expansion near Juba</strong>, South Sudan — clean power injected straight into national networks.</p>
+          <div class="impact-life"><i class="fa-solid fa-city"></i> Fewer blackouts for homes and businesses, less reliance on imported diesel and heavy fuel oil, and more stable supply for growing cities.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-droplet"></i></div>
+          <h3>Water & Communities</h3>
+          <p>Designed and supported <strong>solar water pumping</strong>, <strong>street lighting</strong>, off-grid PV and mini-grids for rural communities and institutions.</p>
+          <div class="impact-life"><i class="fa-solid fa-people-group"></i> Clean water closer to home, safer streets at night, children studying after dark, and small businesses that can stay open longer.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-industry"></i></div>
+          <h3>Industry</h3>
+          <p>At Tororo Cement: <strong>11 switchgear panels</strong>, protection coordination, GIS & <strong>20 MVA transformer</strong>, and a <strong>5,800 kW</strong> mill motor & drive (ABB VRM Project II).</p>
+          <div class="impact-life"><i class="fa-solid fa-helmet-safety"></i> Selective fault isolation protects production and jobs — dependable power for the materials that build roads, schools and homes.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-charging-station"></i></div>
+          <h3>Clean Transport</h3>
+          <p>Published research on <strong>solar-powered EV DC fast charging</strong> and converter control.</p>
+          <div class="impact-life"><i class="fa-solid fa-car-side"></i> A pathway to charging electric vehicles directly from the sun — cutting both fuel costs and tailpipe emissions.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Rural Development</h3>
+          <p>Founder of <strong>Sustaina Nexus Foundation</strong> (in development) — energy access + agriculture for underserved rural communities in Uganda.</p>
+          <div class="impact-life"><i class="fa-solid fa-wheat-awn"></i> Solar-powered irrigation and agro-processing that raise farm incomes and food security.</div>
+        </div>
+      </div>
+
+      <div class="world-gain reveal">
+        <h3><i class="fa-solid fa-earth-americas"></i> What the world gains</h3>
+        <div class="gain-grid">
+          <div><strong>Lower emissions</strong><span>Every solar kWh displaces fossil generation and diesel gensets — directly advancing climate goals (SDG 13).</span></div>
+          <div><strong>Energy access</strong><span>Reliable, affordable power for clinics, schools and homes that were left behind (SDG 7).</span></div>
+          <div><strong>Better health</strong><span>Hospitals with uninterrupted power save lives and reduce dependence on noisy, polluting generators (SDG 3).</span></div>
+          <div><strong>Smarter grids</strong><span>Data and AI squeeze more energy out of existing assets — making the energy transition cheaper and faster (SDG 9).</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section alt" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Toolbox</span>
+        <h2>Technical <span class="grad">skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-cube"></i> Modelling & Simulation</h3>
+          <div class="bar" data-w="90"><span>MATLAB / Simulink</span></div>
+          <div class="bar" data-w="85"><span>PVsyst</span></div>
+          <div class="bar" data-w="85"><span>HOMER</span></div>
+          <div class="bar" data-w="75"><span>DIgSILENT PowerFactory</span></div>
+          <div class="bar" data-w="75"><span>ETAP</span></div>
+          <div class="bar" data-w="65"><span>PSCAD</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-brands fa-python"></i> Data, Python & AI</h3>
+          <div class="bar" data-w="85"><span>Python for data analysis</span></div>
+          <div class="bar" data-w="80"><span>pandas · NumPy · Matplotlib</span></div>
+          <div class="bar" data-w="70"><span>Machine learning (scikit-learn)</span></div>
+          <div class="bar" data-w="75"><span>LLMs for engineering workflows</span></div>
+          <div class="bar" data-w="90"><span>Excel / performance reporting</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-plug-circle-bolt"></i> Power & Field Engineering</h3>
+          <div class="bar" data-w="92"><span>Solar PV design, sizing & commissioning</span></div>
+          <div class="bar" data-w="85"><span>Hybrid PV–battery–diesel & BMS</span></div>
+          <div class="bar" data-w="85"><span>Substations: 33 kV & 161 kV</span></div>
+          <div class="bar" data-w="80"><span>Protection relays & coordination</span></div>
+          <div class="bar" data-w="80"><span>SCADA / PLC · Siemens TIA · Bosch Rexroth</span></div>
+          <div class="bar" data-w="75"><span>AutoCAD</span></div>
+        </div>
+      </div>
+
+      <div class="soft-skills reveal">
+        <div><i class="fa-solid fa-comments"></i><strong>Technical communication</strong><span>Turns complex designs into clear proposals and reports.</span></div>
+        <div><i class="fa-solid fa-magnifying-glass-chart"></i><strong>Analytical problem solving</strong><span>Traces faults and losses to root cause using data.</span></div>
+        <div><i class="fa-solid fa-flag"></i><strong>Initiative & leadership</strong><span>Founder of Sustaina Nexus Foundation.</span></div>
+        <div><i class="fa-solid fa-globe"></i><strong>Cross-cultural teamwork</strong><span>India, Canada, Uganda, South Sudan, Sierra Leone, Germany.</span></div>
+        <div><i class="fa-solid fa-shield-halved"></i><strong>Safety-minded</strong><span>Dependable on live HV equipment and under deadlines.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Career journey</span>
+        <h2>Work <span class="grad">experience</span></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Job 1 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-bolt"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://frontier.dk/" target="_blank" rel="noopener" title="Visit Frontier Energy"><img src="images/logos/frontier.svg" alt="Frontier Energy logo" /></a>
+              <div>
+                <h3>Electrical Engineer & Energy Analyst</h3>
+                <a class="company" href="https://frontier.dk/" target="_blank" rel="noopener">Frontier Energy – Planet Solar Energy <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">Nov 2025 – Sep 2026</span><span><i class="fa-solid fa-location-dot"></i> Freetown, Sierra Leone</span></div>
+            </div>
+            <p class="tl-summary">Electrical O&M, performance analytics and commissioning for a 50 MW grid-connected solar PV portfolio (35 MW operational, 15 MW under implementation) feeding Sierra Leone's national grid.</p>
+            <ul>
+              <li><strong>Sustained plant availability:</strong> executed electrical operations and maintenance across the 50 MW portfolio, keeping clean power flowing into the national grid across 1,500 V DC, 33 kV and 161 kV systems.</li>
+              <li><strong>Drove performance through data:</strong> analysed daily generation against expected output and tracked inverter, transformer and feeder trends to isolate underperformance, downtime causes and availability losses — enabling faster corrective action.</li>
+              <li><strong>Mastered the grid interface:</strong> worked across 1,500 V DC generation, 33 kV collection and the 161 kV connection to the Bumbuna–Freetown transmission corridor.</li>
+              <li><strong>Resolved faults fast:</strong> inspected and troubleshot circuit breakers, CTs, CVTs/VTs, surge arresters, protection relays and transformers; investigated SCADA/PLC alarms and electrical abnormalities to cut avoidable outages.</li>
+              <li><strong>Enabled safe expansion:</strong> carried out pre-energisation checks, functional testing and commissioning records so new capacity could connect to the grid safely.</li>
+              <li><strong>Informed decisions:</strong> authored daily and periodic performance reports giving operations and management clear visibility of plant health.</li>
+            </ul>
+            <div class="tags"><span>SCADA/PLC</span><span>ABB Automation</span><span>Movicon</span><span>Python</span><span>Excel</span><span>PV Analyzer</span><span>Electrical Testing</span><span>Protection Relays</span></div>
+            <p class="leave-reason"><i class="fa-solid fa-graduation-cap"></i> <strong>Reason for leaving:</strong> Left to begin a full-time M.Eng. in Sustainable Energy and Development at Europa-Universität Flensburg.</p>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-solar-panel"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://aptechafrica.com/" target="_blank" rel="noopener" title="Visit Aptech Africa"><img src="images/logos/aptech-wide.png" alt="Aptech Africa logo" /></a>
+              <div>
+                <h3>Electrical Engineer – Solar PV Design, Tenders & Implementation</h3>
+                <a class="company" href="https://aptechafrica.com/" target="_blank" rel="noopener">Aptech Africa Limited <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">Aug 2023 – Oct 2025</span><span><i class="fa-solid fa-location-dot"></i> Uganda · South Sudan · Sierra Leone</span></div>
+            </div>
+            <p class="tl-summary">End-to-end solar engineering — from winning the bid, through design and client presentation, to installation, commissioning and maintenance — across three countries.</p>
+            <ul>
+              <li><strong>Won work through bids:</strong> wrote technical proposals, designs and tender documents that contributed to winning multiple solar projects (community and government laboratories), including projects under <strong>UNDP in Sierra Leone</strong>.</li>
+              <li><strong>Presented designs:</strong> presented system designs to clients and stakeholders, translating energy needs into PV, battery and hybrid configurations.</li>
+              <li><strong>Brought reliable power to healthcare:</strong> contributed to a 2.4 MW hybrid solar PV project with 100 kWh battery storage serving seven hospitals, and upgraded five government hospital laboratories with battery banks and BMS.</li>
+              <li><strong>Added clean generation to a national supply:</strong> supported electrical engineering, testing and commissioning for a 12 MW grid-connected solar plant near Juba, South Sudan, its 26 MW expansion, and a mini-grid under the SLP project.</li>
+              <li><strong>Design to handover:</strong> PV sizing, array/battery/inverter selection for off-grid and hybrid systems, installation checks, testing, commissioning, troubleshooting and maintenance — extending to solar water pumping and street lighting for communities.</li>
+            </ul>
+            <div class="tags"><span>PVsyst</span><span>HOMER</span><span>ETAP</span><span>MATLAB</span><span>AutoCAD</span><span>BMS</span><span>Tendering</span><span>MS Office</span></div>
+            <p class="leave-reason"><i class="fa-solid fa-circle-check"></i> <strong>Reason for leaving:</strong> Contract concluded after the successful delivery of all assigned projects; with no immediate follow-on project, I moved to a utility-scale PV role at Frontier Energy.</p>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-industry"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://www.tororocement.com/" target="_blank" rel="noopener" title="Visit Tororo Cement"><img src="images/logos/tororo.png" alt="Tororo Cement logo" /></a>
+              <div>
+                <h3>Electrical Engineering Project Experience</h3>
+                <a class="company" href="https://www.tororocement.com/" target="_blank" rel="noopener">Tororo Cement Limited (ABB project) <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">Project-based</span><span><i class="fa-solid fa-location-dot"></i> Tororo, Uganda</span></div>
+            </div>
+            <p class="tl-summary">Heavy-industry power systems: medium-voltage distribution, protection and large drives for one of East Africa's major cement producers.</p>
+            <ul>
+              <li><strong>Secured plant power reliability:</strong> took part in commissioning 11 switchgear panels and protection coordination so faults are isolated selectively, limiting their effect on production.</li>
+              <li><strong>Powered a key production line:</strong> assisted with installation, testing and commissioning of a 5,800 kW plant motor and drive for the Vertical Roller Mill Project II.</li>
+              <li><strong>Substation build-out:</strong> participated in GIS and 20 MVA indoor transformer installation.</li>
+            </ul>
+            <div class="tags"><span>GIS</span><span>20 MVA Transformer</span><span>Switchgear</span><span>Protection Coordination</span><span>VSD / Large Motors</span></div>
+          </div>
+        </div>
+
+        <!-- Research internship -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-flask"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://www.uoguelph.ca/" target="_blank" rel="noopener" title="Visit University of Guelph"><img src="images/logos/uog.png" alt="University of Guelph logo" /></a>
+              <div>
+                <h3>Mitacs Globalink Research Intern</h3>
+                <a class="company" href="https://www.uoguelph.ca/" target="_blank" rel="noopener">University of Guelph <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">2022</span><span><i class="fa-solid fa-location-dot"></i> Guelph, Canada</span></div>
+            </div>
+            <ul>
+              <li>Researched micropower generation for smart electronic devices using efficient low-power energy conversion — selected through Canada's competitive Mitacs Globalink programme.</li>
+            </ul>
+            <div class="tags"><span>Energy Harvesting</span><span>Power Electronics</span><span>Research</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section alt" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Selected <span class="grad">projects & impact</span></h2>
+        <p class="lead">Click <i class="fa-solid fa-camera"></i> on any project to attach your own photos.</p>
+      </div>
+      <div class="filters reveal" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="pv">Solar PV</button>
+        <button class="chip" data-filter="grid">Grid & Power</button>
+        <button class="chip" data-filter="ai">AI / Research</button>
+        <button class="chip" data-filter="community">Community</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid"><!-- Filled by js/main.js --></div>
+    </div>
+  </section>
+
+  <!-- Project modal -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-gallery" id="modalGallery"></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ================= RESEARCH ================= -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Research & publications</span>
+        <h2>Where power electronics meets <span class="grad">AI & machine learning</span></h2>
+      </div>
+      <div class="research-grid">
+        <article class="pub-card reveal">
+          <div class="pub-badge"><i class="fa-solid fa-book-open"></i> IEEE-indexed publication</div>
+          <h3>Solar-Powered EV DC Fast Charging and Converter Control</h3>
+          <p>Modelled and controlled the power converter that feeds PV energy into an electric-vehicle DC fast charger, and documented the results as a technical paper — advancing clean, solar-fed transport.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>AI/ML connection:</strong> converter control is a natural fit for data-driven methods — ML-based MPPT, charging-demand forecasting and smart scheduling of PV + storage + EV loads build directly on this work.</div>
+          <a href="#" class="pub-link" id="pubLink" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read the paper (add DOI link)</a>
+        </article>
+        <article class="pub-card reveal">
+          <div class="pub-badge violet"><i class="fa-solid fa-microchip"></i> Ongoing research</div>
+          <h3>Machine-Learning Research for Energy Systems</h3>
+          <p>Developing and simulating ML models for energy and power-electronics applications — combining <strong>Simulink system models</strong> with <strong>Python data analysis</strong>. Now applying <strong>Large Language Models (LLMs)</strong> to O&M: faster fault diagnosis, alarm triage and automated reporting.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>Why it matters:</strong> a data-driven approach to performance and control — documented in technical research reports.</div>
+        </article>
+        <article class="pub-card reveal">
+          <div class="pub-badge teal"><i class="fa-solid fa-battery-half"></i> Research internship</div>
+          <h3>Micropower Generation for Smart Electronic Devices</h3>
+          <p>Mitacs Globalink, <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener" class="inline-link">University of Guelph</a> (Canada, 2022): efficient low-power energy conversion for self-powered smart devices and IoT sensors.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>AI/ML connection:</strong> self-powered sensors are the data backbone for edge-AI monitoring of solar plants and smart grids.</div>
+        </article>
+        <article class="pub-card reveal">
+          <div class="pub-badge sun"><i class="fa-solid fa-graduation-cap"></i> M.Eng. coursework</div>
+          <h3>Energy-System Modelling & Power-Plant Efficiency Analysis</h3>
+          <p>Reviewed energy-system modelling tools and analysed fuel-to-electricity efficiency of power plants across countries and years using Python-based data analysis.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>Data skills:</strong> cleaning multi-country datasets, trend analysis and visualisation — the foundation for any energy ML model.</div>
+        </article>
+      </div>
+
+      <!-- Python / AI toolkit -->
+      <div class="code-block reveal">
+        <div class="code-top"><span></span><span></span><span></span><em>pv_performance.py</em></div>
+<pre><code><span class="k">import</span> pandas <span class="k">as</span> pd
+<span class="k">from</span> sklearn.ensemble <span class="k">import</span> IsolationForest
+
+<span class="c"># Compare actual vs expected yield and flag underperforming inverters</span>
+df = pd.read_csv(<span class="s">"scada_daily.csv"</span>, parse_dates=[<span class="s">"date"</span>])
+df[<span class="s">"PR"</span>] = df[<span class="s">"energy_kwh"</span>] / (df[<span class="s">"irradiation_kwh_m2"</span>] * df[<span class="s">"kwp"</span>])
+
+model = IsolationForest(contamination=<span class="n">0.03</span>).fit(df[[<span class="s">"PR"</span>, <span class="s">"availability"</span>]])
+df[<span class="s">"anomaly"</span>] = model.predict(df[[<span class="s">"PR"</span>, <span class="s">"availability"</span>]])
+<span class="k">print</span>(df[df.anomaly == -<span class="n">1</span>][[<span class="s">"date"</span>, <span class="s">"inverter"</span>, <span class="s">"PR"</span>]])  <span class="c"># ⚡ fix before kWh are lost</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section alt edu-section" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Education background</span>
+        <h2>Education & <span class="grad">certifications</span></h2>
+        <p class="lead">A gold-medal electrical engineering foundation, international research, and a master's in sustainable energy, connecting hands-on engineering with energy-system thinking.</p>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <a class="org-logo" href="https://www.uni-flensburg.de/en/" target="_blank" rel="noopener" title="Visit Europa-Universität Flensburg"><img src="images/logos/flensburg.svg" alt="Europa-Universität Flensburg logo" /></a>
+          <span class="date">Sep 2026 – Present</span>
+          <h3><i class="fa-solid fa-user-graduate" style="color:var(--teal)"></i> M.Eng. Sustainable Energy and Development (SEDev)</h3>
+          <a class="company" href="https://www.uni-flensburg.de/en/" target="_blank" rel="noopener">Europa-Universität Flensburg, Germany <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p>Graduate study connecting energy infrastructure to sustainable development outcomes.</p>
+          <ul>
+            <li>Energy analysis & energy-system modelling (HOMER, MATLAB)</li>
+            <li>Renewable energy technologies & sustainable development</li>
+            <li>Review of energy-system modelling tools</li>
+            <li>Power-plant fuel-to-electricity efficiency analysis across countries and years</li>
+          </ul>
+        </div>
+        <div class="edu-card reveal gold">
+          <a class="org-logo" href="https://cgu-odisha.ac.in/" target="_blank" rel="noopener" title="Visit C. V. Raman Global University"><img src="images/logos/cgu.png" alt="C. V. Raman Global University logo" /></a>
+          <span class="date">2019 – 2023</span>
+          <h3><i class="fa-solid fa-medal"></i> B.Tech. Electrical Engineering</h3>
+          <a class="company" href="https://cgu-odisha.ac.in/" target="_blank" rel="noopener">CV Raman Global University, Bhubaneswar, India <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p><strong>Gold Medal for Academic Excellence</strong> · CGPA 8.31/10</p>
+          <ul>
+            <li>IEEE-indexed publication: Solar-powered EV DC fast charging & converter control</li>
+            <li>Selected for the Mitacs Globalink Research Internship, Canada (2022)</li>
+            <li>Siemens TIA & Bosch Rexroth industrial-automation training at the university's Centres of Excellence</li>
+            <li>Power systems, power electronics, electrical machines & control</li>
+          </ul>
+        </div>
+        <div class="edu-card reveal">
+          <span class="date">Certifications & training</span>
+          <h3>Professional development</h3>
+          <ul>
+            <li>Project Management — Coursera / Google (2024)</li>
+            <li>Totally Integrated Automation — CV Raman Siemens Centre of Excellence</li>
+            <li>Industrial Automation — CV Raman Bosch Rexroth Centre of Excellence</li>
+            <li>Mitacs Globalink Research Internship — <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener" class="inline-link">University of Guelph</a>, Canada (2022)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRENDING SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What employers need now</span>
+        <h2>Ready for the <span class="grad">energy transition's hottest challenges</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="svc reveal"><i class="fa-solid fa-car-battery"></i><h4>BESS & Hybrid Systems</h4><p>Sizing battery storage for peak shaving, backup and grid support.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-network-wired"></i><h4>Grid Integration Studies</h4><p>Load flow, short-circuit and protection studies for new renewable capacity.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-robot"></i><h4>Predictive Maintenance</h4><p>ML anomaly detection on SCADA data to catch failures early.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-cloud-sun"></i><h4>Solar & Load Forecasting</h4><p>Data-driven forecasts for storage dispatch and energy trading.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-clone"></i><h4>Digital Twins</h4><p>Simulink/PVsyst models paired with live data to benchmark plant health.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-charging-station"></i><h4>EV Charging & e-Mobility</h4><p>Solar-fed DC fast charging and converter control.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-house-signal"></i><h4>Microgrids & Energy Access</h4><p>Off-grid & mini-grid design for communities, health and agriculture.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-file-signature"></i><h4>Tenders & Energy Audits</h4><p>Winning proposals, BoQs, audits and performance reports.</p></div>
+      </div>
+
+      <div class="interests reveal">
+        <h3><i class="fa-solid fa-compass"></i> Current interests</h3>
+        <div class="interest-grid">
+          <div class="interest-card"><i class="fa-solid fa-solar-panel"></i><div><h4>Renewable Energy Systems</h4><p>Solar PV, wind and hydropower: design, integration and optimisation of clean generation from distributed to utility scale.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-diagram-project"></i><div><h4>Energy-System Modelling &amp; Analysis</h4><p>Techno-economic modelling and scenario analysis (HOMER, PVsyst, MATLAB, PowerFactory) to plan cost-effective, low-carbon systems.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-brain"></i><div><h4>AI &amp; Machine Learning for Energy</h4><p>Forecasting, anomaly detection, predictive maintenance and LLM-assisted O&amp;M that turn plant data into decisions.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-car-battery"></i><div><h4>Battery Storage (BESS) &amp; BMS</h4><p>Sizing, integration and battery-management strategies for hybrid systems, peak shaving and grid support.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-chart-line"></i><div><h4>Energy Data Analytics &amp; Sustainable Development</h4><p>Data-driven insight that links energy infrastructure to measurable social, economic and climate outcomes (SDG 7 &amp; 13).</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-tower-broadcast"></i><div><h4>Grid Stability, Reliability &amp; Availability</h4><p>Protection, power quality and integration studies that keep high-renewable grids stable and plants available.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-earth-africa"></i><div><h4>Energy Access &amp; Electrification in Africa</h4><p>Mini-grids, off-grid and productive-use solutions that bring reliable power to health, water, agriculture and communities.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section alt" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Let's work together</span>
+        <h2>Need an Engineer Who Delivers <span class="grad">Sustainable Energy, Development and Insight?</span></h2>
+        <p class="lead">Full-time, working-student, contract or remote — in Germany, Europe, Canada, Africa or anywhere in the world. Drop me a message and I'll reply within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a class="c-item" href="mailto:erigarobert2@gmail.com"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>erigarobert2@gmail.com</span></div></a>
+          <a class="c-item" href="tel:+4915907914616"><i class="fa-solid fa-phone"></i><div><strong>Phone (Germany)</strong><span>+49 159 079 14616</span></div></a>
+          <a class="c-item" href="tel:+256765499689"><i class="fa-solid fa-phone"></i><div><strong>Phone (Uganda)</strong><span>+256 765 499 689</span></div></a>
+          <a class="c-item" href="https://wa.me/4915907914616" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>Chat instantly</span></div></a>
+          <a class="c-item" href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><div><strong>LinkedIn</strong><span>Connect professionally</span></div></a>
+          <a class="c-item" href="https://www.facebook.com/share/1FRfmfW5WH/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i><div><strong>Facebook</strong><span>Follow my journey</span></div></a>
+          <a class="c-item" href="https://www.instagram.com/erifusion_/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i><div><strong>Instagram</strong><span>Behind the scenes</span></div></a>
+          <a class="c-item" href="https://x.com/EngErigaRobert" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i><div><strong>X (Twitter)</strong><span>@EngErigaRobert</span></div></a>
+          <div class="visa-note"><i class="fa-brands fa-canadian-maple-leaf"></i> Holds a valid Canadian visa · Open to relocation worldwide</div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <!-- Messages are delivered to Gmail via FormSubmit (see README) -->
+          <input type="hidden" name="_subject" value="New message from your portfolio website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="row">
+            <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
+            <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
+          </div>
+          <div class="row">
+            <label>Company / Organisation<input type="text" name="company" placeholder="Optional" /></label>
+            <label>Reason
+              <select name="reason">
+                <option>Job opportunity</option>
+                <option>Working student role</option>
+                <option>Project / consulting</option>
+                <option>Research collaboration</option>
+                <option>Just saying hello</option>
+              </select>
+            </label>
+          </div>
+          <label>Message<textarea name="message" rows="6" required placeholder="Tell me about the role or project…"></textarea></label>
+          <button type="submit" class="btn btn-primary btn-block" id="sendBtn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#home" class="logo"><img src="images/profile.jpg" alt="Eriga Robert" class="logo-avatar" />Eriga<span class="accent">.</span></a>
+        <p>Electrical & PV Engineer · Energy Analyst · AI/ML for Energy</p>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/1FRfmfW5WH/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/erifusion_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/EngErigaRobert" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://wa.me/4915907914616" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:erigarobert2@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p class="copy">© <span id="year"></span> Eriga Robert · Powering Grids. Decoding Data. Changing Lives.</p>
+    </div>
+  </footer>
+
+  <!-- ================= CHATBOT ================= -->
+  <button class="chat-label" id="chatLabel" type="button"><i class="fa-solid fa-comments"></i> Chat with Eriga's Assistant</button>
+  <button class="chat-fab" id="chatFab" aria-label="Chat with Eriga's Assistant"><i class="fa-solid fa-robot"></i><span class="fab-dot"></span></button>
+  <div class="chat" id="chat" aria-hidden="true">
+    <div class="chat-head">
+      <img src="images/profile.jpg" alt="" />
+      <div><strong>Eriga's Virtual Assistant</strong><span><span class="pulse sm"></span> Online · ask me anything</span></div>
+      <button id="chatClose" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-quick" id="chatQuick"></div>
+    <form class="chat-input" id="chatForm">
+      <input type="text" id="chatText" placeholder="Type your question…" autocomplete="off" />
+      <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

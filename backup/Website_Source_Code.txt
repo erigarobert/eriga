@@ -1,0 +1,2265 @@
+==================================================================
+FILE: index.html
+==================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eriga Robert | Electrical & PV Engineer · Energy Analyst · AI/ML</title>
+  <meta name="description" content="Eriga Robert – Electrical & Solar PV Engineer, Energy Analyst and AI/ML enthusiast. 90+ MW of solar PV across Africa, 1,500 V DC to 161 kV. Open to work worldwide." />
+  <meta property="og:title" content="Eriga Robert | Powering Grids. Decoding Data. Changing Lives." />
+  <meta property="og:description" content="Electrical & PV Engineer · Energy Analyst · AI/ML for Energy. Open to work in any location." />
+  <meta property="og:image" content="images/profile.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/light.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Animated energy background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo"><img src="images/profile.jpg" alt="Eriga Robert" class="logo-avatar" />Eriga<span class="accent">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-drop" id="navDrop" data-group="about,focus,impact">
+        <button class="nav-drop-btn" id="navDropBtn" type="button" aria-haspopup="true" aria-expanded="false">About <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-drop-menu">
+          <a href="#about"><i class="fa-solid fa-user"></i> Who I Am</a>
+          <a href="#focus"><i class="fa-solid fa-bullseye"></i> Focus Areas</a>
+          <a href="#impact"><i class="fa-solid fa-earth-africa"></i> Impact</a>
+        </div>
+      </div>
+      <a href="#skills">Skills</a>
+      <div class="nav-drop" data-group="experience,projects,research">
+        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Experience <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-drop-menu">
+          <a href="#experience"><i class="fa-solid fa-briefcase"></i> Work Experience</a>
+          <a href="#projects"><i class="fa-solid fa-solar-panel"></i> Projects</a>
+          <a href="#research"><i class="fa-solid fa-flask"></i> Research &amp; Publications</a>
+        </div>
+      </div>
+      <a href="#education">Education</a>
+      <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="status-pill"><span class="pulse"></span> Available for hire · Open to any location</div>
+        <h1>Powering Grids.<br /><span class="grad">Decoding Data.</span><br />Changing Lives.</h1>
+        <p class="hero-role">
+          <span id="typed"></span><span class="caret">|</span>
+        </p>
+        <p class="hero-sub">
+          I'm <strong>Eriga Robert</strong> — an electrical engineer who has helped build and run
+          <strong>90+ MW of solar PV</strong> across Africa, from <strong>1,500 V DC</strong> strings to
+          <strong>161 kV</strong> substations — and who now uses <strong>Python, MATLAB and machine learning</strong>
+          to make clean-energy systems smarter, more reliable and more profitable.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Hire Me</a>
+          <a href="#projects" class="btn btn-ghost"><i class="fa-solid fa-solar-panel"></i> See My Work</a>
+          <a href="cv/Eriga_Robert_CV.pdf" class="btn btn-ghost" download><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/share/1FRfmfW5WH/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/erifusion_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/EngErigaRobert" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://wa.me/4915907914616" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:erigarobert2@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+4915907914616" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-ring">
+          <div class="photo-orbit"></div>
+          <img src="images/profile.jpg" alt="Eriga Robert" class="profile-photo" />
+          <div class="float-badge b1"><i class="fa-solid fa-solar-panel"></i> 90+ MW PV</div>
+          <div class="float-badge b2"><i class="fa-solid fa-bolt"></i> 161 kV Grid</div>
+          <div class="float-badge b3"><i class="fa-solid fa-brain"></i> AI / ML</div>
+          <div class="float-badge b4"><i class="fa-solid fa-medal"></i> Gold Medalist</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="container stats">
+      <div class="stat"><span class="num" data-count="90" data-suffix="+">0</span><span class="lbl">MW of solar PV supported</span></div>
+      <div class="stat"><span class="num" data-count="161" data-suffix=" kV">0</span><span class="lbl">Highest grid voltage worked</span></div>
+      <div class="stat"><span class="num" data-count="7">0</span><span class="lbl">Hospitals powered by hybrid PV</span></div>
+      <div class="stat"><span class="num" data-count="6">0</span><span class="lbl">Countries worked & studied in</span></div>
+      <div class="stat"><span class="num" data-count="3" data-suffix="+">0</span><span class="lbl">Years hands-on field experience</span></div>
+    </div>
+  </section>
+
+  <!-- ================= HIRE BANNER ================= -->
+  <div class="hire-strip">
+    <div class="marquee">
+      <span>⚡ Solar PV Design & Grid Integration</span><span>📊 Energy Analytics & Performance Audits</span>
+      <span>🤖 Machine Learning for Energy Systems</span><span>🔋 Battery Storage & Hybrid Microgrids</span>
+      <span>🐍 Python · MATLAB · PowerFactory · PVsyst · HOMER</span><span>🌍 Open to work in any location · Canadian visa holder</span>
+      <span>⚡ Solar PV Design & Grid Integration</span><span>📊 Energy Analytics & Performance Audits</span>
+      <span>🤖 Machine Learning for Energy Systems</span><span>🔋 Battery Storage & Hybrid Microgrids</span>
+      <span>🐍 Python · MATLAB · PowerFactory · PVsyst · HOMER</span><span>🌍 Open to work in any location · Canadian visa holder</span>
+    </div>
+  </div>
+
+  <!-- ================= ORGANISATIONS ================= -->
+  <div class="org-strip">
+    <div class="container">
+      <p class="org-title">Organisations I have worked and studied with</p>
+      <div class="org-logos">
+        <a href="https://frontier.dk/" target="_blank" rel="noopener" title="Frontier Energy"><img src="images/logos/frontier.svg" alt="Frontier Energy logo" /></a>
+        <a href="https://aptechafrica.com/" target="_blank" rel="noopener" title="Aptech Africa"><img src="images/logos/aptech-wide.png" alt="Aptech Africa logo" /></a>
+        <a href="https://www.tororocement.com/" target="_blank" rel="noopener" title="Tororo Cement"><img src="images/logos/tororo.png" alt="Tororo Cement logo" /></a>
+        <a href="https://www.uni-flensburg.de/en/" target="_blank" rel="noopener" title="Europa-Universität Flensburg"><img src="images/logos/flensburg.svg" alt="Europa-Universität Flensburg logo" /></a>
+        <a href="https://cgu-odisha.ac.in/" target="_blank" rel="noopener" title="C. V. Raman Global University"><img src="images/logos/cgu.png" alt="C. V. Raman Global University logo" /></a>
+        <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener" title="University of Guelph (Mitacs Globalink)"><img src="images/logos/uog.png" alt="University of Guelph logo" /></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About me</span>
+        <h2>The engineer who speaks <span class="grad">both kilovolts and code</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I am an <strong>Electrical & Solar PV Engineer and Energy Analyst</strong> with 3+ years of hands-on experience
+            designing, bidding, commissioning and operating solar PV, hybrid and grid-connected systems in
+            <strong>Uganda, South Sudan and Sierra Leone</strong>. I've worked on everything from rooftop-scale off-grid kits and
+            solar water pumps, to a <strong>50 MW grid-connected PV portfolio</strong> feeding Sierra Leone's national grid through a
+            <strong>161 kV</strong> connection on the Bumbuna–Freetown corridor.
+          </p>
+          <p>
+            What makes me different is that I sit at the meeting point of <strong>field engineering and data</strong>. I know how
+            real inverters, transformers and protection relays behave at 3 a.m. during a fault — and I use
+            <strong>Python, MATLAB/Simulink and machine-learning models</strong> to turn that behaviour into insight: spotting
+            underperformance early, quantifying losses and supporting smarter operations, including
+            <strong>LLM-assisted O&M</strong>.
+          </p>
+          <p>
+            I'm a <strong>Gold Medalist</strong> in Electrical Engineering (CGPA 8.31/10), an <strong>IEEE-indexed author</strong>,
+            a former <strong>Mitacs Globalink research intern</strong> in Canada, and I'm currently pursuing a Master's in
+            <strong>Sustainable Energy and Development (SEDev)</strong> at Europa-Universität Flensburg, Germany.
+          </p>
+          <div class="about-cards">
+            <div class="mini-card"><i class="fa-solid fa-earth-africa"></i><div><strong>Open to work anywhere</strong><span>Europe · Africa · North America · Remote</span></div></div>
+            <div class="mini-card"><i class="fa-brands fa-canadian-maple-leaf"></i><div><strong>Canadian visa holder</strong><span>Ready for opportunities in Canada</span></div></div>
+            <div class="mini-card"><i class="fa-solid fa-user-graduate"></i><div><strong>Working student / Full-time</strong><span>Based in Flensburg, Germany</span></div></div>
+            <div class="mini-card"><i class="fa-solid fa-language"></i><div><strong>Languages</strong><span>English (Professional) · German (A2) · Madi (Fluent)</span></div></div>
+          </div>
+        </div>
+        <div class="about-side reveal">
+          <div class="quote-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>"Every megawatt I help connect is a hospital that keeps its lights on, a pump that brings clean water, and a classroom that can study after dark. Engineering is my tool — impact is my goal."</p>
+            <span>— Eriga Robert</span>
+          </div>
+          <div class="info-list">
+            <div><i class="fa-solid fa-location-dot"></i> Flensburg, Germany</div>
+            <div><a href="tel:+4915907914616"><i class="fa-solid fa-phone"></i> +49 159 079 14616</a></div>
+            <div><a href="tel:+256765499689"><i class="fa-solid fa-phone"></i> +256 765 499 689</a></div>
+            <div><a href="mailto:erigarobert2@gmail.com"><i class="fa-solid fa-envelope"></i> erigarobert2@gmail.com</a></div>
+            <div><a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/eriga-robert-9522b518a</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOCUS AREAS ================= -->
+  <section class="section alt" id="focus">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What I do best</span>
+        <h2>Four focus areas. <span class="grad">One mission: clean, reliable, intelligent and inclusive energy.</span></h2>
+      </div>
+      <div class="focus-grid">
+        <article class="focus-card reveal" style="--c: var(--sun)">
+          <div class="focus-icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <h3>Electrical & Solar PV Engineering</h3>
+          <p>From site assessment to handover — I design, size, test and commission PV systems that last.</p>
+          <ul>
+            <li>Utility-scale PV up to 1,500 V DC, 33 kV collection & 161 kV grid connection</li>
+            <li>Off-grid, hybrid PV–battery–diesel & microgrid design</li>
+            <li>Battery storage sizing & Battery Management Systems (BMS)</li>
+            <li>Protection relays & coordination, GIS, transformers up to 20 MVA</li>
+            <li>Pre-energisation checks, functional testing & commissioning</li>
+            <li>Load flow & short-circuit studies (PowerFactory, ETAP)</li>
+          </ul>
+        </article>
+        <article class="focus-card reveal" style="--c: var(--teal)">
+          <div class="focus-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Energy Analytics, Modelling & Audit</h3>
+          <p>I turn plant data into decisions — finding the kilowatt-hours that are silently being lost.</p>
+          <ul>
+            <li>Daily generation vs. expected yield analysis (PR, availability, losses)</li>
+            <li>Inverter, transformer & feeder trend analysis to isolate faults</li>
+            <li>Energy-system modelling with HOMER, PVsyst & MATLAB</li>
+            <li>Energy audits & power-plant efficiency analysis</li>
+            <li>Management-ready performance reports & dashboards</li>
+            <li>Tender documents, technical proposals & BoQs</li>
+          </ul>
+        </article>
+        <article class="focus-card reveal" style="--c: var(--violet)">
+          <div class="focus-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>AI & Machine Learning for Energy</h3>
+          <p>I bring data science into the control room — so plants predict problems instead of reacting to them.</p>
+          <ul>
+            <li>ML models for energy & power-electronics applications</li>
+            <li>Python data pipelines combined with Simulink system models</li>
+            <li>Anomaly detection & predictive maintenance concepts for PV O&M</li>
+            <li>Solar / load forecasting for storage & grid planning</li>
+            <li>LLM-assisted O&M: faster fault diagnosis & reporting</li>
+            <li>Converter control & solar-fed EV fast charging research</li>
+          </ul>
+        </article>
+        <article class="focus-card reveal" style="--c: #16a34a">
+          <div class="focus-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Sustainable Energy &amp; Development</h3>
+          <p>I plan energy solutions around the development outcomes they must deliver: healthier communities, secure livelihoods and a lower-carbon economy.</p>
+          <ul>
+            <li>Energy-access planning: mini-grids, off-grid systems &amp; productive use of energy</li>
+            <li>Aligning energy projects with SDG 7 (clean energy) and SDG 13 (climate action)</li>
+            <li>Techno-economic and socio-economic assessment of energy investments</li>
+            <li>Climate-resilient, low-carbon power for health, water &amp; agriculture</li>
+            <li>Donor-funded project delivery and stakeholder engagement (incl. UNDP)</li>
+            <li>Founder, Sustaina Nexus Foundation: energy &amp; agriculture in rural Uganda</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IMPACT ================= -->
+  <section class="section" id="impact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Real-world impact</span>
+        <h2>Beyond megawatts: <span class="grad">how lives have changed</span></h2>
+        <p class="lead">Energy is never just electricity. Here is what the systems I've worked on mean for people, sectors and the planet.</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-hospital"></i></div>
+          <h3>Healthcare</h3>
+          <p>A 2.4 MW hybrid solar PV system with battery storage now serves <strong>seven hospitals</strong>, plus battery-bank and BMS upgrades for <strong>five government hospital laboratories</strong>.</p>
+          <div class="impact-life"><i class="fa-solid fa-heart-pulse"></i> Fridges keep vaccines cold, theatres keep running during outages, lab samples aren't lost — mothers deliver babies under reliable light.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-tower-broadcast"></i></div>
+          <h3>National Grids</h3>
+          <p>Supported a <strong>50 MW PV portfolio in Sierra Leone</strong> and a <strong>12 MW plant + 26 MW expansion near Juba</strong>, South Sudan — clean power injected straight into national networks.</p>
+          <div class="impact-life"><i class="fa-solid fa-city"></i> Fewer blackouts for homes and businesses, less reliance on imported diesel and heavy fuel oil, and more stable supply for growing cities.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-droplet"></i></div>
+          <h3>Water & Communities</h3>
+          <p>Designed and supported <strong>solar water pumping</strong>, <strong>street lighting</strong>, off-grid PV and mini-grids for rural communities and institutions.</p>
+          <div class="impact-life"><i class="fa-solid fa-people-group"></i> Clean water closer to home, safer streets at night, children studying after dark, and small businesses that can stay open longer.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-industry"></i></div>
+          <h3>Industry</h3>
+          <p>At Tororo Cement: <strong>11 switchgear panels</strong>, protection coordination, GIS & <strong>20 MVA transformer</strong>, and a <strong>5,800 kW</strong> mill motor & drive (ABB VRM Project II).</p>
+          <div class="impact-life"><i class="fa-solid fa-helmet-safety"></i> Selective fault isolation protects production and jobs — dependable power for the materials that build roads, schools and homes.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-charging-station"></i></div>
+          <h3>Clean Transport</h3>
+          <p>Published research on <strong>solar-powered EV DC fast charging</strong> and converter control.</p>
+          <div class="impact-life"><i class="fa-solid fa-car-side"></i> A pathway to charging electric vehicles directly from the sun — cutting both fuel costs and tailpipe emissions.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-ico"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Rural Development</h3>
+          <p>Founder of <strong>Sustaina Nexus Foundation</strong> (in development) — energy access + agriculture for underserved rural communities in Uganda.</p>
+          <div class="impact-life"><i class="fa-solid fa-wheat-awn"></i> Solar-powered irrigation and agro-processing that raise farm incomes and food security.</div>
+        </div>
+      </div>
+
+      <div class="world-gain reveal">
+        <h3><i class="fa-solid fa-earth-americas"></i> What the world gains</h3>
+        <div class="gain-grid">
+          <div><strong>Lower emissions</strong><span>Every solar kWh displaces fossil generation and diesel gensets — directly advancing climate goals (SDG 13).</span></div>
+          <div><strong>Energy access</strong><span>Reliable, affordable power for clinics, schools and homes that were left behind (SDG 7).</span></div>
+          <div><strong>Better health</strong><span>Hospitals with uninterrupted power save lives and reduce dependence on noisy, polluting generators (SDG 3).</span></div>
+          <div><strong>Smarter grids</strong><span>Data and AI squeeze more energy out of existing assets — making the energy transition cheaper and faster (SDG 9).</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section alt" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Toolbox</span>
+        <h2>Technical <span class="grad">skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-cube"></i> Modelling & Simulation</h3>
+          <div class="bar" data-w="90"><span>MATLAB / Simulink</span></div>
+          <div class="bar" data-w="85"><span>PVsyst</span></div>
+          <div class="bar" data-w="85"><span>HOMER</span></div>
+          <div class="bar" data-w="75"><span>DIgSILENT PowerFactory</span></div>
+          <div class="bar" data-w="75"><span>ETAP</span></div>
+          <div class="bar" data-w="65"><span>PSCAD</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-brands fa-python"></i> Data, Python & AI</h3>
+          <div class="bar" data-w="85"><span>Python for data analysis</span></div>
+          <div class="bar" data-w="80"><span>pandas · NumPy · Matplotlib</span></div>
+          <div class="bar" data-w="70"><span>Machine learning (scikit-learn)</span></div>
+          <div class="bar" data-w="75"><span>LLMs for engineering workflows</span></div>
+          <div class="bar" data-w="90"><span>Excel / performance reporting</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-plug-circle-bolt"></i> Power & Field Engineering</h3>
+          <div class="bar" data-w="92"><span>Solar PV design, sizing & commissioning</span></div>
+          <div class="bar" data-w="85"><span>Hybrid PV–battery–diesel & BMS</span></div>
+          <div class="bar" data-w="85"><span>Substations: 33 kV & 161 kV</span></div>
+          <div class="bar" data-w="80"><span>Protection relays & coordination</span></div>
+          <div class="bar" data-w="80"><span>SCADA / PLC · Siemens TIA · Bosch Rexroth</span></div>
+          <div class="bar" data-w="75"><span>AutoCAD</span></div>
+        </div>
+      </div>
+
+      <div class="soft-skills reveal">
+        <div><i class="fa-solid fa-comments"></i><strong>Technical communication</strong><span>Turns complex designs into clear proposals and reports.</span></div>
+        <div><i class="fa-solid fa-magnifying-glass-chart"></i><strong>Analytical problem solving</strong><span>Traces faults and losses to root cause using data.</span></div>
+        <div><i class="fa-solid fa-flag"></i><strong>Initiative & leadership</strong><span>Founder of Sustaina Nexus Foundation.</span></div>
+        <div><i class="fa-solid fa-globe"></i><strong>Cross-cultural teamwork</strong><span>India, Canada, Uganda, South Sudan, Sierra Leone, Germany.</span></div>
+        <div><i class="fa-solid fa-shield-halved"></i><strong>Safety-minded</strong><span>Dependable on live HV equipment and under deadlines.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Career journey</span>
+        <h2>Work <span class="grad">experience</span></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Job 1 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-bolt"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://frontier.dk/" target="_blank" rel="noopener" title="Visit Frontier Energy"><img src="images/logos/frontier.svg" alt="Frontier Energy logo" /></a>
+              <div>
+                <h3>Electrical Engineer & Energy Analyst</h3>
+                <a class="company" href="https://frontier.dk/" target="_blank" rel="noopener">Frontier Energy – Planet Solar Energy <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">Nov 2025 – Sep 2026</span><span><i class="fa-solid fa-location-dot"></i> Freetown, Sierra Leone</span></div>
+            </div>
+            <p class="tl-summary">Electrical O&M, performance analytics and commissioning for a 50 MW grid-connected solar PV portfolio (35 MW operational, 15 MW under implementation) feeding Sierra Leone's national grid.</p>
+            <ul>
+              <li><strong>Sustained plant availability:</strong> executed electrical operations and maintenance across the 50 MW portfolio, keeping clean power flowing into the national grid across 1,500 V DC, 33 kV and 161 kV systems.</li>
+              <li><strong>Drove performance through data:</strong> analysed daily generation against expected output and tracked inverter, transformer and feeder trends to isolate underperformance, downtime causes and availability losses — enabling faster corrective action.</li>
+              <li><strong>Mastered the grid interface:</strong> worked across 1,500 V DC generation, 33 kV collection and the 161 kV connection to the Bumbuna–Freetown transmission corridor.</li>
+              <li><strong>Resolved faults fast:</strong> inspected and troubleshot circuit breakers, CTs, CVTs/VTs, surge arresters, protection relays and transformers; investigated SCADA/PLC alarms and electrical abnormalities to cut avoidable outages.</li>
+              <li><strong>Enabled safe expansion:</strong> carried out pre-energisation checks, functional testing and commissioning records so new capacity could connect to the grid safely.</li>
+              <li><strong>Informed decisions:</strong> authored daily and periodic performance reports giving operations and management clear visibility of plant health.</li>
+            </ul>
+            <div class="tags"><span>SCADA/PLC</span><span>ABB Automation</span><span>Movicon</span><span>Python</span><span>Excel</span><span>PV Analyzer</span><span>Electrical Testing</span><span>Protection Relays</span></div>
+            <p class="leave-reason"><i class="fa-solid fa-graduation-cap"></i> <strong>Reason for leaving:</strong> Left to begin a full-time M.Eng. in Sustainable Energy and Development at Europa-Universität Flensburg.</p>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-solar-panel"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://aptechafrica.com/" target="_blank" rel="noopener" title="Visit Aptech Africa"><img src="images/logos/aptech-wide.png" alt="Aptech Africa logo" /></a>
+              <div>
+                <h3>Electrical Engineer – Solar PV Design, Tenders & Implementation</h3>
+                <a class="company" href="https://aptechafrica.com/" target="_blank" rel="noopener">Aptech Africa Limited <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">Aug 2023 – Oct 2025</span><span><i class="fa-solid fa-location-dot"></i> Uganda · South Sudan · Sierra Leone</span></div>
+            </div>
+            <p class="tl-summary">End-to-end solar engineering — from winning the bid, through design and client presentation, to installation, commissioning and maintenance — across three countries.</p>
+            <ul>
+              <li><strong>Won work through bids:</strong> wrote technical proposals, designs and tender documents that contributed to winning multiple solar projects (community and government laboratories), including projects under <strong>UNDP in Sierra Leone</strong>.</li>
+              <li><strong>Presented designs:</strong> presented system designs to clients and stakeholders, translating energy needs into PV, battery and hybrid configurations.</li>
+              <li><strong>Brought reliable power to healthcare:</strong> contributed to a 2.4 MW hybrid solar PV project with 100 kWh battery storage serving seven hospitals, and upgraded five government hospital laboratories with battery banks and BMS.</li>
+              <li><strong>Added clean generation to a national supply:</strong> supported electrical engineering, testing and commissioning for a 12 MW grid-connected solar plant near Juba, South Sudan, its 26 MW expansion, and a mini-grid under the SLP project.</li>
+              <li><strong>Design to handover:</strong> PV sizing, array/battery/inverter selection for off-grid and hybrid systems, installation checks, testing, commissioning, troubleshooting and maintenance — extending to solar water pumping and street lighting for communities.</li>
+            </ul>
+            <div class="tags"><span>PVsyst</span><span>HOMER</span><span>ETAP</span><span>MATLAB</span><span>AutoCAD</span><span>BMS</span><span>Tendering</span><span>MS Office</span></div>
+            <p class="leave-reason"><i class="fa-solid fa-circle-check"></i> <strong>Reason for leaving:</strong> Contract concluded after the successful delivery of all assigned projects; with no immediate follow-on project, I moved to a utility-scale PV role at Frontier Energy.</p>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-industry"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://www.tororocement.com/" target="_blank" rel="noopener" title="Visit Tororo Cement"><img src="images/logos/tororo.png" alt="Tororo Cement logo" /></a>
+              <div>
+                <h3>Electrical Engineering Project Experience</h3>
+                <a class="company" href="https://www.tororocement.com/" target="_blank" rel="noopener">Tororo Cement Limited (ABB project) <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">Project-based</span><span><i class="fa-solid fa-location-dot"></i> Tororo, Uganda</span></div>
+            </div>
+            <p class="tl-summary">Heavy-industry power systems: medium-voltage distribution, protection and large drives for one of East Africa's major cement producers.</p>
+            <ul>
+              <li><strong>Secured plant power reliability:</strong> took part in commissioning 11 switchgear panels and protection coordination so faults are isolated selectively, limiting their effect on production.</li>
+              <li><strong>Powered a key production line:</strong> assisted with installation, testing and commissioning of a 5,800 kW plant motor and drive for the Vertical Roller Mill Project II.</li>
+              <li><strong>Substation build-out:</strong> participated in GIS and 20 MVA indoor transformer installation.</li>
+            </ul>
+            <div class="tags"><span>GIS</span><span>20 MVA Transformer</span><span>Switchgear</span><span>Protection Coordination</span><span>VSD / Large Motors</span></div>
+          </div>
+        </div>
+
+        <!-- Research internship -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"><i class="fa-solid fa-flask"></i></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <a class="org-logo" href="https://www.uoguelph.ca/" target="_blank" rel="noopener" title="Visit University of Guelph"><img src="images/logos/uog.png" alt="University of Guelph logo" /></a>
+              <div>
+                <h3>Mitacs Globalink Research Intern</h3>
+                <a class="company" href="https://www.uoguelph.ca/" target="_blank" rel="noopener">University of Guelph <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <div class="tl-meta"><span class="date">2022</span><span><i class="fa-solid fa-location-dot"></i> Guelph, Canada</span></div>
+            </div>
+            <ul>
+              <li>Researched micropower generation for smart electronic devices using efficient low-power energy conversion — selected through Canada's competitive Mitacs Globalink programme.</li>
+            </ul>
+            <div class="tags"><span>Energy Harvesting</span><span>Power Electronics</span><span>Research</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section alt" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Selected <span class="grad">projects & impact</span></h2>
+        <p class="lead">Click <i class="fa-solid fa-camera"></i> on any project to attach your own photos.</p>
+      </div>
+      <div class="filters reveal" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="pv">Solar PV</button>
+        <button class="chip" data-filter="grid">Grid & Power</button>
+        <button class="chip" data-filter="ai">AI / Research</button>
+        <button class="chip" data-filter="community">Community</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid"><!-- Filled by js/main.js --></div>
+    </div>
+  </section>
+
+  <!-- Project modal -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-gallery" id="modalGallery"></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ================= RESEARCH ================= -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Research & publications</span>
+        <h2>Where power electronics meets <span class="grad">AI & machine learning</span></h2>
+      </div>
+      <div class="research-grid">
+        <article class="pub-card reveal">
+          <div class="pub-badge"><i class="fa-solid fa-book-open"></i> IEEE-indexed publication</div>
+          <h3>Solar-Powered EV DC Fast Charging and Converter Control</h3>
+          <p>Modelled and controlled the power converter that feeds PV energy into an electric-vehicle DC fast charger, and documented the results as a technical paper — advancing clean, solar-fed transport.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>AI/ML connection:</strong> converter control is a natural fit for data-driven methods — ML-based MPPT, charging-demand forecasting and smart scheduling of PV + storage + EV loads build directly on this work.</div>
+          <a href="#" class="pub-link" id="pubLink" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read the paper (add DOI link)</a>
+        </article>
+        <article class="pub-card reveal">
+          <div class="pub-badge violet"><i class="fa-solid fa-microchip"></i> Ongoing research</div>
+          <h3>Machine-Learning Research for Energy Systems</h3>
+          <p>Developing and simulating ML models for energy and power-electronics applications — combining <strong>Simulink system models</strong> with <strong>Python data analysis</strong>. Now applying <strong>Large Language Models (LLMs)</strong> to O&M: faster fault diagnosis, alarm triage and automated reporting.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>Why it matters:</strong> a data-driven approach to performance and control — documented in technical research reports.</div>
+        </article>
+        <article class="pub-card reveal">
+          <div class="pub-badge teal"><i class="fa-solid fa-battery-half"></i> Research internship</div>
+          <h3>Micropower Generation for Smart Electronic Devices</h3>
+          <p>Mitacs Globalink, <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener" class="inline-link">University of Guelph</a> (Canada, 2022): efficient low-power energy conversion for self-powered smart devices and IoT sensors.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>AI/ML connection:</strong> self-powered sensors are the data backbone for edge-AI monitoring of solar plants and smart grids.</div>
+        </article>
+        <article class="pub-card reveal">
+          <div class="pub-badge sun"><i class="fa-solid fa-graduation-cap"></i> M.Eng. coursework</div>
+          <h3>Energy-System Modelling & Power-Plant Efficiency Analysis</h3>
+          <p>Reviewed energy-system modelling tools and analysed fuel-to-electricity efficiency of power plants across countries and years using Python-based data analysis.</p>
+          <div class="ai-link"><i class="fa-solid fa-link"></i> <strong>Data skills:</strong> cleaning multi-country datasets, trend analysis and visualisation — the foundation for any energy ML model.</div>
+        </article>
+      </div>
+
+      <!-- Python / AI toolkit -->
+      <div class="code-block reveal">
+        <div class="code-top"><span></span><span></span><span></span><em>pv_performance.py</em></div>
+<pre><code><span class="k">import</span> pandas <span class="k">as</span> pd
+<span class="k">from</span> sklearn.ensemble <span class="k">import</span> IsolationForest
+
+<span class="c"># Compare actual vs expected yield and flag underperforming inverters</span>
+df = pd.read_csv(<span class="s">"scada_daily.csv"</span>, parse_dates=[<span class="s">"date"</span>])
+df[<span class="s">"PR"</span>] = df[<span class="s">"energy_kwh"</span>] / (df[<span class="s">"irradiation_kwh_m2"</span>] * df[<span class="s">"kwp"</span>])
+
+model = IsolationForest(contamination=<span class="n">0.03</span>).fit(df[[<span class="s">"PR"</span>, <span class="s">"availability"</span>]])
+df[<span class="s">"anomaly"</span>] = model.predict(df[[<span class="s">"PR"</span>, <span class="s">"availability"</span>]])
+<span class="k">print</span>(df[df.anomaly == -<span class="n">1</span>][[<span class="s">"date"</span>, <span class="s">"inverter"</span>, <span class="s">"PR"</span>]])  <span class="c"># ⚡ fix before kWh are lost</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section alt edu-section" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Education background</span>
+        <h2>Education & <span class="grad">certifications</span></h2>
+        <p class="lead">A gold-medal electrical engineering foundation, international research, and a master's in sustainable energy, connecting hands-on engineering with energy-system thinking.</p>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <a class="org-logo" href="https://www.uni-flensburg.de/en/" target="_blank" rel="noopener" title="Visit Europa-Universität Flensburg"><img src="images/logos/flensburg.svg" alt="Europa-Universität Flensburg logo" /></a>
+          <span class="date">Sep 2026 – Present</span>
+          <h3><i class="fa-solid fa-user-graduate" style="color:var(--teal)"></i> M.Eng. Sustainable Energy and Development (SEDev)</h3>
+          <a class="company" href="https://www.uni-flensburg.de/en/" target="_blank" rel="noopener">Europa-Universität Flensburg, Germany <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p>Graduate study connecting energy infrastructure to sustainable development outcomes.</p>
+          <ul>
+            <li>Energy analysis & energy-system modelling (HOMER, MATLAB)</li>
+            <li>Renewable energy technologies & sustainable development</li>
+            <li>Review of energy-system modelling tools</li>
+            <li>Power-plant fuel-to-electricity efficiency analysis across countries and years</li>
+          </ul>
+        </div>
+        <div class="edu-card reveal gold">
+          <a class="org-logo" href="https://cgu-odisha.ac.in/" target="_blank" rel="noopener" title="Visit C. V. Raman Global University"><img src="images/logos/cgu.png" alt="C. V. Raman Global University logo" /></a>
+          <span class="date">2019 – 2023</span>
+          <h3><i class="fa-solid fa-medal"></i> B.Tech. Electrical Engineering</h3>
+          <a class="company" href="https://cgu-odisha.ac.in/" target="_blank" rel="noopener">CV Raman Global University, Bhubaneswar, India <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p><strong>Gold Medal for Academic Excellence</strong> · CGPA 8.31/10</p>
+          <ul>
+            <li>IEEE-indexed publication: Solar-powered EV DC fast charging & converter control</li>
+            <li>Selected for the Mitacs Globalink Research Internship, Canada (2022)</li>
+            <li>Siemens TIA & Bosch Rexroth industrial-automation training at the university's Centres of Excellence</li>
+            <li>Power systems, power electronics, electrical machines & control</li>
+          </ul>
+        </div>
+        <div class="edu-card reveal">
+          <span class="date">Certifications & training</span>
+          <h3>Professional development</h3>
+          <ul>
+            <li>Project Management — Coursera / Google (2024)</li>
+            <li>Totally Integrated Automation — CV Raman Siemens Centre of Excellence</li>
+            <li>Industrial Automation — CV Raman Bosch Rexroth Centre of Excellence</li>
+            <li>Mitacs Globalink Research Internship — <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener" class="inline-link">University of Guelph</a>, Canada (2022)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRENDING SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What employers need now</span>
+        <h2>Ready for the <span class="grad">energy transition's hottest challenges</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="svc reveal"><i class="fa-solid fa-car-battery"></i><h4>BESS & Hybrid Systems</h4><p>Sizing battery storage for peak shaving, backup and grid support.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-network-wired"></i><h4>Grid Integration Studies</h4><p>Load flow, short-circuit and protection studies for new renewable capacity.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-robot"></i><h4>Predictive Maintenance</h4><p>ML anomaly detection on SCADA data to catch failures early.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-cloud-sun"></i><h4>Solar & Load Forecasting</h4><p>Data-driven forecasts for storage dispatch and energy trading.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-clone"></i><h4>Digital Twins</h4><p>Simulink/PVsyst models paired with live data to benchmark plant health.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-charging-station"></i><h4>EV Charging & e-Mobility</h4><p>Solar-fed DC fast charging and converter control.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-house-signal"></i><h4>Microgrids & Energy Access</h4><p>Off-grid & mini-grid design for communities, health and agriculture.</p></div>
+        <div class="svc reveal"><i class="fa-solid fa-file-signature"></i><h4>Tenders & Energy Audits</h4><p>Winning proposals, BoQs, audits and performance reports.</p></div>
+      </div>
+
+      <div class="interests reveal">
+        <h3><i class="fa-solid fa-compass"></i> Current interests</h3>
+        <div class="interest-grid">
+          <div class="interest-card"><i class="fa-solid fa-solar-panel"></i><div><h4>Renewable Energy Systems</h4><p>Solar PV, wind and hydropower: design, integration and optimisation of clean generation from distributed to utility scale.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-diagram-project"></i><div><h4>Energy-System Modelling &amp; Analysis</h4><p>Techno-economic modelling and scenario analysis (HOMER, PVsyst, MATLAB, PowerFactory) to plan cost-effective, low-carbon systems.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-brain"></i><div><h4>AI &amp; Machine Learning for Energy</h4><p>Forecasting, anomaly detection, predictive maintenance and LLM-assisted O&amp;M that turn plant data into decisions.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-car-battery"></i><div><h4>Battery Storage (BESS) &amp; BMS</h4><p>Sizing, integration and battery-management strategies for hybrid systems, peak shaving and grid support.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-chart-line"></i><div><h4>Energy Data Analytics &amp; Sustainable Development</h4><p>Data-driven insight that links energy infrastructure to measurable social, economic and climate outcomes (SDG 7 &amp; 13).</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-tower-broadcast"></i><div><h4>Grid Stability, Reliability &amp; Availability</h4><p>Protection, power quality and integration studies that keep high-renewable grids stable and plants available.</p></div></div>
+          <div class="interest-card"><i class="fa-solid fa-earth-africa"></i><div><h4>Energy Access &amp; Electrification in Africa</h4><p>Mini-grids, off-grid and productive-use solutions that bring reliable power to health, water, agriculture and communities.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section alt" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Let's work together</span>
+        <h2>Need an Engineer Who Delivers <span class="grad">Sustainable Energy, Development and Insight?</span></h2>
+        <p class="lead">Full-time, working-student, contract or remote — in Germany, Europe, Canada, Africa or anywhere in the world. Drop me a message and I'll reply within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a class="c-item" href="mailto:erigarobert2@gmail.com"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>erigarobert2@gmail.com</span></div></a>
+          <a class="c-item" href="tel:+4915907914616"><i class="fa-solid fa-phone"></i><div><strong>Phone (Germany)</strong><span>+49 159 079 14616</span></div></a>
+          <a class="c-item" href="tel:+256765499689"><i class="fa-solid fa-phone"></i><div><strong>Phone (Uganda)</strong><span>+256 765 499 689</span></div></a>
+          <a class="c-item" href="https://wa.me/4915907914616" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>Chat instantly</span></div></a>
+          <a class="c-item" href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><div><strong>LinkedIn</strong><span>Connect professionally</span></div></a>
+          <a class="c-item" href="https://www.facebook.com/share/1FRfmfW5WH/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i><div><strong>Facebook</strong><span>Follow my journey</span></div></a>
+          <a class="c-item" href="https://www.instagram.com/erifusion_/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i><div><strong>Instagram</strong><span>Behind the scenes</span></div></a>
+          <a class="c-item" href="https://x.com/EngErigaRobert" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i><div><strong>X (Twitter)</strong><span>@EngErigaRobert</span></div></a>
+          <div class="visa-note"><i class="fa-brands fa-canadian-maple-leaf"></i> Holds a valid Canadian visa · Open to relocation worldwide</div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <!-- Messages are delivered to Gmail via FormSubmit (see README) -->
+          <input type="hidden" name="_subject" value="New message from your portfolio website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="row">
+            <label>Your name<input type="text" name="name" required placeholder="Jane Doe" /></label>
+            <label>Your email<input type="email" name="email" required placeholder="jane@company.com" /></label>
+          </div>
+          <div class="row">
+            <label>Company / Organisation<input type="text" name="company" placeholder="Optional" /></label>
+            <label>Reason
+              <select name="reason">
+                <option>Job opportunity</option>
+                <option>Working student role</option>
+                <option>Project / consulting</option>
+                <option>Research collaboration</option>
+                <option>Just saying hello</option>
+              </select>
+            </label>
+          </div>
+          <label>Message<textarea name="message" rows="6" required placeholder="Tell me about the role or project…"></textarea></label>
+          <button type="submit" class="btn btn-primary btn-block" id="sendBtn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#home" class="logo"><img src="images/profile.jpg" alt="Eriga Robert" class="logo-avatar" />Eriga<span class="accent">.</span></a>
+        <p>Electrical & PV Engineer · Energy Analyst · AI/ML for Energy</p>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/eriga-robert-9522b518a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/1FRfmfW5WH/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/erifusion_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/EngErigaRobert" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://wa.me/4915907914616" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:erigarobert2@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p class="copy">© <span id="year"></span> Eriga Robert · Powering Grids. Decoding Data. Changing Lives.</p>
+    </div>
+  </footer>
+
+  <!-- ================= CHATBOT ================= -->
+  <button class="chat-label" id="chatLabel" type="button"><i class="fa-solid fa-comments"></i> Chat with Eriga's Assistant</button>
+  <button class="chat-fab" id="chatFab" aria-label="Chat with Eriga's Assistant"><i class="fa-solid fa-robot"></i><span class="fab-dot"></span></button>
+  <div class="chat" id="chat" aria-hidden="true">
+    <div class="chat-head">
+      <img src="images/profile.jpg" alt="" />
+      <div><strong>Eriga's Virtual Assistant</strong><span><span class="pulse sm"></span> Online · ask me anything</span></div>
+      <button id="chatClose" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-quick" id="chatQuick"></div>
+    <form class="chat-input" id="chatForm">
+      <input type="text" id="chatText" placeholder="Type your question…" autocomplete="off" />
+      <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
+
+
+==================================================================
+FILE: css/style.css
+==================================================================
+/* ==========================================================
+   Eriga Robert – Portfolio
+   Palette: deep "night-grid" navy + solar amber + energy teal
+   ========================================================== */
+:root {
+  --bg: #25272c;
+  --bg-2: #2d3036;
+  --surface: rgba(255, 255, 255, 0.055);
+  --surface-solid: #34373e;
+  --border: rgba(255, 255, 255, 0.11);
+  --text: #f3f4f6;
+  --text-2: #c3cddd;
+  --heading: #ffffff;
+  --muted: #cdd2da;
+  --teal: #2dd4bf;
+  --teal-2: #0ea5a0;
+  --sun: #fbbf24;
+  --sun-2: #fb923c;
+  --violet: #a78bfa;
+  --grad: linear-gradient(100deg, var(--sun) 0%, var(--sun-2) 35%, var(--teal) 100%);
+  --radius: 18px;
+  --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+  --font-head: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+strong { color: var(--heading); font-weight: 600; }
+
+#bg-canvas { position: fixed; inset: 0; z-index: -1; opacity: 0.55; }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -2;
+  background:
+    radial-gradient(900px 600px at 85% -10%, rgba(25, 211, 182, 0.14), transparent 60%),
+    radial-gradient(800px 500px at -10% 30%, rgba(251, 191, 36, 0.10), transparent 60%),
+    radial-gradient(700px 500px at 60% 110%, rgba(139, 124, 246, 0.12), transparent 60%),
+    var(--bg);
+}
+
+.container { width: min(1180px, 100% - 32px); margin-inline: auto; }
+.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.accent { color: var(--sun); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 24px; border-radius: 999px; font-weight: 600; font-size: 0.95rem;
+  border: 1px solid transparent; cursor: pointer; transition: transform .25s, box-shadow .25s, background .25s;
+  font-family: inherit;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn-primary { background: var(--grad); color: #0a0f1c; box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.6); }
+.btn-primary:hover { box-shadow: 0 16px 40px -10px rgba(25, 211, 182, 0.6); }
+.btn-ghost { border-color: var(--border); background: rgba(255,255,255,0.03); color: var(--text); }
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+.btn-sm { padding: 9px 18px; font-size: 0.88rem; }
+.btn-block { width: 100%; justify-content: center; }
+
+/* ---------- Navbar ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px max(16px, calc((100% - 1180px) / 2));
+  transition: background .3s, padding .3s, border-color .3s;
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled { background: rgba(30, 32, 36, 0.82); backdrop-filter: blur(14px); padding-block: 12px; border-color: var(--border); }
+.logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.logo-bolt { filter: drop-shadow(0 0 8px rgba(251,191,36,.7)); }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a:not(.btn) { color: var(--muted); font-size: 0.93rem; font-weight: 500; position: relative; transition: color .2s; }
+.nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 2px; background: var(--grad); transition: width .3s; }
+.nav-links a:not(.btn):hover, .nav-links a.active { color: #fff; }
+.nav-links a:not(.btn):hover::after, .nav-links a.active::after { width: 100%; }
+.burger { display: none; background: none; border: 0; cursor: pointer; flex-direction: column; gap: 5px; }
+.burger span { width: 26px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; }
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Hero ---------- */
+.hero { min-height: 100vh; padding: 130px 0 60px; display: flex; flex-direction: column; justify-content: center; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center; }
+.status-pill {
+  display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px;
+  background: rgba(25, 211, 182, 0.1); border: 1px solid rgba(25, 211, 182, 0.35); color: var(--teal);
+  font-size: 0.85rem; font-weight: 600; margin-bottom: 22px;
+}
+.pulse { width: 9px; height: 9px; border-radius: 50%; background: #22e3a0; box-shadow: 0 0 0 0 rgba(34,227,160,.7); animation: pulse 1.8s infinite; display: inline-block; }
+.pulse.sm { width: 7px; height: 7px; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(34,227,160,0); } 100% { box-shadow: 0 0 0 0 rgba(34,227,160,0); } }
+.hero h1 { font-family: var(--font-head); font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 18px; }
+.hero-role { font-family: var(--font-head); font-size: clamp(1.1rem, 2.2vw, 1.45rem); color: var(--sun); min-height: 2em; font-weight: 600; }
+.caret { animation: blink 1s steps(1) infinite; color: var(--teal); }
+@keyframes blink { 50% { opacity: 0; } }
+.hero-sub { color: var(--muted); font-size: 1.08rem; max-width: 620px; margin: 12px 0 30px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
+.socials { display: flex; gap: 12px; flex-wrap: wrap; }
+.socials a {
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--border); background: rgba(255,255,255,.03); color: var(--muted); transition: .25s;
+}
+.socials a:hover { color: #0a0f1c; background: var(--teal); border-color: var(--teal); transform: translateY(-4px) rotate(-6deg); }
+
+.hero-visual { display: flex; justify-content: center; }
+.photo-ring { position: relative; width: min(400px, 80vw); aspect-ratio: 1; }
+.photo-orbit {
+  position: absolute; inset: -14px; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--sun), var(--sun-2), var(--teal), var(--violet), var(--sun));
+  animation: spin 8s linear infinite; filter: blur(1px);
+}
+.photo-orbit::after { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--bg); }
+@keyframes spin { to { transform: rotate(360deg); } }
+.profile-photo {
+  position: relative; width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+  border: 6px solid var(--bg-2); box-shadow: 0 0 80px -10px rgba(25,211,182,.45);
+}
+.float-badge {
+  position: absolute; padding: 10px 16px; border-radius: 14px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;
+  background: rgba(37, 39, 44, 0.85); border: 1px solid var(--border); backdrop-filter: blur(10px);
+  box-shadow: var(--shadow); animation: float 5s ease-in-out infinite;
+}
+.float-badge i { color: var(--sun); margin-right: 6px; }
+.b1 { top: 6%; left: -12%; }
+.b2 { top: 18%; right: -14%; animation-delay: -1.2s; }
+.b2 i { color: var(--teal); }
+.b3 { bottom: 16%; left: -16%; animation-delay: -2.4s; }
+.b3 i { color: var(--violet); }
+.b4 { bottom: 2%; right: -6%; animation-delay: -3.6s; }
+@keyframes float { 50% { transform: translateY(-12px); } }
+
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 70px; }
+.stat {
+  padding: 22px 18px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border);
+  text-align: center; backdrop-filter: blur(10px); transition: transform .3s, border-color .3s;
+}
+.stat:hover { transform: translateY(-6px); border-color: rgba(251,191,36,.45); }
+.stat .num { display: block; font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat .lbl { color: var(--muted); font-size: 0.85rem; }
+
+/* ---------- Marquee ---------- */
+.hire-strip { overflow: hidden; border-block: 1px solid var(--border); background: rgba(251,191,36,0.05); padding: 16px 0; }
+.marquee { display: flex; gap: 50px; width: max-content; animation: marquee 40s linear infinite; }
+.marquee span { white-space: nowrap; font-family: var(--font-head); font-weight: 600; color: #cfd8e8; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---------- Sections ---------- */
+.section { padding: 110px 0; }
+.section.alt { background: linear-gradient(180deg, rgba(37, 39, 44,0) 0%, rgba(37, 39, 44,0.75) 15%, rgba(37, 39, 44,0.75) 85%, rgba(37, 39, 44,0) 100%); }
+.section-head { text-align: center; max-width: 820px; margin: 0 auto 56px; }
+.eyebrow {
+  display: inline-block; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--teal); font-weight: 700; margin-bottom: 12px;
+}
+.section-head h2 { font-family: var(--font-head); font-size: clamp(1.9rem, 4vw, 2.9rem); line-height: 1.15; letter-spacing: -0.01em; }
+.lead { color: var(--muted); margin-top: 14px; font-size: 1.05rem; }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ---------- About ---------- */
+.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+.about-text p { color: var(--text-2); margin-bottom: 16px; font-size: 1.03rem; }
+.about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+.mini-card { display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border); }
+.mini-card i { font-size: 1.4rem; color: var(--sun); width: 28px; text-align: center; }
+.mini-card .fa-canadian-maple-leaf { color: #ff4d4d; }
+.mini-card div { display: flex; flex-direction: column; }
+.mini-card span { color: var(--muted); font-size: 0.85rem; }
+.quote-card {
+  padding: 30px; border-radius: var(--radius); position: relative; margin-bottom: 20px;
+  background: linear-gradient(145deg, rgba(251,191,36,.12), rgba(25,211,182,.08)); border: 1px solid rgba(251,191,36,.25);
+}
+.quote-card i { font-size: 2rem; color: var(--sun); opacity: .6; }
+.quote-card p { font-size: 1.1rem; font-style: italic; margin: 12px 0; color: var(--text); }
+.quote-card span { color: var(--teal); font-weight: 600; }
+.info-list { display: grid; gap: 10px; padding: 24px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.info-list div { color: var(--text-2); font-size: 0.95rem; word-break: break-word; }
+.info-list i { color: var(--teal); width: 22px; }
+.info-list a:hover { color: var(--sun); }
+
+/* ---------- Focus ---------- */
+.focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.focus-card {
+  padding: 32px 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border);
+  position: relative; overflow: hidden; transition: transform .35s, border-color .35s, box-shadow .35s;
+}
+.focus-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--c); }
+.focus-card:hover { transform: translateY(-10px); border-color: var(--c); box-shadow: 0 30px 60px -30px var(--c); }
+.focus-icon { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; font-size: 1.7rem; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); margin-bottom: 20px; }
+.focus-card h3 { font-family: var(--font-head); font-size: 1.35rem; margin-bottom: 10px; }
+.focus-card > p { color: var(--muted); margin-bottom: 18px; }
+.focus-card li { padding: 7px 0 7px 26px; position: relative; color: var(--text-2); font-size: 0.94rem; border-top: 1px dashed var(--border); }
+.focus-card li::before { content: "⚡"; position: absolute; left: 0; font-size: 0.85rem; }
+
+/* ---------- Impact ---------- */
+.impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.impact-card {
+  padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border);
+  display: flex; flex-direction: column; transition: transform .3s, border-color .3s;
+}
+.impact-card:hover { transform: translateY(-6px); border-color: rgba(25,211,182,.5); }
+.impact-ico { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; font-size: 1.4rem; background: var(--grad); color: #0a0f1c; margin-bottom: 16px; }
+.impact-card h3 { font-family: var(--font-head); font-size: 1.25rem; margin-bottom: 8px; }
+.impact-card p { color: var(--text-2); font-size: 0.95rem; flex: 1; }
+.impact-life { margin-top: 16px; padding: 14px; border-radius: 12px; background: rgba(25,211,182,.08); border-left: 3px solid var(--teal); font-size: 0.9rem; color: var(--text-2); }
+.impact-life i { color: var(--teal); margin-right: 6px; }
+.world-gain { margin-top: 40px; padding: 36px; border-radius: 24px; background: linear-gradient(135deg, rgba(25,211,182,.1), rgba(139,124,246,.1)); border: 1px solid var(--border); }
+.world-gain h3 { font-family: var(--font-head); font-size: 1.5rem; margin-bottom: 22px; }
+.world-gain h3 i { color: var(--teal); }
+.gain-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.gain-grid div { display: flex; flex-direction: column; gap: 6px; }
+.gain-grid strong { color: var(--sun); font-family: var(--font-head); font-size: 1.1rem; }
+.gain-grid span { color: var(--text-2); font-size: 0.92rem; }
+
+/* ---------- Timeline ---------- */
+.timeline { position: relative; max-width: 960px; margin: 0 auto; }
+.timeline::before { content: ""; position: absolute; left: 27px; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--sun), var(--teal), var(--violet)); }
+.tl-item { position: relative; padding-left: 80px; margin-bottom: 34px; }
+.tl-dot { position: absolute; left: 6px; top: 22px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--bg-2); border: 2px solid var(--sun); color: var(--sun); box-shadow: 0 0 20px rgba(251,191,36,.35); }
+.tl-card { padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); transition: border-color .3s; }
+.tl-card:hover { border-color: rgba(251,191,36,.4); }
+.tl-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+.tl-head h3 { font-family: var(--font-head); font-size: 1.3rem; }
+.company { color: var(--teal); font-weight: 600; }
+.tl-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: 0.88rem; color: var(--muted); }
+.date { display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(251,191,36,.12); color: var(--sun); font-weight: 600; font-size: 0.85rem; }
+.tl-summary { color: var(--text-2); margin-bottom: 12px; font-style: italic; }
+.tl-card li { padding: 6px 0 6px 22px; position: relative; color: var(--text-2); font-size: 0.95rem; }
+.tl-card li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 7px; height: 7px; border-radius: 50%; background: var(--teal); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.tags span { font-size: 0.78rem; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); background: rgba(255,255,255,.03); }
+
+/* ---------- Projects ---------- */
+.filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+.chip { padding: 9px 20px; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; font-family: inherit; font-weight: 500; transition: .25s; }
+.chip:hover { color: #fff; border-color: var(--teal); }
+.chip.active { background: var(--grad); color: #0a0f1c; border-color: transparent; font-weight: 600; }
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.project {
+  border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); overflow: hidden;
+  display: flex; flex-direction: column; transition: transform .35s, border-color .35s, box-shadow .35s;
+}
+.project.hide { display: none; }
+.project:hover { transform: translateY(-8px); border-color: rgba(25,211,182,.5); box-shadow: var(--shadow); }
+.p-media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; cursor: pointer; }
+.p-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.project:hover .p-media img { transform: scale(1.06); }
+.p-placeholder { width: 100%; height: 100%; display: grid; place-items: center; text-align: center; background: var(--ph); position: relative; }
+.p-placeholder i { font-size: 3rem; color: rgba(255,255,255,.9); filter: drop-shadow(0 6px 18px rgba(0,0,0,.35)); }
+.p-placeholder small { display: block; margin-top: 10px; color: rgba(255,255,255,.8); font-size: .8rem; }
+.p-placeholder::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 26px 26px; }
+.p-count { position: absolute; left: 12px; bottom: 12px; font-size: .78rem; padding: 4px 10px; border-radius: 999px; background: rgba(0,0,0,.55); }
+.p-upload {
+  position: absolute; top: 12px; right: 12px; z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgba(30, 32, 36,.75); color: #fff; backdrop-filter: blur(6px); transition: .25s;
+}
+.p-upload:hover { background: var(--sun); color: #0a0f1c; transform: scale(1.1); }
+.p-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.p-cat { font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; color: var(--teal); font-weight: 700; }
+.p-body h3 { font-family: var(--font-head); font-size: 1.18rem; margin: 6px 0 10px; }
+.p-body p { color: var(--muted); font-size: .92rem; flex: 1; }
+.p-impact { margin-top: 14px; font-size: .88rem; color: #f8e3b0; }
+.p-impact i { color: var(--sun); }
+.p-more { margin-top: 16px; align-self: flex-start; background: none; border: 0; color: var(--sun); font-weight: 600; cursor: pointer; font-family: inherit; font-size: .9rem; }
+.p-more:hover { color: var(--teal); }
+
+/* Modal */
+.modal { position: fixed; inset: 0; z-index: 90; background: rgba(2,6,14,.82); backdrop-filter: blur(8px); display: none; place-items: center; padding: 16px; }
+.modal.open { display: grid; }
+.modal-box { width: min(900px, 100%); max-height: 90vh; overflow-y: auto; border-radius: 22px; background: var(--surface-solid); border: 1px solid var(--border); position: relative; animation: pop .35s ease; }
+@keyframes pop { from { transform: scale(.94); opacity: 0; } }
+.modal-close { position: absolute; top: 14px; right: 14px; z-index: 3; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(0,0,0,.6); color: #fff; cursor: pointer; font-size: 1.1rem; }
+.modal-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px; padding: 6px; }
+.modal-gallery .g-item { position: relative; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; }
+.modal-gallery img { width: 100%; height: 100%; object-fit: cover; }
+.g-del { position: absolute; top: 6px; right: 6px; width: 30px; height: 30px; border: 0; border-radius: 50%; background: rgba(0,0,0,.65); color: #fff; cursor: pointer; }
+.g-del:hover { background: #e11d48; }
+.modal-gallery .p-placeholder { aspect-ratio: 16 / 7; border-radius: 12px; grid-column: 1 / -1; }
+.modal-body { padding: 28px; }
+.modal-body h3 { font-family: var(--font-head); font-size: 1.6rem; margin: 6px 0 12px; }
+.modal-body p { color: var(--text-2); margin-bottom: 12px; }
+.modal-body .tags { margin-bottom: 18px; }
+
+/* ---------- Research ---------- */
+.research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.pub-card { padding: 30px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); transition: transform .3s, border-color .3s; }
+.pub-card:hover { transform: translateY(-6px); border-color: rgba(139,124,246,.55); }
+.pub-badge { display: inline-flex; gap: 8px; align-items: center; padding: 6px 14px; border-radius: 999px; font-size: .8rem; font-weight: 700; background: rgba(251,191,36,.14); color: var(--sun); margin-bottom: 14px; }
+.pub-badge.violet { background: rgba(139,124,246,.16); color: #b3a8ff; }
+.pub-badge.teal { background: rgba(25,211,182,.14); color: var(--teal); }
+.pub-badge.sun { background: rgba(249,115,22,.14); color: #fdba74; }
+.pub-card h3 { font-family: var(--font-head); font-size: 1.3rem; margin-bottom: 10px; }
+.pub-card p { color: var(--text-2); font-size: .95rem; }
+.ai-link { margin-top: 16px; padding: 14px; border-radius: 12px; background: rgba(139,124,246,.09); border-left: 3px solid var(--violet); font-size: .9rem; color: var(--text-2); }
+.ai-link i { color: var(--violet); }
+.pub-link { display: inline-flex; gap: 8px; align-items: center; margin-top: 16px; color: var(--sun); font-weight: 600; font-size: .92rem; }
+.pub-link:hover { color: var(--teal); }
+
+.code-block { margin-top: 40px; border-radius: var(--radius); background: #1d1f23; border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow); }
+.code-top { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: rgba(255,255,255,.04); border-bottom: 1px solid var(--border); }
+.code-top span { width: 12px; height: 12px; border-radius: 50%; background: #ff5f57; }
+.code-top span:nth-child(2) { background: #febc2e; }
+.code-top span:nth-child(3) { background: #28c840; }
+.code-top em { margin-left: 10px; color: var(--muted); font-size: .85rem; font-style: normal; }
+.code-block pre { padding: 22px; overflow-x: auto; font-family: "Consolas", "Fira Code", monospace; font-size: .9rem; line-height: 1.7; color: #d6deeb; }
+.code-block .k { color: #c792ea; } .code-block .s { color: #ecc48d; } .code-block .c { color: #637777; font-style: italic; } .code-block .n { color: #f78c6c; }
+
+/* ---------- Skills ---------- */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.skill-card { padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.skill-card h3 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 20px; }
+.skill-card h3 i { color: var(--sun); margin-right: 8px; }
+.bar { margin-bottom: 16px; }
+.bar span { display: block; font-size: .9rem; color: var(--text-2); margin-bottom: 6px; }
+.bar::after { content: ""; display: block; height: 8px; border-radius: 99px; background: rgba(255,255,255,.07); }
+.bar { position: relative; }
+.bar i.fill { position: absolute; left: 0; bottom: 0; height: 8px; border-radius: 99px; background: var(--grad); width: 0; transition: width 1.6s cubic-bezier(.2,.8,.2,1); z-index: 1; }
+.soft-skills { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 30px; }
+.soft-skills div { padding: 20px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+.soft-skills i { font-size: 1.4rem; color: var(--teal); }
+.soft-skills span { color: var(--muted); font-size: .85rem; }
+
+/* ---------- Services ---------- */
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.svc { padding: 26px 22px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); transition: .3s; }
+.svc:hover { transform: translateY(-6px); background: linear-gradient(160deg, rgba(251,191,36,.12), rgba(25,211,182,.08)); border-color: rgba(251,191,36,.4); }
+.svc i { font-size: 1.6rem; color: var(--sun); margin-bottom: 14px; }
+.svc h4 { font-family: var(--font-head); font-size: 1.08rem; margin-bottom: 6px; }
+.svc p { color: var(--muted); font-size: .9rem; }
+.interests { margin-top: 40px; text-align: center; }
+.interests h3 { font-family: var(--font-head); font-size: 1.4rem; margin-bottom: 18px; }
+.interests h3 i { color: var(--teal); }
+.interest-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.interest-tags span { padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); font-size: .92rem; transition: .25s; }
+.interest-tags span:hover { border-color: var(--teal); transform: translateY(-3px); }
+
+/* ---------- Education ---------- */
+.edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.edu-card { padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.edu-card.gold { border-color: rgba(251,191,36,.45); background: linear-gradient(160deg, rgba(251,191,36,.1), var(--surface)); }
+.edu-card h3 { font-family: var(--font-head); font-size: 1.2rem; margin: 12px 0 4px; }
+.edu-card p { color: var(--text-2); margin-top: 10px; font-size: .94rem; }
+.edu-card .fa-medal { color: var(--sun); }
+.edu-card li { color: var(--text-2); font-size: .92rem; padding: 6px 0 6px 20px; position: relative; }
+.edu-card li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+
+/* ---------- Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 30px; }
+.contact-info { display: grid; gap: 12px; align-content: start; }
+.c-item { display: flex; gap: 16px; align-items: center; padding: 16px 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border); transition: .25s; }
+.c-item:hover { border-color: var(--teal); transform: translateX(6px); }
+.c-item i { font-size: 1.3rem; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(25,211,182,.12); color: var(--teal); }
+.c-item .fa-facebook { color: #4f8bff; background: rgba(79,139,255,.12); }
+.c-item .fa-instagram { color: #f472b6; background: rgba(244,114,182,.12); }
+.c-item .fa-whatsapp { color: #25d366; background: rgba(37,211,102,.12); }
+.c-item .fa-linkedin { color: #4ea8ff; background: rgba(78,168,255,.12); }
+.c-item .fa-x-twitter { color: #fff; background: rgba(255,255,255,.1); }
+.c-item div { display: flex; flex-direction: column; }
+.c-item span { color: var(--muted); font-size: .9rem; word-break: break-all; }
+.visa-note { padding: 14px 18px; border-radius: 14px; background: rgba(255,77,77,.08); border: 1px solid rgba(255,77,77,.3); font-weight: 600; font-size: .92rem; }
+.visa-note i { color: #ff4d4d; margin-right: 6px; }
+.contact-form { padding: 32px; border-radius: 22px; background: var(--surface); border: 1px solid var(--border); display: grid; gap: 16px; align-content: start; }
+.contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form label { display: grid; gap: 6px; font-size: .88rem; color: var(--muted); font-weight: 500; }
+.contact-form input, .contact-form textarea, .contact-form select {
+  width: 100%; padding: 13px 15px; border-radius: 12px; border: 1px solid var(--border); background: rgba(30, 32, 36,.6);
+  color: var(--text); font-family: inherit; font-size: .95rem; transition: border-color .2s, box-shadow .2s; resize: vertical;
+}
+.contact-form select option { background: var(--bg-2); }
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 4px rgba(25,211,182,.15); }
+.form-status { min-height: 1.4em; font-size: .92rem; text-align: center; }
+.form-status.ok { color: #34d399; } .form-status.err { color: #fb7185; }
+
+/* ---------- Footer ---------- */
+.footer { padding: 50px 0 30px; border-top: 1px solid var(--border); }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+.footer p { color: var(--muted); font-size: .9rem; margin-top: 6px; }
+.footer .copy { width: 100%; text-align: center; padding-top: 20px; border-top: 1px solid var(--border); }
+
+/* ---------- Chatbot ---------- */
+.chat-fab {
+  position: fixed; right: 22px; bottom: 22px; z-index: 80; width: 62px; height: 62px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--grad); color: #0a0f1c; font-size: 1.6rem; box-shadow: 0 14px 34px -8px rgba(249,115,22,.6); transition: transform .25s;
+}
+.chat-fab:hover { transform: scale(1.08) rotate(-8deg); }
+.fab-dot { position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; border-radius: 50%; background: #22e3a0; border: 2px solid var(--bg); }
+.chat {
+  position: fixed; right: 22px; bottom: 96px; z-index: 81; width: min(380px, calc(100vw - 32px)); height: min(560px, calc(100vh - 130px));
+  border-radius: 22px; background: var(--surface-solid); border: 1px solid var(--border); box-shadow: 0 30px 80px -20px rgba(0,0,0,.8);
+  display: flex; flex-direction: column; overflow: hidden;
+  opacity: 0; transform: translateY(20px) scale(.96); pointer-events: none; transition: .3s ease;
+}
+.chat.open { opacity: 1; transform: none; pointer-events: auto; }
+.chat-head { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: linear-gradient(120deg, rgba(251,191,36,.18), rgba(25,211,182,.15)); border-bottom: 1px solid var(--border); }
+.chat-head img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid var(--teal); }
+.chat-head div { flex: 1; display: flex; flex-direction: column; }
+.chat-head span { font-size: .78rem; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.chat-head button { background: none; border: 0; color: #fff; font-size: 1.2rem; cursor: pointer; }
+.chat-body { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: .9rem; line-height: 1.5; animation: pop .25s ease; }
+.msg a { color: var(--sun); text-decoration: underline; }
+.msg.bot { background: rgba(255,255,255,.06); border: 1px solid var(--border); border-bottom-left-radius: 4px; align-self: flex-start; }
+.msg.user { background: var(--grad); color: #0a0f1c; border-bottom-right-radius: 4px; align-self: flex-end; font-weight: 500; }
+.typing { display: flex; gap: 4px; padding: 14px; }
+.typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: bounce 1s infinite; }
+.typing i:nth-child(2) { animation-delay: .15s; } .typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes bounce { 50% { transform: translateY(-5px); } }
+.chat-quick { display: flex; gap: 6px; overflow-x: auto; padding: 8px 12px; border-top: 1px solid var(--border); scrollbar-width: none; }
+.chat-quick button { white-space: nowrap; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text); font-size: .8rem; cursor: pointer; font-family: inherit; }
+.chat-quick button:hover { border-color: var(--teal); color: var(--teal); }
+.chat-input { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--border); }
+.chat-input input { flex: 1; padding: 11px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(30, 32, 36,.6); color: var(--text); font-family: inherit; }
+.chat-input input:focus { outline: none; border-color: var(--teal); }
+.chat-input button { width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--grad); color: #0a0f1c; cursor: pointer; }
+
+.to-top { position: fixed; left: 22px; bottom: 22px; z-index: 70; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface-solid); color: #fff; cursor: pointer; opacity: 0; pointer-events: none; transition: .3s; }
+.to-top.show { opacity: 1; pointer-events: auto; }
+.to-top:hover { background: var(--teal); color: #0a0f1c; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1050px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .focus-grid, .impact-grid, .projects-grid, .skills-grid, .edu-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid, .gain-grid { grid-template-columns: 1fr 1fr; }
+  .soft-skills { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 860px) {
+  .nav-links {
+    position: fixed; top: 0; right: 0; height: 100vh; width: min(300px, 80vw); flex-direction: column; align-items: flex-start;
+    padding: 90px 30px; gap: 22px; background: rgba(30, 32, 36,.97); border-left: 1px solid var(--border);
+    transform: translateX(100%); transition: transform .35s ease;
+  }
+  .nav-links.open { transform: none; }
+  .burger { display: flex; z-index: 60; }
+  .hero-grid, .about-grid, .contact-grid, .research-grid { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; }
+  .photo-ring { width: min(290px, 70vw); }
+  .float-badge { font-size: .75rem; padding: 7px 11px; }
+  .b1 { left: -8%; } .b2 { right: -8%; } .b3 { left: -10%; } .b4 { right: -2%; }
+}
+@media (max-width: 640px) {
+  .section { padding: 80px 0; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .focus-grid, .impact-grid, .projects-grid, .skills-grid, .edu-grid, .services-grid, .gain-grid, .about-cards, .soft-skills, .contact-form .row { grid-template-columns: 1fr; }
+  .timeline::before { left: 19px; }
+  .tl-item { padding-left: 56px; }
+  .tl-dot { left: 0; width: 40px; height: 40px; }
+  .tl-meta { align-items: flex-start; }
+  .tl-card, .contact-form, .world-gain { padding: 22px; }
+  .hero-cta .btn { flex: 1 1 auto; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ==========================================================
+   Update: justified text, photo position, Experience + Education
+   ========================================================== */
+/* Justified body text */
+p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card span {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+/* Keep short / centred lines centred */
+.section-head .lead, .form-status, .footer p, .hero-role, .stat .lbl, .interests, .p-impact { text-align: center; }
+.p-impact { text-align: left; }
+
+/* Profile photo sits a bit higher */
+.hero-visual { align-self: start; margin-top: -30px; }
+
+
+@media (max-width: 860px) {
+  .hero-visual { margin-top: -20px; }
+  .hero { padding-top: 100px; }
+}
+@media (max-width: 640px) {
+  /* narrow screens: justified text leaves gaps, so align left */
+  p, li, .impact-life, .ai-link { text-align: left; }
+}
+
+
+==================================================================
+FILE: css/pages.css
+==================================================================
+/* ==========================================================
+   Grey theme + "page" layout: every section reads as a new page
+   (loaded after style.css)
+   ========================================================== */
+body::before {
+  background:
+    radial-gradient(900px 600px at 85% -10%, rgba(45, 212, 191, 0.08), transparent 60%),
+    radial-gradient(800px 500px at -10% 30%, rgba(251, 191, 36, 0.06), transparent 60%),
+    var(--bg);
+}
+#bg-canvas { opacity: 0.35; }
+.hero { background: linear-gradient(180deg, #2b2e34 0%, var(--bg) 100%); }
+.hire-strip { background: #1f2125; position: relative; z-index: 2; }
+
+body { counter-reset: page; }
+.section {
+  counter-increment: page;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 100px;
+  background: #2a2c31;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -24px 48px -12px rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+.section.alt { background: #33363c; }
+
+/* gradient bar marking the top of each page */
+.section::after {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--grad);
+}
+/* page number label */
+.section::before {
+  content: "PAGE " counter(page, decimal-leading-zero);
+  position: absolute; top: 30px; left: max(16px, calc((100% - 1180px) / 2));
+  font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.22em;
+  color: var(--sun); padding: 6px 14px; border-radius: 999px;
+  border: 1px solid rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.08);
+}
+.section > .container { position: relative; }
+
+/* cards: lighter grey so they stand out on each page */
+.focus-card, .impact-card, .tl-card, .project, .pub-card, .skill-card, .svc, .edu-card,
+.stat, .mini-card, .info-list, .c-item, .contact-form, .soft-skills div, .interest-tags span {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+}
+.section.alt .focus-card, .section.alt .tl-card, .section.alt .project, .section.alt .skill-card,
+.section.alt .c-item, .section.alt .contact-form, .section.alt .soft-skills div { background: rgba(255, 255, 255, 0.075); }
+.edu-card.gold { background: linear-gradient(160deg, rgba(251, 191, 36, 0.14), rgba(255, 255, 255, 0.06)); }
+.tl-dot { background: #33363c; }
+.contact-form input, .contact-form textarea, .contact-form select, .chat-input input { background: rgba(0, 0, 0, 0.22); }
+.contact-form select option { background: #2a2c31; }
+.code-block { background: #1d1f23; }
+.nav.scrolled { background: rgba(31, 33, 37, 0.9); }
+.chat, .modal-box { background: #2f3238; }
+
+/* page dots (right side) */
+.page-dots { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 40; display: flex; flex-direction: column; gap: 12px; }
+.page-dots a { position: relative; width: 11px; height: 11px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.4); transition: .25s; }
+.page-dots a.active { background: var(--sun); border-color: var(--sun); transform: scale(1.3); box-shadow: 0 0 10px rgba(251, 191, 36, .6); }
+.page-dots a span {
+  position: absolute; right: 22px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-size: .75rem; font-weight: 600;
+  padding: 4px 10px; border-radius: 6px; background: #1f2125; border: 1px solid var(--border); opacity: 0; pointer-events: none; transition: .2s;
+}
+.page-dots a:hover span { opacity: 1; }
+
+@media (max-width: 860px) {
+  .nav-links { background: rgba(31, 33, 37, 0.98); }
+  .page-dots { display: none; }
+  .section { min-height: auto; padding: 90px 0 70px; }
+  .section::before { top: 24px; }
+}
+
+
+==================================================================
+FILE: css/light.css
+==================================================================
+/* ==========================================================
+   LIGHT THEME (loaded last): near-white pages, dark readable text,
+   deeper solar-amber / teal / violet accents that work on white.
+   Delete the <link> to css/light.css in index.html to go back to the grey theme.
+   ========================================================== */
+:root {
+  --bg: #f5f6f8;
+  --bg-2: #ffffff;
+  --surface: #ffffff;
+  --surface-solid: #ffffff;
+  --border: rgba(15, 23, 42, 0.10);
+  --text: #1e293b;          /* main text: slate-800 */
+  --text-2: #475569;        /* body text: slate-600 */
+  --heading: #0f172a;       /* headings / bold: slate-900 */
+  --muted: #64748b;         /* secondary text: slate-500 */
+  --teal: #0d9488;          /* teal-600 */
+  --teal-2: #0f766e;
+  --sun: #d97706;           /* amber-600: readable on white */
+  --sun-2: #ea580c;         /* orange-600 */
+  --violet: #7c3aed;        /* violet-600 */
+  --grad: linear-gradient(100deg, #f59e0b 0%, #ea580c 40%, #0d9488 100%);
+  --shadow: 0 18px 40px -18px rgba(15, 23, 42, 0.18);
+}
+
+body { background: var(--bg); color: var(--text); }
+body::before {
+  background:
+    radial-gradient(900px 600px at 90% -10%, rgba(13, 148, 136, 0.10), transparent 60%),
+    radial-gradient(800px 500px at -10% 20%, rgba(245, 158, 11, 0.10), transparent 60%),
+    var(--bg);
+}
+#bg-canvas { opacity: 0.5; }
+h1, h2, h3, h4 { color: var(--heading); }
+
+/* ---------- Nav ---------- */
+.nav.scrolled { background: rgba(255, 255, 255, 0.92); box-shadow: 0 6px 20px -12px rgba(15, 23, 42, 0.25); }
+.nav-links a:not(.btn) { color: var(--text-2); }
+.nav-links a:not(.btn):hover, .nav-links a.active { color: var(--heading); }
+.burger span { background: var(--heading); }
+.logo { color: var(--heading); }
+
+/* ---------- Buttons ---------- */
+.btn-primary, .chip.active, .chat-fab, .chat-input button, .msg.user, .impact-ico { color: #ffffff; }
+.btn-primary { box-shadow: 0 10px 24px -10px rgba(234, 88, 12, 0.55); }
+.btn-ghost { background: #ffffff; color: var(--heading); border-color: rgba(15, 23, 42, 0.15); }
+.btn-ghost:hover { color: var(--teal); border-color: var(--teal); }
+
+/* ---------- Hero ---------- */
+.hero { background: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%); }
+.hero-sub { color: var(--text-2); }
+.status-pill { background: rgba(13, 148, 136, 0.08); }
+.photo-orbit::after { background: #ffffff; }
+.profile-photo { border-color: #ffffff; box-shadow: 0 20px 60px -15px rgba(13, 148, 136, 0.45); }
+.float-badge { background: #ffffff; color: var(--heading); border-color: rgba(15, 23, 42, 0.08); box-shadow: 0 12px 30px -12px rgba(15, 23, 42, 0.3); }
+.socials a { background: #ffffff; color: var(--text-2); border-color: rgba(15, 23, 42, 0.12); }
+.socials a:hover { color: #ffffff; background: var(--teal); border-color: var(--teal); }
+.stat { background: #ffffff; box-shadow: var(--shadow); }
+
+/* Dark band for contrast */
+.hire-strip { background: #0f172a; border-color: transparent; }
+.marquee span { color: #e2e8f0; }
+
+/* ---------- Organisation logos ---------- */
+.org-strip { padding: 40px 0 30px; background: #ffffff; border-bottom: 1px solid var(--border); position: relative; z-index: 2; }
+.org-title { text-align: center !important; font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: var(--muted); margin-bottom: 22px; }
+.org-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 22px 46px; }
+.org-logos a { display: flex; align-items: center; height: 64px; padding: 6px 10px; border-radius: 12px; transition: transform .25s, box-shadow .25s; }
+.org-logos a:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+/* explicit height: SVG logos (Frontier, EUF) have no built-in size and would collapse to 0 width */
+.org-logos img { height: 52px; width: auto; max-width: 200px; object-fit: contain; }
+.org-logos img[src$="uog.png"] { border-radius: 8px; }
+.inline-link { color: var(--teal); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.inline-link:hover { color: var(--sun-2); }
+
+/* smaller profile photo */
+.photo-ring { width: min(320px, 70vw); }
+.float-badge { font-size: .8rem; padding: 8px 13px; }
+
+.org-logo {
+  flex: 0 0 auto; width: 120px; height: 64px; display: grid; place-items: center; padding: 8px 10px;
+  background: #ffffff; border: 1px solid var(--border); border-radius: 12px; transition: transform .25s, box-shadow .25s;
+}
+.org-logo:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.org-logo img { height: 44px; width: auto; max-width: 100%; object-fit: contain; }
+.tl-head { align-items: center; }
+.tl-head > div:not(.tl-meta) { flex: 1; min-width: 200px; }
+.edu-card .org-logo { margin-bottom: 14px; width: 150px; }
+a.company { display: inline-flex; align-items: center; gap: 6px; }
+a.company i { font-size: .7rem; opacity: .7; }
+a.company:hover { color: var(--sun-2); text-decoration: underline; }
+
+/* ---------- Pages (sections) ---------- */
+.section { background: #f5f6f8; border-top: 1px solid rgba(15, 23, 42, 0.06); box-shadow: 0 -18px 40px -22px rgba(15, 23, 42, 0.18); }
+.section.alt { background: #ffffff; }
+.section::before { background: rgba(217, 119, 6, 0.08); border-color: rgba(217, 119, 6, 0.35); }
+
+/* ---------- Cards ---------- */
+.focus-card, .impact-card, .tl-card, .project, .pub-card, .skill-card, .svc, .edu-card,
+.mini-card, .info-list, .c-item, .contact-form, .soft-skills div, .interest-tags span {
+  background: #ffffff; border-color: rgba(15, 23, 42, 0.08); box-shadow: 0 10px 30px -18px rgba(15, 23, 42, 0.22);
+}
+.section.alt .focus-card, .section.alt .tl-card, .section.alt .project, .section.alt .skill-card, .section.alt .pub-card,
+.section.alt .c-item, .section.alt .contact-form, .section.alt .soft-skills div, .section.alt .edu-card,
+.section.alt .svc, .section.alt .impact-card { background: #f8fafc; }
+.edu-card.gold, .section.alt .edu-card.gold { background: linear-gradient(160deg, #fff7e6, #ffffff); border-color: rgba(217, 119, 6, 0.35); }
+.quote-card { background: linear-gradient(145deg, #fff7e6, #e9fbf8); border-color: rgba(217, 119, 6, 0.3); }
+.quote-card p { color: var(--heading); }
+.impact-life { background: rgba(13, 148, 136, 0.07); color: #134e4a; }
+.ai-link { background: rgba(124, 58, 237, 0.06); color: #3b2a6b; }
+.p-impact { color: #9a3412; }
+.pub-badge { background: rgba(217, 119, 6, 0.12); color: #b45309; }
+.pub-badge.violet { background: rgba(124, 58, 237, 0.10); color: #6d28d9; }
+.pub-badge.teal { background: rgba(13, 148, 136, 0.10); color: #0f766e; }
+.pub-badge.sun { background: rgba(234, 88, 12, 0.10); color: #c2410c; }
+.date { background: rgba(217, 119, 6, 0.10); color: #b45309; }
+.tags span { background: #f1f5f9; color: var(--text-2); border-color: rgba(15, 23, 42, 0.08); }
+.tl-dot { background: #ffffff; }
+.bar::after { background: #e2e8f0; }
+.chip { background: #ffffff; color: var(--text-2); border-color: rgba(15, 23, 42, 0.12); }
+.chip:hover { color: var(--heading); }
+.p-upload { background: rgba(255, 255, 255, 0.92); color: var(--heading); }
+.p-count { color: #ffffff; }
+.world-gain { background: linear-gradient(135deg, #e9fbf8, #f3efff); }
+.visa-note { background: #fff1f1; border-color: rgba(220, 38, 38, 0.25); color: var(--heading); }
+.c-item .fa-x-twitter { color: #000000; background: rgba(0, 0, 0, 0.06); }
+.interest-tags span { color: var(--heading); }
+
+/* ---------- Forms ---------- */
+.contact-form input, .contact-form textarea, .contact-form select, .chat-input input {
+  background: #ffffff; color: var(--heading); border-color: rgba(15, 23, 42, 0.15);
+}
+.contact-form select option { background: #ffffff; color: var(--heading); }
+.contact-form label { color: var(--text-2); }
+.form-status.ok { color: #059669; } .form-status.err { color: #dc2626; }
+
+/* ---------- Chat, modal, misc ---------- */
+.chat, .modal-box { background: #ffffff; }
+.chat-head { background: linear-gradient(120deg, #fff4e0, #e3f8f4); }
+.chat-head button { color: var(--heading); }
+.msg.bot { background: #f1f5f9; color: var(--heading); border-color: rgba(15, 23, 42, 0.06); }
+.msg a { color: #c2410c; }
+.chat-quick button { color: var(--heading); }
+.to-top { background: #ffffff; color: var(--heading); box-shadow: var(--shadow); }
+.to-top:hover { color: #ffffff; }
+.page-dots a { border-color: rgba(15, 23, 42, 0.3); }
+.page-dots a.active { background: var(--sun-2); border-color: var(--sun-2); box-shadow: 0 0 10px rgba(234, 88, 12, .45); }
+.page-dots a span { background: #0f172a; color: #ffffff; border-color: transparent; }
+.footer { background: #0f172a; border-color: transparent; }
+.footer, .footer p, .footer .logo { color: #e2e8f0; }
+.footer .copy { border-color: rgba(255, 255, 255, 0.12); }
+.footer .socials a { background: transparent; color: #cbd5e1; border-color: rgba(255, 255, 255, 0.2); }
+
+@media (max-width: 860px) {
+  .nav-links { background: rgba(255, 255, 255, 0.98); box-shadow: -10px 0 30px -10px rgba(15, 23, 42, 0.25); }
+  .org-logos { gap: 16px 28px; }
+  .org-logos img { height: 40px; max-width: 140px; }
+  .photo-ring { width: min(240px, 62vw); }
+}
+
+
+==================================================================
+FILE: css/responsive.css
+==================================================================
+/* ==========================================================
+   Header colour, About dropdown, one-line logo row, chat label,
+   reasons for leaving + responsive layout for all devices.
+   (loaded last)
+   ========================================================== */
+html { -webkit-text-size-adjust: 100%; }
+body { -webkit-tap-highlight-color: transparent; }
+img, svg, video { max-width: 100%; height: auto; }
+
+/* ---------- Fixed header: deep navy → teal ---------- */
+.nav, .nav.scrolled {
+  background: linear-gradient(90deg, #0f172a 0%, #12324a 55%, #115e59 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px -14px rgba(15, 23, 42, 0.6);
+  padding-block: 14px;
+}
+.nav.scrolled { padding-block: 10px; }
+.nav .logo { color: #ffffff; }
+.nav .logo .accent { color: #fbbf24; }
+.nav-links a:not(.btn), .nav-drop-btn { color: #cbd5e1; }
+.nav-links a:not(.btn):hover, .nav-links a.active, .nav-drop-btn:hover, .nav-drop.active .nav-drop-btn { color: #ffffff; }
+.nav-links a:not(.btn)::after { background: linear-gradient(90deg, #fbbf24, #2dd4bf); }
+.burger span { background: #ffffff; }
+
+/* ---------- About dropdown ---------- */
+.nav-drop { position: relative; }
+.nav-drop-btn {
+  background: none; border: 0; cursor: pointer; font: inherit; font-size: 0.93rem; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 6px; padding: 0;
+}
+.nav-drop-btn i { font-size: 0.7rem; transition: transform .25s; }
+.nav-drop.open .nav-drop-btn i { transform: rotate(180deg); }
+.nav-drop-menu {
+  position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%) translateY(8px);
+  min-width: 200px; padding: 8px; border-radius: 14px; background: #ffffff;
+  box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.35); border: 1px solid rgba(15, 23, 42, 0.08);
+  display: flex; flex-direction: column; gap: 2px;
+  opacity: 0; visibility: hidden; transition: opacity .2s, transform .2s, visibility .2s; z-index: 70;
+}
+.nav-drop-menu::before { content: ""; position: absolute; top: -16px; left: 0; right: 0; height: 16px; } /* hover bridge */
+.nav-links .nav-drop-menu a {
+  color: #1e293b; padding: 10px 14px; border-radius: 10px; font-size: 0.92rem; display: flex; align-items: center; gap: 10px;
+}
+.nav-links .nav-drop-menu a::after { display: none; }
+.nav-links .nav-drop-menu a i { width: 18px; color: #0d9488; }
+.nav-links .nav-drop-menu a:hover, .nav-links .nav-drop-menu a.active { background: #f1f5f9; color: #0f172a; }
+@media (hover: hover) and (min-width: 1025px) {
+  .nav-drop:hover .nav-drop-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+  .nav-drop:hover .nav-drop-btn i { transform: rotate(180deg); }
+}
+.nav-drop.open .nav-drop-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* ---------- Organisations: one single line ---------- */
+.org-strip { padding: 26px 0 22px; }
+.org-title { margin-bottom: 14px; }
+.org-logos {
+  flex-wrap: nowrap; justify-content: safe center; gap: clamp(14px, 2.6vw, 34px);
+  overflow-x: auto; scrollbar-width: none; padding: 4px 2px;
+}
+.org-logos::-webkit-scrollbar { display: none; }
+.org-logos a { flex: 0 0 auto; height: auto; padding: 4px 6px; }
+.org-logos img { height: clamp(26px, 3vw, 38px); width: auto; max-width: 170px; }
+.org-logos img[src$="uog.png"] { height: clamp(26px, 3vw, 38px); }
+
+/* ---------- Reasons for leaving ---------- */
+.leave-reason {
+  margin-top: 14px; padding: 10px 14px; border-radius: 10px; font-size: 0.9rem;
+  background: #f8fafc; border-left: 3px solid var(--sun); color: var(--text-2);
+}
+.section.alt .leave-reason { background: #ffffff; }
+.leave-reason i { color: var(--sun); margin-right: 4px; }
+
+/* ---------- Chat label ---------- */
+.chat-label {
+  position: fixed; right: 92px; bottom: 34px; z-index: 80;
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer;
+  background: #0f172a; color: #ffffff; font: 600 0.88rem var(--font-body);
+  box-shadow: 0 12px 28px -10px rgba(15, 23, 42, 0.55); transition: transform .25s, opacity .25s;
+  animation: chatHint 3s ease-in-out 2s 2;
+}
+.chat-label i { color: #fbbf24; }
+.chat-label:hover { transform: translateY(-3px); }
+.chat-label.hidden { opacity: 0; pointer-events: none; transform: translateX(10px); }
+@keyframes chatHint { 50% { transform: translateX(-6px); } }
+.chat-fab, .chat-label, .to-top { margin-bottom: env(safe-area-inset-bottom, 0); }
+
+/* ---------- Large screens ---------- */
+@media (min-width: 1600px) {
+  html { font-size: 17px; }
+  .container { width: min(1320px, 100% - 64px); }
+  .nav { padding-inline: max(16px, calc((100% - 1320px) / 2)); }
+  .section::before { left: max(16px, calc((100% - 1320px) / 2)); }
+}
+
+/* ---------- Laptops / tablets: switch to the burger menu ---------- */
+@media (max-width: 1024px) {
+  .burger { display: flex; z-index: 60; }
+  .nav-links {
+    position: fixed; top: 0; right: 0; height: 100vh; height: 100dvh; width: min(320px, 85vw);
+    flex-direction: column; align-items: stretch; gap: 4px; padding: 84px 22px 30px; overflow-y: auto;
+    background: #0f172a; border-left: 1px solid rgba(255, 255, 255, 0.08); box-shadow: -20px 0 40px -20px rgba(0, 0, 0, 0.6);
+    transform: translateX(100%); transition: transform .35s ease;
+  }
+  .nav-links.open { transform: none; }
+  .nav-links > a:not(.btn), .nav-drop-btn { padding: 12px 10px; border-radius: 10px; font-size: 1rem; width: 100%; justify-content: space-between; }
+  .nav-links > a:not(.btn)::after { display: none; }
+  .nav-links > a:not(.btn):hover, .nav-drop-btn:hover { background: rgba(255, 255, 255, 0.06); }
+  .nav-links .btn { margin-top: 12px; justify-content: center; }
+  .nav-drop-menu {
+    position: static; transform: none; min-width: 0; background: rgba(255, 255, 255, 0.05); box-shadow: none; border: 0;
+    max-height: 0; overflow: hidden; padding: 0 6px; opacity: 1; visibility: visible; transition: max-height .3s ease, padding .3s;
+  }
+  .nav-drop.open .nav-drop-menu { max-height: 240px; padding: 6px; transform: none; }
+  .nav-links .nav-drop-menu a { color: #e2e8f0; }
+  .nav-links .nav-drop-menu a:hover, .nav-links .nav-drop-menu a.active { background: rgba(255, 255, 255, 0.08); color: #ffffff; }
+  .nav-links .nav-drop-menu a i { color: #2dd4bf; }
+  .nav-drop-menu::before { display: none; }
+
+  .hero-grid { gap: 36px; }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Tablets (portrait) ---------- */
+@media (max-width: 860px) {
+  .hero { padding-top: 100px; min-height: auto; }
+  .hero-text { text-align: center; }
+  .hero-sub { margin-inline: auto; }
+  .hero-cta, .hero .socials { justify-content: center; }
+  .status-pill { margin-inline: auto; }
+  .tl-head { flex-direction: column; align-items: flex-start; }
+  .tl-meta { align-items: flex-start; }
+  .chat-label { right: 86px; bottom: 30px; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 640px) {
+  .nav, .nav.scrolled { padding-block: 10px; }
+  .logo { font-size: 1.3rem; }
+  .hero h1 { font-size: clamp(2.1rem, 9.5vw, 2.8rem); }
+  .hero-role { font-size: 1.02rem; }
+  .hero-sub { font-size: 1rem; }
+  .hero-cta .btn { flex: 1 1 100%; }
+  .socials a { width: 40px; height: 40px; }
+  .stats { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 40px; }
+  .stat { padding: 16px 10px; }
+  .stat .num { font-size: 1.7rem; }
+  .stat:last-child { grid-column: 1 / -1; }
+  .section-head { margin-bottom: 36px; }
+  .section-head h2 { font-size: clamp(1.55rem, 7vw, 2rem); }
+  .org-logos { justify-content: flex-start; gap: 18px; }
+  .org-logos img { height: 28px; }
+  .org-logo { width: 104px; height: 56px; }
+  .edu-card .org-logo { width: 130px; }
+  .focus-card, .impact-card, .pub-card, .skill-card, .edu-card, .svc { padding: 22px; }
+  .modal { padding: 0; }
+  .modal-box { max-height: 100vh; max-height: 100dvh; height: 100%; border-radius: 0; }
+  .chat { right: 8px; left: 8px; width: auto; bottom: 86px; height: min(70vh, 560px); height: min(70dvh, 560px); }
+  .chat-fab { right: 14px; bottom: 14px; width: 56px; height: 56px; font-size: 1.4rem; }
+  .chat-label { right: 78px; bottom: 22px; padding: 9px 13px; font-size: 0.8rem; }
+  .to-top { left: 14px; bottom: 14px; width: 42px; height: 42px; }
+  .code-block pre { font-size: 0.78rem; padding: 16px; }
+  .marquee span { font-size: 0.9rem; }
+}
+
+/* ---------- Very small phones ---------- */
+@media (max-width: 380px) {
+  .container { width: calc(100% - 24px); }
+  .chat-label span, .chat-label { font-size: 0.74rem; }
+  .float-badge { display: none; }
+  .stats { grid-template-columns: 1fr; }
+  .stat:last-child { grid-column: auto; }
+}
+
+/* ---------- Landscape phones (short screens) ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-top: 90px; }
+  .section { min-height: auto; }
+  .chat { height: calc(100vh - 110px); }
+  .page-dots { display: none; }
+}
+
+/* ---------- Current interests (cards) ---------- */
+.interests h3 { margin-bottom: 24px; }
+.interest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; text-align: left; }
+.interest-card {
+  display: flex; gap: 14px; align-items: flex-start; padding: 20px; border-radius: 16px;
+  background: #ffffff; border: 1px solid rgba(15, 23, 42, 0.08); box-shadow: 0 10px 30px -18px rgba(15, 23, 42, 0.22);
+  transition: transform .25s, border-color .25s;
+}
+.interest-card:hover { transform: translateY(-4px); border-color: rgba(13, 148, 136, 0.45); }
+.interest-card > i {
+  flex: 0 0 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-size: 1.15rem;
+  background: linear-gradient(135deg, #f59e0b, #0d9488); color: #ffffff;
+}
+.interest-card h4 { font-family: var(--font-head); font-size: 1rem; margin-bottom: 4px; color: var(--heading); }
+.interest-card p { font-size: 0.88rem; color: var(--text-2); }
+@media (max-width: 640px) { .interest-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Profile photo in the header / footer logo ---------- */
+.logo { gap: 10px; }
+.logo-avatar {
+  width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%;
+  border: 2px solid #fbbf24; box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.35);
+  transition: transform .25s;
+}
+.logo:hover .logo-avatar { transform: scale(1.06); }
+.nav.scrolled .logo-avatar { width: 36px; height: 36px; }
+@media (max-width: 640px) { .logo-avatar { width: 34px; height: 34px; } }
+
+/* ---------- Focus areas: four cards in a 2 x 2 grid ---------- */
+.focus-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 640px) { .focus-grid { grid-template-columns: 1fr; } }
+
+
+==================================================================
+FILE: js/main.js
+==================================================================
+/* ==========================================================
+   Eriga Robert – Portfolio scripts
+   ========================================================== */
+
+/* ---------------- SETTINGS: edit these ---------------- */
+const CONFIG = {
+  email: "erigarobert2@gmail.com",
+  // Contact form delivery (free, no backend): https://formsubmit.co
+  // The FIRST message triggers an activation email to your Gmail – click "Activate" once.
+  formEndpoint: "https://formsubmit.co/ajax/erigarobert2@gmail.com",
+  phoneDE: "+49 159 079 14616",
+  phoneUG: "+256 765 499 689",
+  whatsapp: "https://wa.me/4915907914616",
+  linkedin: "https://www.linkedin.com/in/eriga-robert-9522b518a",
+  facebook: "https://www.facebook.com/share/1FRfmfW5WH/",
+  instagram: "https://www.instagram.com/erifusion_/",
+  x: "https://x.com/EngErigaRobert",
+  publicationUrl: "", // paste your IEEE paper link (DOI) here
+};
+
+/* ---------------- PROJECTS: edit / add here ----------------
+   To show your OWN photos permanently for every visitor:
+   1. copy the pictures into  images/projects/
+   2. list them in  photos: ["images/projects/my-photo.jpg", ...]
+   (The camera button on the site only saves photos in YOUR browser.) */
+const PROJECTS = [
+  {
+    id: "sl50",
+    cat: "grid pv",
+    label: "Utility-scale PV · O&M",
+    title: "50 MW Grid-Connected PV Portfolio, Sierra Leone",
+    icon: "fa-solar-panel",
+    ph: "linear-gradient(135deg,#f59e0b,#ea580c 55%,#0f766e)",
+    summary: "O&M support, performance analysis and commissioning of added capacity across the 1,500 V DC, 33 kV and 161 kV chain.",
+    details: [
+      "35 MW in operation and 15 MW under implementation, feeding Sierra Leone's national grid via the 161 kV Bumbuna–Freetown corridor.",
+      "Daily generation vs. expected yield analysis; inverter, transformer and feeder trend tracking to isolate losses and downtime.",
+      "Troubleshooting of breakers, CTs, CVTs/VTs, surge arresters, protection relays and transformers using SCADA/PLC alarms.",
+      "Pre-energisation checks, functional testing and commissioning records for new capacity.",
+    ],
+    impact: "Reliable renewable generation reaching the national transmission network.",
+    tags: ["1,500 V DC", "33 kV", "161 kV", "SCADA", "Python", "Performance analytics"],
+    photos: [],
+  },
+  {
+    id: "juba",
+    cat: "grid pv",
+    label: "Utility-scale PV · EPC",
+    title: "12 MW Solar Plant + 26 MW Expansion, Juba, South Sudan",
+    icon: "fa-bolt",
+    ph: "linear-gradient(135deg,#0ea5a0,#0369a1 60%,#1e1b4b)",
+    summary: "Electrical engineering, testing and commissioning support for a grid-connected plant near Juba, its 26 MW expansion, and a mini-grid under the SLP project.",
+    details: [
+      "Supported electrical engineering for one of South Sudan's first utility-scale solar plants.",
+      "Testing and commissioning support during the expansion phase.",
+      "Mini-grid engineering under the SLP project.",
+    ],
+    impact: "Added grid-connected solar capacity to South Sudan's power supply — reducing diesel dependence.",
+    tags: ["Grid-connected PV", "Commissioning", "Mini-grid", "Expansion"],
+    photos: [],
+  },
+  {
+    id: "hosp",
+    cat: "pv community",
+    label: "Hybrid PV · Healthcare",
+    title: "2.4 MW Hybrid PV for Seven Hospitals",
+    icon: "fa-hospital",
+    ph: "linear-gradient(135deg,#10b981,#0d9488 50%,#1e3a8a)",
+    summary: "Sized and designed PV–battery–diesel systems with 100 kWh storage to match hospital loads, plus BMS upgrades for five government hospital laboratories.",
+    details: [
+      "Load assessment and PV/battery/inverter sizing for critical healthcare loads.",
+      "Hybrid PV–battery–diesel architecture with Battery Management System (BMS).",
+      "Battery bank + BMS upgrades in five government hospital laboratories.",
+    ],
+    impact: "Dependable electricity for theatres, maternity wards, vaccine fridges and labs.",
+    tags: ["Hybrid PV", "100 kWh BESS", "BMS", "HOMER", "PVsyst"],
+    photos: [],
+  },
+  {
+    id: "bids",
+    cat: "pv community",
+    label: "Tenders · Design",
+    title: "Solar Project Bids, incl. UNDP Sierra Leone",
+    icon: "fa-file-signature",
+    ph: "linear-gradient(135deg,#8b5cf6,#6d28d9 50%,#0f172a)",
+    summary: "Technical proposals, designs, BoQs and tender documents — presented to clients and stakeholders.",
+    details: [
+      "Wrote technical proposals and supporting documents for community and government-laboratory solar projects.",
+      "Presented system designs to clients, translating energy needs into PV, battery and hybrid configurations.",
+      "Contributed to winning several bids, including projects under UNDP in Sierra Leone.",
+    ],
+    impact: "Won funding that brought solar power to communities and public institutions.",
+    tags: ["Tendering", "Proposals", "BoQ", "Client presentations", "UNDP"],
+    photos: [],
+  },
+  {
+    id: "offgrid",
+    cat: "pv community",
+    label: "Off-grid · Communities",
+    title: "Off-grid PV, Solar Water Pumping & Street Lighting",
+    icon: "fa-droplet",
+    ph: "linear-gradient(135deg,#06b6d4,#0284c7 55%,#14532d)",
+    summary: "Design and support of off-grid PV, solar water pumping and street lighting for communities and institutions.",
+    details: [
+      "PV sizing and equipment selection for off-grid and pumping applications.",
+      "Installation, testing, commissioning and maintenance.",
+    ],
+    impact: "Clean water closer to home, safer streets at night and power for schools and institutions.",
+    tags: ["Off-grid", "Solar pumping", "Street lighting", "Communities"],
+    photos: [],
+  },
+  {
+    id: "tororo",
+    cat: "grid",
+    label: "Industrial power",
+    title: "Industrial Power Systems, Tororo Cement (ABB)",
+    icon: "fa-industry",
+    ph: "linear-gradient(135deg,#f97316,#b45309 50%,#1e3a8a)",
+    summary: "GIS and 20 MVA transformer installation; commissioning of 11 switchgear panels; protection coordination; 5,800 kW motor and drive (VRM Project II).",
+    details: [
+      "Commissioning of 11 switchgear panels and protection coordination for selective fault isolation.",
+      "Installation, testing and commissioning of a 5,800 kW mill motor and drive.",
+      "GIS and 20 MVA indoor transformer installation.",
+    ],
+    impact: "Stronger plant power distribution and dependable operation of a key production drive.",
+    tags: ["GIS", "20 MVA", "Switchgear", "Protection", "Large drives"],
+    photos: [],
+  },
+  {
+    id: "ml",
+    cat: "ai",
+    label: "AI / ML Research",
+    title: "Machine-Learning Research for Energy Systems",
+    icon: "fa-brain",
+    ph: "linear-gradient(135deg,#a855f7,#6366f1 50%,#0ea5a0)",
+    summary: "ML models for energy and power-electronics applications combining Simulink system models with Python data analysis — now applying LLMs to O&M.",
+    details: [
+      "Developed and simulated ML models for energy and power-electronics use cases.",
+      "Combined MATLAB/Simulink system models with Python data pipelines.",
+      "Currently exploring Large Language Models for O&M: fault diagnosis, alarm triage and automated reports.",
+    ],
+    impact: "A data-driven approach to system performance and control, documented in technical research reports.",
+    tags: ["Python", "MATLAB", "Simulink", "Machine learning", "LLM"],
+    photos: [],
+  },
+  {
+    id: "ev",
+    cat: "ai",
+    label: "IEEE Publication",
+    title: "Solar-Powered EV DC Fast Charging & Converter Control",
+    icon: "fa-charging-station",
+    ph: "linear-gradient(135deg,#22c55e,#0d9488 50%,#1d4ed8)",
+    summary: "Modelled and controlled the charging converter feeding PV energy into an EV DC fast charger; published as an IEEE-indexed paper.",
+    details: [
+      "Converter modelling and control design in MATLAB/Simulink.",
+      "Integration of PV generation with DC fast-charging requirements.",
+    ],
+    impact: "A pathway to charging electric vehicles directly from the sun.",
+    tags: ["Power electronics", "EV charging", "MATLAB/Simulink", "IEEE"],
+    photos: [],
+  },
+  {
+    id: "nexus",
+    cat: "community",
+    label: "Founder · Social impact",
+    title: "Sustaina Nexus Foundation (in development)",
+    icon: "fa-seedling",
+    ph: "linear-gradient(135deg,#84cc16,#15803d 55%,#0f172a)",
+    summary: "An energy-access and agriculture initiative for underserved rural communities in Uganda, built through community mobilisation and grant funding.",
+    details: [
+      "Designing solar-powered solutions for irrigation, agro-processing and household energy.",
+      "Community mobilisation and grant-funding strategy.",
+    ],
+    impact: "Higher farm incomes, food security and energy access for rural families.",
+    tags: ["Energy access", "Agri-PV", "Leadership", "Uganda"],
+    photos: [],
+  },
+];
+
+/* ======================================================== */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+
+document.getElementById("year").textContent = new Date().getFullYear();
+if (CONFIG.publicationUrl) { $("#pubLink").href = CONFIG.publicationUrl; $("#pubLink").innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Read the paper'; }
+else { $("#pubLink").addEventListener("click", (e) => { e.preventDefault(); alert("Publication link coming soon. Ask me for a copy via the contact form!"); }); }
+
+/* ---------------- Navbar ---------------- */
+const nav = $("#nav"), burger = $("#burger"), navLinks = $("#navLinks"), toTop = $("#toTop");
+burger.addEventListener("click", () => { burger.classList.toggle("open"); navLinks.classList.toggle("open"); });
+$$("#navLinks a").forEach((a) => a.addEventListener("click", () => { burger.classList.remove("open"); navLinks.classList.remove("open"); }));
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 40);
+  toTop.classList.toggle("show", window.scrollY > 700);
+  let current = "";
+  $$("section[id]").forEach((s) => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  $$("#navLinks a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
+});
+toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
+
+/* ---------------- Typing effect ---------------- */
+const roles = [
+  "Electrical & Solar PV Engineer",
+  "Energy Analyst & Modeller",
+  "AI / ML for Energy Systems",
+  "Grid Integration · 1,500 V DC → 161 kV",
+  "Python · MATLAB · PowerFactory",
+  "Open to work — anywhere in the world 🌍",
+];
+(function type(i = 0, j = 0, del = false) {
+  const el = $("#typed"), word = roles[i];
+  el.textContent = word.slice(0, j);
+  if (!del && j === word.length) return setTimeout(() => type(i, j, true), 1800);
+  if (del && j === 0) return setTimeout(() => type((i + 1) % roles.length, 0, false), 300);
+  setTimeout(() => type(i, j + (del ? -1 : 1), del), del ? 35 : 70);
+})();
+
+/* ---------------- Reveal + counters + skill bars ---------------- */
+$$(".bar").forEach((b) => { const f = document.createElement("i"); f.className = "fill"; b.appendChild(f); });
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("visible");
+    $$(".bar", e.target).forEach((b) => ($(".fill", b).style.width = b.dataset.w + "%"));
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.12 });
+$$(".reveal").forEach((el) => io.observe(el));
+
+const countIO = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.count, suf = el.dataset.suffix || "";
+    let start = null;
+    const step = (t) => {
+      start ??= t;
+      const p = Math.min((t - start) / 1600, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+    countIO.unobserve(el);
+  });
+}, { threshold: 0.5 });
+$$("[data-count]").forEach((el) => countIO.observe(el));
+
+/* ---------------- Energy-grid background canvas ---------------- */
+(function bg() {
+  const c = $("#bg-canvas"), ctx = c.getContext("2d");
+  let w, h, pts;
+  const init = () => {
+    w = c.width = innerWidth; h = c.height = innerHeight;
+    const n = Math.min(70, Math.floor((w * h) / 22000));
+    pts = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3 }));
+  };
+  const draw = () => {
+    ctx.clearRect(0, 0, w, h);
+    pts.forEach((p, i) => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > w) p.vx *= -1;
+      if (p.y < 0 || p.y > h) p.vy *= -1;
+      for (let j = i + 1; j < pts.length; j++) {
+        const q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
+        if (d < 140) { ctx.strokeStyle = `rgba(25,211,182,${0.12 * (1 - d / 140)})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
+      }
+      ctx.fillStyle = i % 5 === 0 ? "rgba(251,191,36,.7)" : "rgba(25,211,182,.5)";
+      ctx.beginPath(); ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2); ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  };
+  addEventListener("resize", init);
+  init();
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) draw();
+})();
+
+/* ---------------- Projects + photo attach ---------------- */
+const store = {
+  get(id) { try { return JSON.parse(localStorage.getItem("proj_" + id) || "[]"); } catch { return []; } },
+  set(id, arr) {
+    try { localStorage.setItem("proj_" + id, JSON.stringify(arr)); return true; }
+    catch { alert("Browser storage is full. For many photos, put them in images/projects/ and list them in js/main.js."); return false; }
+  },
+};
+const allPhotos = (p) => [...p.photos, ...store.get(p.id)];
+
+// Shrink uploaded photos so they fit in browser storage
+function compress(file, max = 1280) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = () => {
+      const img = new Image();
+      img.onload = () => {
+        const s = Math.min(1, max / Math.max(img.width, img.height));
+        const cv = document.createElement("canvas");
+        cv.width = img.width * s; cv.height = img.height * s;
+        cv.getContext("2d").drawImage(img, 0, 0, cv.width, cv.height);
+        res(cv.toDataURL("image/jpeg", 0.8));
+      };
+      img.onerror = rej; img.src = r.result;
+    };
+    r.onerror = rej; r.readAsDataURL(file);
+  });
+}
+function pickPhotos(project) {
+  const inp = document.createElement("input");
+  inp.type = "file"; inp.accept = "image/*"; inp.multiple = true;
+  inp.onchange = async () => {
+    const added = [];
+    for (const f of inp.files) { try { added.push(await compress(f)); } catch {} }
+    if (added.length && store.set(project.id, [...store.get(project.id), ...added])) { renderProjects(); openModal(project.id); }
+  };
+  inp.click();
+}
+
+const placeholder = (p, big) =>
+  `<div class="p-placeholder" style="--ph:${p.ph}"><div><i class="fa-solid ${p.icon}"></i><small>${big ? "No photos yet — click “Add photos” to attach" : "Project photos coming soon"}</small></div></div>`;
+
+function renderProjects() {
+  $("#projectsGrid").innerHTML = PROJECTS.map((p) => {
+    const ph = allPhotos(p);
+    return `
+    <article class="project reveal visible" data-cat="${p.cat}">
+      <div class="p-media" data-open="${p.id}">
+        ${ph.length ? `<img src="${ph[0]}" alt="${p.title}" loading="lazy" />` : placeholder(p)}
+        ${ph.length > 1 ? `<span class="p-count"><i class="fa-solid fa-images"></i> ${ph.length}</span>` : ""}
+        <button class="p-upload" data-upload="${p.id}" title="Attach photos"><i class="fa-solid fa-camera"></i></button>
+      </div>
+      <div class="p-body">
+        <span class="p-cat">${p.label}</span>
+        <h3>${p.title}</h3>
+        <p>${p.summary}</p>
+        <div class="p-impact"><i class="fa-solid fa-star"></i> ${p.impact}</div>
+        <button class="p-more" data-open="${p.id}">View details <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </article>`;
+  }).join("");
+  applyFilter();
+}
+let filter = "all";
+function applyFilter() { $$(".project").forEach((el) => el.classList.toggle("hide", filter !== "all" && !el.dataset.cat.split(" ").includes(filter))); }
+$$("#filters .chip").forEach((b) => b.addEventListener("click", () => {
+  $$("#filters .chip").forEach((x) => x.classList.remove("active"));
+  b.classList.add("active"); filter = b.dataset.filter; applyFilter();
+}));
+$("#projectsGrid").addEventListener("click", (e) => {
+  const up = e.target.closest("[data-upload]");
+  if (up) { e.stopPropagation(); return pickPhotos(PROJECTS.find((p) => p.id === up.dataset.upload)); }
+  const op = e.target.closest("[data-open]");
+  if (op) openModal(op.dataset.open);
+});
+
+const modal = $("#projectModal");
+function openModal(id) {
+  const p = PROJECTS.find((x) => x.id === id);
+  const local = store.get(p.id);
+  const gallery = [
+    ...p.photos.map((src) => `<div class="g-item"><img src="${src}" alt="" /></div>`),
+    ...local.map((src, i) => `<div class="g-item"><img src="${src}" alt="" /><button class="g-del" data-del="${i}" title="Remove"><i class="fa-solid fa-trash"></i></button></div>`),
+  ];
+  $("#modalGallery").innerHTML = gallery.length ? gallery.join("") : placeholder(p, true);
+  $("#modalBody").innerHTML = `
+    <span class="p-cat">${p.label}</span>
+    <h3>${p.title}</h3>
+    <p>${p.summary}</p>
+    <ul style="margin:0 0 16px 18px;list-style:disc;color:var(--text-2)">${p.details.map((d) => `<li style="margin:6px 0">${d}</li>`).join("")}</ul>
+    <div class="p-impact" style="margin-bottom:16px"><i class="fa-solid fa-star"></i> <strong>Impact:</strong> ${p.impact}</div>
+    <div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div>
+    <button class="btn btn-primary btn-sm" id="modalAdd"><i class="fa-solid fa-camera"></i> Add photos</button>`;
+  $("#modalAdd").onclick = () => pickPhotos(p);
+  $$("[data-del]", modal).forEach((b) => (b.onclick = () => {
+    const arr = store.get(p.id); arr.splice(+b.dataset.del, 1); store.set(p.id, arr); renderProjects(); openModal(p.id);
+  }));
+  modal.classList.add("open"); modal.setAttribute("aria-hidden", "false");
+}
+const closeModal = () => { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); };
+$("#modalClose").onclick = closeModal;
+modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); toggleChat(false); } });
+renderProjects();
+
+/* ---------------- Contact form → Gmail (FormSubmit) ---------------- */
+$("#contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target, btn = $("#sendBtn"), status = $("#formStatus");
+  const data = Object.fromEntries(new FormData(form));
+  if (data._honey) return; // spam bot
+  data._replyto = data.email;
+  btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+  status.className = "form-status"; status.textContent = "";
+  try {
+    const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || "Failed");
+    status.className = "form-status ok"; status.textContent = "✅ Thank you! Your message was sent — I'll get back to you within 24 hours.";
+    form.reset();
+  } catch (err) {
+    status.className = "form-status err";
+    const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "-"}\nReason: ${data.reason}\n\n${data.message}`);
+    status.innerHTML = `Couldn't send automatically. <a href="mailto:${CONFIG.email}?subject=${encodeURIComponent("Portfolio message: " + data.reason)}&body=${body}" style="color:var(--sun);text-decoration:underline">Click here to send it by email instead</a>.`;
+  } finally {
+    btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+  }
+});
+
+/* ---------------- Chatbot (rule-based, no API key needed) ---------------- */
+const KB = [
+  { k: ["hi", "hello", "hey", "good morning", "good evening", "hallo", "guten"], a: "Hello! 👋 I'm Eriga's virtual assistant. Ask me about his experience, skills, projects, AI/ML work, availability or how to contact him." },
+  { k: ["who", "about", "introduce", "yourself", "summary", "eriga"], a: "Eriga Robert is an <b>Electrical & Solar PV Engineer, Energy Analyst and AI/ML enthusiast</b> with 3+ years of field experience. He has supported <b>90+ MW of solar PV</b> across Africa — from 1,500 V DC to 161 kV — and is now doing a Master's in Sustainable Energy and Development in Flensburg, Germany." },
+  { k: ["experience", "work", "job", "career", "worked", "employ", "frontier", "aptech", "planet"], a: "💼 <b>Frontier Energy – Planet Solar Energy</b> (Nov 2025 – Sep 2026, Sierra Leone): O&M & performance analytics for a 50 MW grid-connected PV portfolio at 33 kV / 161 kV.<br>💼 <b>Aptech Africa</b> (Aug 2023 – Oct 2025, Uganda/South Sudan/Sierra Leone): PV design, tenders (incl. UNDP), hybrid systems for 7 hospitals, 12 MW + 26 MW plant near Juba.<br>💼 <b>Tororo Cement (ABB project)</b>: GIS, 20 MVA transformer, 11 switchgear panels, 5,800 kW drive." },
+  { k: ["skill", "tool", "software", "pvsyst", "homer", "powerfactory", "etap", "matlab", "simulink", "pscad", "autocad"], a: "🛠️ <b>Modelling:</b> MATLAB/Simulink, PVsyst, HOMER, DIgSILENT PowerFactory, ETAP, PSCAD<br>🐍 <b>Data/AI:</b> Python (pandas, NumPy), machine learning, LLMs, Excel<br>⚡ <b>Field:</b> PV design & commissioning, BESS/BMS, protection relays, SCADA/PLC, Siemens TIA, Bosch Rexroth, AutoCAD" },
+  { k: ["python", "ai", "ml", "machine learning", "artificial", "llm", "data", "model", "predict", "forecast"], a: "🤖 Eriga combines Simulink system models with Python data analysis to build ML models for energy & power-electronics applications. He's now applying <b>LLMs to solar O&M</b> — faster fault diagnosis, alarm triage and automated reporting — and is interested in predictive maintenance and solar/load forecasting." },
+  { k: ["publication", "paper", "ieee", "research", "publish", "mitacs", "guelph"], a: "📚 <b>IEEE-indexed publication:</b> Solar-Powered EV DC Fast Charging and Converter Control.<br>🔬 <b>Mitacs Globalink Research Intern</b>, University of Guelph, Canada (2022): micropower generation for smart devices.<br>🧠 Ongoing ML research for energy systems. See the <a href='#research'>Research section</a>." },
+  { k: ["project", "portfolio", "hospital", "juba", "sierra", "50 mw", "solar plant"], a: "🔆 Highlights: 50 MW PV portfolio (Sierra Leone) · 12 MW + 26 MW plant (Juba) · 2.4 MW hybrid PV for 7 hospitals · UNDP solar bids · solar pumping & street lighting · Tororo Cement industrial power. <a href='#projects'>See all projects →</a>" },
+  { k: ["impact", "lives", "change", "community", "world", "sdg", "help"], a: "🌍 His work keeps hospital theatres and vaccine fridges running, puts clean solar power on national grids in Sierra Leone and South Sudan, brings water and street lighting to communities, and cuts diesel use and CO₂ emissions. <a href='#impact'>Read more →</a>" },
+  { k: ["education", "degree", "study", "university", "master", "gold", "cgpa", "flensburg", "b.tech"], a: "🎓 <b>M.Eng. Sustainable Energy and Development</b> — Europa-Universität Flensburg (Sep 2026 – present)<br>🥇 <b>B.Tech. Electrical Engineering</b> — CV Raman Global University, India (2019–2023), <b>Gold Medal</b>, CGPA 8.31/10" },
+  { k: ["hire", "available", "availability", "open", "opportunit", "relocat", "location", "remote", "working student", "werkstudent", "full-time", "full time"], a: "✅ <b>Yes — Eriga is available for hire!</b> Full-time, working-student, contract, consulting or remote roles. He's <b>open to work in any location</b> worldwide and is currently based in Flensburg, Germany. <a href='#contact'>Send him a message →</a>" },
+  { k: ["visa", "canada", "canadian", "permit", "work permit"], a: "🍁 Eriga holds a <b>valid Canadian visa</b> and is open to relocating — to Canada, Europe, Africa or anywhere the right opportunity is." },
+  { k: ["language", "german", "deutsch", "english", "speak"], a: "🗣️ English — professional · German — A2 (improving) · Madi — fluent." },
+  { k: ["contact", "email", "mail", "phone", "call", "number", "reach", "whatsapp", "linkedin", "message", "facebook", "instagram", "twitter", "x.com", "social"], a: `📧 <a href="mailto:${CONFIG.email}">${CONFIG.email}</a><br>📞 <a href="tel:+4915907914616">${CONFIG.phoneDE}</a> (DE) · <a href="tel:+256765499689">${CONFIG.phoneUG}</a> (UG)<br>💬 <a href="${CONFIG.whatsapp}" target="_blank">WhatsApp</a> · <a href="${CONFIG.linkedin}" target="_blank">LinkedIn</a><br>🌐 <a href="${CONFIG.facebook}" target="_blank">Facebook</a> · <a href="${CONFIG.instagram}" target="_blank">Instagram</a> · <a href="${CONFIG.x}" target="_blank">X (@EngErigaRobert)</a><br>Or use the <a href="#contact">message form</a> — it goes straight to his inbox.` },
+  { k: ["cv", "resume", "download"], a: "📄 You can download Eriga's CV using the <b>Download CV</b> button at the top of the page, or request the latest version via the <a href='#contact'>contact form</a>." },
+  { k: ["salary", "rate", "price", "cost", "fee"], a: "💶 Compensation depends on the role and location — please reach out via the <a href='#contact'>contact form</a> and Eriga will reply within 24 hours." },
+  { k: ["interest", "hobby", "passion", "future", "goal"], a: "🔭 Current interests: AI & LLMs for solar O&M, battery storage & grid-forming inverters, energy-system modelling, agri-PV & solar irrigation, solar e-mobility, energy access in Africa, and green hydrogen." },
+  { k: ["sustaina", "nexus", "foundation", "founder", "ngo"], a: "🌱 Eriga founded <b>Sustaina Nexus Foundation</b> (in development) — an energy-access and agriculture initiative for underserved rural communities in Uganda, built through community mobilisation and grant funding." },
+  { k: ["thank", "thanks", "danke", "great", "awesome", "cool"], a: "You're welcome! 😊 Anything else you'd like to know? You can also leave Eriga a message directly from the <a href='#contact'>contact form</a>." },
+];
+const QUICK = ["Is he available for hire?", "Experience", "AI & Python work", "Publications", "Projects", "Visa / relocation", "Contact"];
+
+const chat = $("#chat"), body = $("#chatBody");
+function addMsg(html, who = "bot") { const m = document.createElement("div"); m.className = "msg " + who; m.innerHTML = html; body.appendChild(m); body.scrollTop = body.scrollHeight; }
+function reply(text) {
+  const q = text.toLowerCase();
+  let best = null, score = 0;
+  KB.forEach((item) => { const s = item.k.reduce((n, k) => n + (q.includes(k) ? k.length : 0), 0); if (s > score) { score = s; best = item; } });
+  const t = document.createElement("div"); t.className = "msg bot typing"; t.innerHTML = "<i></i><i></i><i></i>"; body.appendChild(t); body.scrollTop = body.scrollHeight;
+  setTimeout(() => {
+    t.remove();
+    addMsg(best ? best.a : `Good question! I don't have that answer yet, but Eriga would love to tell you himself. 👉 <a href="#contact">Leave a message</a> or email <a href="mailto:${CONFIG.email}">${CONFIG.email}</a>.`);
+  }, 650);
+}
+function send(text) { if (!text.trim()) return; addMsg(text.replace(/</g, "&lt;"), "user"); reply(text); }
+let greeted = false;
+function toggleChat(force) {
+  const open = force ?? !chat.classList.contains("open");
+  chat.classList.toggle("open", open); chat.setAttribute("aria-hidden", String(!open));
+  $("#chatFab").innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-robot"></i><span class="fab-dot"></span>';
+  if (open && !greeted) { greeted = true; addMsg("Hi there! 👋 I'm Eriga's assistant. ⚡ Electrical & PV Engineer · 📊 Energy Analyst · 🤖 AI/ML — and <b>available for hire worldwide</b>. What would you like to know?"); }
+  if (open) setTimeout(() => $("#chatText").focus(), 300);
+}
+$("#chatQuick").innerHTML = QUICK.map((q) => `<button type="button">${q}</button>`).join("");
+$("#chatQuick").addEventListener("click", (e) => { if (e.target.tagName === "BUTTON") send(e.target.textContent); });
+$("#chatFab").onclick = () => toggleChat();
+$("#chatClose").onclick = () => toggleChat(false);
+$("#chatForm").addEventListener("submit", (e) => { e.preventDefault(); const i = $("#chatText"); send(i.value); i.value = ""; });
+body.addEventListener("click", (e) => { if (e.target.matches("a[href^='#']")) toggleChat(false); });
+
+
+==================================================================
+FILE: js/pages.js
+==================================================================
+/* Page dots: one dot per section ("page"), highlights the page you are on */
+(function pageDots() {
+  const sections = [...document.querySelectorAll("section.section[id]")];
+  const pages = [{ id: "home", name: "Home" }].concat(
+    sections.map((s, i) => {
+      const label = s.querySelector(".eyebrow");
+      return { id: s.id, name: String(i + 1).padStart(2, "0") + " · " + (label ? label.textContent : s.id) };
+    })
+  );
+  const nav = document.createElement("nav");
+  nav.className = "page-dots";
+  nav.setAttribute("aria-label", "Pages");
+  nav.innerHTML = pages.map((p) => `<a href="#${p.id}" data-id="${p.id}"><span>${p.name}</span></a>`).join("");
+  document.body.appendChild(nav);
+
+  const update = () => {
+    let current = "home";
+    pages.forEach((p) => {
+      const el = document.getElementById(p.id);
+      if (el && window.scrollY >= el.offsetTop - window.innerHeight / 2) current = p.id;
+    });
+    nav.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.dataset.id === current));
+  };
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+})();
+
+
+==================================================================
+FILE: js/nav.js
+==================================================================
+/* Header dropdowns (About, Experience), chat label and extra chatbot answers */
+(function () {
+  const drops = [...document.querySelectorAll(".nav-drop")];
+  const closeAll = (except) => drops.forEach((d) => {
+    if (d === except) return;
+    d.classList.remove("open");
+    const b = d.querySelector(".nav-drop-btn");
+    if (b) b.setAttribute("aria-expanded", "false");
+  });
+
+  drops.forEach((drop) => {
+    const btn = drop.querySelector(".nav-drop-btn");
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeAll(drop);
+      const open = drop.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
+    });
+    drop.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => closeAll()));
+  });
+  document.addEventListener("click", (e) => { if (!e.target.closest(".nav-drop")) closeAll(); });
+
+  // Highlight the dropdown button while you are on one of its pages
+  const mark = () => {
+    let current = "";
+    document.querySelectorAll("section[id]").forEach((s) => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    drops.forEach((d) => d.classList.toggle("active", (d.dataset.group || "").split(",").includes(current)));
+  };
+  window.addEventListener("scroll", mark, { passive: true });
+  mark();
+
+  // "Chat with Eriga's Assistant" label opens the chat and hides while it is open
+  const label = document.getElementById("chatLabel");
+  const fab = document.getElementById("chatFab");
+  const chat = document.getElementById("chat");
+  if (label && fab && chat) {
+    label.addEventListener("click", () => fab.click());
+    new MutationObserver(() => label.classList.toggle("hidden", chat.classList.contains("open")))
+      .observe(chat, { attributes: true, attributeFilter: ["class"] });
+  }
+
+  // Extra / updated chatbot answers
+  if (typeof KB !== "undefined") {
+    KB.push({
+      k: ["leave", "left", "leaving", "reason", "quit", "why did", "resign", "contract"],
+      a: "📌 <b>Frontier Energy (Nov 2025 – Sep 2026):</b> left to begin a full-time M.Eng. in Sustainable Energy and Development at Europa-Universität Flensburg.<br>📌 <b>Aptech Africa (Aug 2023 – Oct 2025):</b> contract concluded after the successful delivery of all assigned projects; with no immediate follow-on project, Eriga moved to a utility-scale PV role at Frontier Energy.",
+    });
+    const interests = KB.find((item) => item.k.includes("interest"));
+    if (interests) {
+      interests.k.push("wind", "hydro", "renewable", "grid stability", "reliability", "bess", "bms", "africa");
+      interests.a = "🔭 <b>Current interests:</b><br>☀️ Renewable energy systems: solar PV, wind & hydropower<br>📐 Energy-system modelling & analysis<br>🤖 AI & machine learning for energy<br>🔋 Battery storage (BESS) & BMS<br>📊 Energy data analytics & sustainable development<br>⚡ Grid stability, reliability & availability<br>🌍 Energy access & electrification in Africa";
+    }
+  }
+})();
+
+
+==================================================================
+FILE: README.txt
+==================================================================
+ERIGA ROBERT - PORTFOLIO WEBSITE
+================================
+Open index.html in any browser to view the site.
+
+FOLDERS
+  index.html          - page content (text, sections)
+  css/style.css       - colours, layout, animations
+  js/main.js          - projects list, chatbot answers, contact form, settings
+  images/profile.jpg  - your profile photo
+  images/projects/    - put your project photos here
+  cv/                 - put your CV here, named  Eriga_Robert_CV.pdf  (for the "Download CV" button)
+
+1) SOCIAL LINKS
+   Facebook, Instagram and X links are already set (index.html and js/main.js).
+
+2) MESSAGES TO GMAIL
+   The contact form uses FormSubmit (free). After the site is online, send yourself one test message.
+   FormSubmit emails erigarobert2@gmail.com an "Activate form" link. Click it once.
+   After that, every message reaches your Gmail. (Check the Spam folder the first time.)
+   NOTE: the form only works when the site is hosted online (not when opened as a local file).
+
+3) PROJECT PHOTOS (permanent, seen by every visitor)
+   Copy photos into images/projects/ then in js/main.js add them to the project, e.g.
+       photos: ["images/projects/sierra-leone-1.jpg", "images/projects/sierra-leone-2.jpg"],
+   The camera button on the website only saves photos in YOUR OWN browser (for previewing).
+
+4) IEEE PAPER LINK
+   In js/main.js set  publicationUrl: "https://doi.org/..."
+
+5) CHATBOT
+   Answers are in js/main.js, in the KB list. Edit the text or add new {k:[keywords], a:"answer"} entries.
+
+6) PUBLISH FOR FREE
+   - Netlify Drop: go to app.netlify.com/drop and drag the whole cv_profile folder in.
+   - or GitHub Pages: upload the folder to a GitHub repository, then Settings > Pages.
+
+
