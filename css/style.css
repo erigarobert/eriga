@@ -506,4 +506,10 @@ p, li, .impact-life, .ai-link, .gain-grid span, .soft-skills span, .mini-card sp
 .lb-count { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.8); font-size: .9rem; }
 @media (max-width: 640px) { .lb-prev, .lb-next { top: auto; bottom: 8px; transform: none; } }
 
-.pub-meta { font-size: .85rem; color: var(--text-2); margin: -4px 0 10px; }
+
+/* Publication title list */
+.pub-list { grid-column: 1 / -1; }
+.pub-list ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 12px; }
+.pub-list a { display: flex; gap: 12px; align-items: flex-start; color: var(--text-2); font-weight: 600; line-height: 1.5; transition: color .2s; }
+.pub-list a i { color: var(--sun); margin-top: 4px; }
+.pub-list a:hover { color: var(--teal); }

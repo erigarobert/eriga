@@ -243,8 +243,6 @@ const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
 document.getElementById("year").textContent = new Date().getFullYear();
-if (CONFIG.publicationUrl) { $("#pubLink").href = CONFIG.publicationUrl; $("#pubLink").innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Read the paper'; }
-else { $("#pubLink").addEventListener("click", (e) => { e.preventDefault(); alert("Publication link coming soon. Ask me for a copy via the contact form!"); }); }
 
 /* ---------------- Navbar ---------------- */
 const nav = $("#nav"), burger = $("#burger"), navLinks = $("#navLinks"), toTop = $("#toTop");
