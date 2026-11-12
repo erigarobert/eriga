@@ -262,9 +262,9 @@ const roles = [
   "Electrical & Solar PV Engineer",
   "Energy Analyst & Modeller",
   "AI / ML for Energy Systems",
-  "Grid Integration · 1,500 V DC → 161 kV",
+  "Sustainable Energy for Community Development",
   "Python · MATLAB · PowerFactory",
-  "Open to work, anywhere in the world 🌍",
+  "Clean Energy Access for Rural Communities 🌍",
 ];
 (function type(i = 0, j = 0, del = false) {
   const el = $("#typed"), word = roles[i];
